@@ -37,7 +37,6 @@ body {
     height: 80px;
     width: 100%;
     transform: translate(-50%, -60%);
-    font-family: "Roboto Mono", monospace;
     font-weight: 700;
     font-size: calc(2rem + 2vw);
     line-height: calc(4rem + 2vw);
@@ -102,7 +101,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.15;
-    width: 600px;
+    width: 500px;
     height: 400px;
     border-radius: 50%;
     background-image: radial-gradient(circle at center, #ed1c24, rgba(255, 0, 0, 0) 75%);
