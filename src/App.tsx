@@ -49,6 +49,7 @@ function App() {
                     <Typewriter
                         onInit={(typewriter) => {
                             typewriter
+                                .pauseFor(500)
                                 .typeString("computational<br />brilliance.")
                                 .callFunction(() => {
                                     setIsWritten(true);

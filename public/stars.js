@@ -6,9 +6,9 @@
 
 // Settings
 var canvas = document.getElementById("stars"),
-    particleCount = 150,
+    particleCount = 250,
 	flareCount = 10,
-	motion = 0.025,
+	motion = 0.03,
 	tilt = 0.05,
 	color = '#ed1c24',
 	particleSizeBase = 1.25,
@@ -16,12 +16,12 @@ var canvas = document.getElementById("stars"),
 	flareSizeBase = 100,
 	flareSizeMultiplier = 100,
 	lineWidth = 2,
-	linkChance = 75, // chance per frame of link, higher = smaller chance
+	linkChance = 0, // chance per frame of link, higher = smaller chance
 	linkLengthMin = 7, // min linked vertices
 	linkLengthMax = 10, // max linked vertices
-	linkOpacity = 0.75; // number between 0 & 1
+	linkOpacity = 0.07; // number between 0 & 1
 	linkFade = 250, // link fade-out frames
-	linkSpeed = 0.75, // distance a link travels in 1 frame
+	linkSpeed = 0.1, // distance a link travels in 1 frame
 	glareAngle = -60,
 	glareOpacityMultiplier = 0.01,
 	renderParticles = true,
