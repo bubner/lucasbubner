@@ -11,6 +11,7 @@
   "dependencies": {
     "@vitejs/plugin-react": "^3.1.0",
     "react": "^18.2.0",
+    "react-animation-on-scroll": "^5.1.0",
     "react-dom": "^18.2.0",
     "typewriter-effect": "^2.19.0",
     "vite-plugin-checker": "^0.5.5"
