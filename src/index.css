@@ -1,6 +1,7 @@
 /* Global application styles */
 
 html, body {
+    width: 100%;
     max-width: 100%;
     user-select: none;
     overflow-x: hidden;
