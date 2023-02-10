@@ -35,6 +35,7 @@ function App() {
             {isWritten && !introDone && (
                 <>
                     <div className="bg-elem">
+                        <div className="dots" />
                         <canvas id="stars" />
                         <canvas id="pulse" />
                         <img id="bg" src="/starbg2.png" />
