@@ -1,12 +1,16 @@
 /* Global application styles */
 
+html, body {
+    max-width: 100%;
+    user-select: none;
+    overflow-x: hidden;
+}
+
 :root {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
-    user-select: none;
-    overflow-x: hidden;
 
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
