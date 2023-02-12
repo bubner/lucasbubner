@@ -163,16 +163,17 @@ function Main() {
                             <p className="content sm">I am an adaptive problem solver.</p>
                         </AnimationOnScroll>
                     </div>
-                    
-                        <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
-                            <div className="text-element">
-                                <p className="content huge">I am Lucas Bubner.</p>
-                            </div>
-                            <div className="mini-element">
-                                <Link to="/i" id="next">View more information ⮞</Link>
-                            </div>
-                        </AnimationOnScroll>
-                    
+
+                    <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
+                        <div className="text-element">
+                            <p className="content huge">I am Lucas Bubner.</p>
+                        </div>
+                        <div className="mini-element">
+                            <Link to="/i" id="next">
+                                View more information ⮞
+                            </Link>
+                        </div>
+                    </AnimationOnScroll>
                 </div>
             )}
         </div>

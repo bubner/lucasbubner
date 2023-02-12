@@ -62,7 +62,8 @@ body {
     animation: fadeIn 2s ease-in-out;
 }
 
-#maincontent, #stars {
+#maincontent,
+#stars {
     animation: fadeIn 0.5s ease-in-out;
 }
 
@@ -87,7 +88,6 @@ body {
     margin: auto;
     animation: arrow-move 2s ease-in-out infinite;
 }
-
 
 .arrow:hover {
     cursor: pointer;

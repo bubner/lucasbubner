@@ -4,6 +4,7 @@
  */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import Main from "./Main";
 import "./App.css";
@@ -30,7 +31,12 @@ function App() {
     }, [isWritten]);
 
     return (
-        <div id="App">
+        <motion.div
+            id="App"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}>
             <div id="intro" style={{ transform: shouldMove ? "translateY(-150vh)" : "translate(0)" }}>
                 {isWritten && !introDone && (
                     <>
@@ -68,7 +74,7 @@ function App() {
             )}
             {isWritten && !introDone && <div style={{ height: "1px", display: introDone ? "none" : "block" }} />}
             {introDone && <Main />}
-        </div>
+        </motion.div>
     );
 }
 

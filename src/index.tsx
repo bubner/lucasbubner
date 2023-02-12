@@ -5,21 +5,14 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "./App";
-import Info from "./Info";
+import AnimatedRoute from "./AnimatedRoute";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
         <BrowserRouter>
-            <Routes>
-                <Route path="/">
-                    <Route index element={<App />} />
-                    <Route path="/i" element={<Info />} />
-                    <Route path="*" element={<App />} />
-                </Route>
-            </Routes>
+            <AnimatedRoute />
         </BrowserRouter>
     </React.StrictMode>
 );
