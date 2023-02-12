@@ -6,7 +6,7 @@
 
 // Settings
 var canvas = document.getElementById("stars"),
-    particleCount = 150,
+    particleCount = 100,
 	flareCount = 10,
 	motion = 0.03,
 	tilt = 0.05,

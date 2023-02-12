@@ -24,8 +24,13 @@ body {
     object-fit: cover;
 }
 
+#intro {
+    transition: transform 1s;
+}
+
 #heading {
     animation: fadeIn 0.5s ease-in-out;
+    transition: transform 1s;
     z-index: 1;
     user-select: none;
     position: absolute;

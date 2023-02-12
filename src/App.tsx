@@ -10,16 +10,14 @@ import "./App.css";
 function App() {
     const [isWritten, setIsWritten] = useState(false);
     const [introDone, setIntroDone] = useState(false);
+    const [shouldMove, setShouldMove] = useState(false);
 
     const handleIntroFinish = () => {
         window.removeEventListener("scroll", handleIntroFinish);
-        window.scroll({
-            top: window.innerHeight,
-            behavior: "smooth",
-        });
+        setShouldMove(true);
         setTimeout(() => {
             setIntroDone(true);
-        }, 500);
+        }, 400);
     };
 
     useEffect(() => {
@@ -31,22 +29,24 @@ function App() {
     }, [isWritten]);
 
     return (
-        <>
-            {isWritten && !introDone && (
-                <>
-                    <div className="bg-elem">
-                        <div className="dots" />
-                        <canvas id="stars" />
-                        <canvas id="pulse" />
-                        <img id="bg" src="/starbg2.png" />
-                        <div className="arrow-container">
-                            <svg className="arrow" onClick={() => handleIntroFinish()} />
+        <div id="App">
+            <div id="intro" style={{ transform: shouldMove ? "translateY(-150vh)" : "translate(0)" }}>
+                {isWritten && !introDone && (
+                    <>
+                        <div className="bg-elem">
+                            <div className="dots" />
+                            <canvas id="stars" />
+                            <canvas id="pulse" />
+                            <img id="bg" src="/starbg2.png" />
+                            <div className="arrow-container">
+                                <svg className="arrow" onClick={() => handleIntroFinish()} />
+                            </div>
                         </div>
-                    </div>
-                </>
-            )}
+                    </>
+                )}
+            </div>
             {!introDone && (
-                <div id="heading">
+                <div id="heading" style={{ transform: shouldMove ? "translate(-50vw, -200vh)" : "reset" }}>
                     <Typewriter
                         onInit={(typewriter) => {
                             typewriter
@@ -60,9 +60,9 @@ function App() {
                     />
                 </div>
             )}
-            {isWritten && <div style={{"height": "100vh", "display": introDone ? "none" : "block"}} />}
+            {isWritten && <div style={{ height: "1px", display: introDone ? "none" : "block" }} />}
             {introDone && <Main />}
-        </>
+        </div>
     );
 }
 

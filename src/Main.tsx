@@ -13,41 +13,53 @@ function Main() {
         winRef.current?.scrollIntoView({ behavior: "auto" });
         setTimeout(() => {
             setIsExplained(true);
-        }, 1400);
-        const script = document.createElement("script");
-        script.src = "/globe.js"
-        document.body.appendChild(script);
+            const script = document.createElement("script");
+            script.src = "/globe.js";
+            document.body.appendChild(script);
+        }, 1000);
     }, []);
 
     return (
-        <>
+        <div id="main">
             <div ref={winRef} />
             <div className="text-container">
                 <p className="text-line">I am a self-taught,</p>
                 <p className="text-line">young software developer.</p>
             </div>
-            <img id="collar-l" src="/collar.png" />
-            <img id="collar-r" src="/collar2.png" />
-            <img id="extd-bg" src="/starbg2.png" />
-            <div id="geo-globe">
-                <img id="pfp" src="/transparent.png" />
-                <canvas id="canvas" />
-            </div>
             {isExplained && (
                 <div id="maincontent">
-                    <div className="text-element">
-                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOut="animate__fadeOutLeft">
-                            <p>Powered by intuition, <br /> <br /> <br /> influenced by soul.</p>
+                <div id="extd-bg" />
+                    <div id="collarband">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <img id="collar-l" src="/collar.png" />
+                        </AnimationOnScroll>
+                        <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}>
+                            <img id="collar-r" src="/collar2.png" />
+                        </AnimationOnScroll>
+                        <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
+                            <div id="geo-globe">
+                                <img id="pfp" src="/transparent.png" />
+                                <canvas id="canvas" />
+                            </div>
                         </AnimationOnScroll>
                     </div>
                     <div className="text-element">
                         <AnimationOnScroll animateIn="animate__fadeInLeft" animateOut="animate__fadeOutLeft">
-                            <p>Stuff <br /> <br /> <br /> here</p>
+                            <p>
+                                Powered by intuition, <br /> <br /> <br /> influenced by soul.
+                            </p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOut="animate__fadeOutLeft">
+                            <p>
+                                Stuff <br /> <br /> <br /> here
+                            </p>
                         </AnimationOnScroll>
                     </div>
                 </div>
             )}
-        </>
+        </div>
     );
 }
 
