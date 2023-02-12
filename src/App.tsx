@@ -3,6 +3,7 @@
  * @author Lucas Bubner, 2023
  */
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import Main from "./Main";
 import "./App.css";
@@ -46,21 +47,26 @@ function App() {
                 )}
             </div>
             {!introDone && (
-                <div id="heading" style={{ transform: shouldMove ? "translate(-50vw, -200vh)" : "reset" }}>
-                    <Typewriter
-                        onInit={(typewriter) => {
-                            typewriter
-                                .pauseFor(500)
-                                .typeString("computational<br />brilliance.")
-                                .callFunction(() => {
-                                    setIsWritten(true);
-                                })
-                                .start();
-                        }}
-                    />
-                </div>
+                <>
+                    <Link id="skip" to="/i" style={{ opacity: shouldMove ? "0" : "1" }}>
+                        Skip sequence ⮞
+                    </Link>
+                    <div id="heading" style={{ transform: shouldMove ? "translate(-50vw, -200vh)" : "reset" }}>
+                        <Typewriter
+                            onInit={(typewriter) => {
+                                typewriter
+                                    .pauseFor(500)
+                                    .typeString("computational<br />brilliance.")
+                                    .callFunction(() => {
+                                        setIsWritten(true);
+                                    })
+                                    .start();
+                            }}
+                        />
+                    </div>
+                </>
             )}
-            {isWritten && <div style={{ height: "1px", display: introDone ? "none" : "block" }} />}
+            {isWritten && !introDone && <div style={{ height: "1px", display: introDone ? "none" : "block" }} />}
             {introDone && <Main />}
         </div>
     );

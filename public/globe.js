@@ -16,8 +16,6 @@
         height = 490;
 
         container = document.getElementById("geo-globe");
-        container.style.height = height + "px";
-
         canvas = document.getElementById("canvas");
         canvas.width = width;
         canvas.height = height;

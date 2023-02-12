@@ -3,6 +3,7 @@
  * @author Lucas Bubner, 2023
  */
 import { createRef, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "./Main.css";
 
@@ -23,12 +24,12 @@ function Main() {
         <div id="main">
             <div ref={winRef} />
             <div className="text-container">
-                <p className="text-line">I am a self-taught,</p>
+                <p className="text-line">I am a self-driven,</p>
                 <p className="text-line">young software developer.</p>
             </div>
             {isExplained && (
                 <div id="maincontent">
-                <div id="extd-bg" />
+                    <div id="extd-bg" />
                     <div id="collarband">
                         <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
                             <img id="collar-l" src="/collar.png" />
@@ -43,20 +44,135 @@ function Main() {
                             </div>
                         </AnimationOnScroll>
                     </div>
+                    <div className="text-element big">
+                        <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
+                            <p className="content">Powered by intuition,</p>
+                            <p className="content">influenced by soul.</p>
+                        </AnimationOnScroll>
+                    </div>
                     <div className="text-element">
-                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOut="animate__fadeOutLeft">
-                            <p>
-                                Powered by intuition, <br /> <br /> <br /> influenced by soul.
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I have a strong passion for technology and innovation.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I strive only to the highest of standards.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I build and develop to solve problems.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I have a dedicated work ethic.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I am constantly seeking opportunities to grow.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I ensure my projects are to only of the highest standards.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">
+                                I have a strong sense of responsibility and always strive to exceed expectations.
                             </p>
                         </AnimationOnScroll>
                     </div>
                     <div className="text-element">
-                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOut="animate__fadeOutLeft">
-                            <p>
-                                Stuff <br /> <br /> <br /> here
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I have skills in a wide range of hardware and software tools.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">
+                                I have experience communicating complex ideas in an innovative way.
                             </p>
                         </AnimationOnScroll>
                     </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I captain and program for FTC Robotics Team 15215.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I create intellectual property to improve and provide.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">
+                                I have experience in project management and delivering on time.
+                            </p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I desire to positively impact the world through technology.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I am a high-achieving academic student.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I am a critical thinker.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I am proficient in multiple programming languages.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I am a self-directed learner.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I am committed to continuous learning and professional growth.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I am dedicated to learning and improvement.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">
+                                I am a quick learner and able to adapt to new technologies and environments.
+                            </p>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className="text-element">
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                            <p className="content sm">I am an adaptive problem solver.</p>
+                        </AnimationOnScroll>
+                    </div>
+                    
+                        <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
+                            <div className="text-element">
+                                <p className="content huge">I am Lucas Bubner.</p>
+                            </div>
+                            <div className="mini-element">
+                                <Link to="/i" id="next">View more information ⮞</Link>
+                            </div>
+                        </AnimationOnScroll>
+                    
                 </div>
             )}
         </div>

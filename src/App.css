@@ -6,6 +6,17 @@ body {
     padding: 0;
 }
 
+#skip {
+    transition: opacity 1s;
+    color: #727272;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    text-decoration: none;
+}
+
 #stars {
     display: block;
     position: relative;
