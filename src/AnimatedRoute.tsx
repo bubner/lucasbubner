@@ -11,8 +11,8 @@ function AnimatedRoute() {
                 <Route path="/">
                     <Route index element={<App />} />
                     <Route path="/i" element={<Info />} />
-                    <Route path="*" element={<App />} />
                 </Route>
+                <Route path="*" element={<App />} />
             </Routes>
         </AnimatePresence>
     );
