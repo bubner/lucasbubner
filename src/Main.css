@@ -113,6 +113,11 @@
     }
 }
 
+@media only screen and (max-width: 470px) {
+    #collar-l, #collar-r, #canvas {
+        display: none;
+    }
+}
 
 #extd-bg {
     z-index: -3;

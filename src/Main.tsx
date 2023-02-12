@@ -30,12 +30,12 @@ function Main() {
                 <div id="maincontent">
                 <div id="extd-bg" />
                     <div id="collarband">
-                        {/* <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
                             <img id="collar-l" src="/collar.png" />
                         </AnimationOnScroll>
                         <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}>
                             <img id="collar-r" src="/collar2.png" />
-                        </AnimationOnScroll> */}
+                        </AnimationOnScroll>
                         <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
                             <div id="geo-globe">
                                 <img id="pfp" src="/transparent.png" />
