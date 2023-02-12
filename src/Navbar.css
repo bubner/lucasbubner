@@ -1,0 +1,90 @@
+#navbar {
+    position: fixed;
+    align-items: center;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    width: 30%;
+    height: 75px;
+    margin: auto;
+    background-color: #7f7f7f;
+}
+
+#imagebuttons, #mobileheader {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#mobileheader {
+    display: none;
+}
+
+#imagebuttons:hover, #mobileheader {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    #imagebuttons {
+        display: none;
+    }
+    #mobileheader {
+        display: flex;
+    }
+}
+
+.navbar-img, #mobileheader img {
+    transform: translateY(25%);
+    width: 50px;
+    height: 50px;
+}
+
+#navbar button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.outer {
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    margin: auto;
+    padding: 12px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.inner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #181a1b;
+    color: white;
+    border-radius: 10px;
+    padding: 12px;
+    width: 90%;
+    height: 66%;
+}
+
+.buttonarea button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 12px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    width: 100%;
+    height: fit-content;
+}
+
+#mobileheader > * {
+    transition: fadeIn 0.5s;
+}

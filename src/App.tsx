@@ -36,7 +36,7 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.25 }}
         >
             <div id="intro" style={{ transform: shouldMove ? "translateY(-150vh)" : "translate(0)" }}>
                 {isWritten && !introDone && (
