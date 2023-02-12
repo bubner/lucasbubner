@@ -164,7 +164,7 @@ function Main() {
                         </AnimationOnScroll>
                     </div>
 
-                    <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
+                    <AnimationOnScroll style={{ animationDelay: "1s" }} animateIn="animate__fadeIn" animateOnce={true}>
                         <div className="text-element">
                             <p className="content huge">I am Lucas Bubner.</p>
                         </div>
