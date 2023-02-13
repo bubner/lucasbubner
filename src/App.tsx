@@ -15,7 +15,7 @@ function App() {
     const [shouldMove, setShouldMove] = useState(false);
 
     const handleIntroFinish = () => {
-        window.removeEventListener("scroll", handleIntroFinish);
+        window.removeEventListener("wheel", handleIntroFinish);
         setShouldMove(true);
         setTimeout(() => {
             setIntroDone(true);
@@ -27,7 +27,7 @@ function App() {
         const script = document.createElement("script");
         script.src = "/stars.js";
         document.body.appendChild(script);
-        window.addEventListener("scroll", handleIntroFinish);
+        window.addEventListener("wheel", handleIntroFinish);
     }, [isWritten]);
 
     return (
@@ -73,7 +73,6 @@ function App() {
                     </div>
                 </>
             )}
-            {isWritten && !introDone && <div style={{ height: "1px", display: introDone ? "none" : "block" }} />}
             {introDone && <Main />}
         </motion.div>
     );

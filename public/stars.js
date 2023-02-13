@@ -172,6 +172,7 @@ function init() {
 }
 
 function render() {
+	if (!canvas) return;
 	if (randomMotion) {
 		n++;
 		if (n >= noiseLength) {
