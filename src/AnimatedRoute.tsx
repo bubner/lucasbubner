@@ -1,3 +1,7 @@
+/**
+ * Router module to handle switching between webpages
+ * @author Lucas Bubner, 2023
+ */
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import App from "./App";
