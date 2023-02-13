@@ -17,6 +17,11 @@ function AnimatedRoute() {
                 </Route>
                 <Route path="/i">
                     <Route index element={<Home />} />
+                    <Route path="accomplishments" element={<Home />} />
+                    <Route path="technology" element={<Home />} />
+                    <Route path="honourables" element={<Home />} />
+                    <Route path="projects" element={<Home />} />
+                    <Route path="links" element={<Home />} />
                 </Route>
                 <Route path="*" element={<App />} />
             </Routes>

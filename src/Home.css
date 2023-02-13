@@ -1,5 +1,68 @@
+.container > * {
+    opacity: 0;
+    animation: gen 2s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.container > *:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.container > *:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+.container > *:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
+/* I've used this same keyframe in at least four projects */
+@keyframes gen {
+    0% {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 .content-bg {
+    position: fixed;
+    top: 0;
+    z-index: -1;
     height: 100vh;
     width: 100vw;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+.container {
+    z-index: -1;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    background: radial-gradient(circle at center, #470000, #000000);
+    border: 4px solid #777777;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    margin: 20px;
+    height: fit-content;
+    flex-basis: calc(25% - 40px);
+}
+
+@media only screen and (max-width: 767px) {
+    .box {
+        flex-basis: 75%;
+    }
 }

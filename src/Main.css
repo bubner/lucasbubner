@@ -1,7 +1,3 @@
-#main {
-    animation: fadeIn 4s;
-}
-
 .text-container,
 .text-element {
     display: flex;

@@ -2,7 +2,7 @@
  * Standard information module with links and other metadata.
  * @author Lucas Bubner, 2023
  */
-import { useRef } from "react";
+import { useRef, FC } from "react";
 import { motion } from "framer-motion";
 import { useLocation, useNavigate } from "react-router-dom";
 import Popup from "reactjs-popup";
@@ -15,20 +15,77 @@ function Navbar() {
     const location = useLocation();
     const goto = useNavigate();
 
+    interface PathMap {
+        alt: string;
+        path: string;
+    }
+
+    interface Image extends PathMap {
+        src: string;
+    }
+
+    interface NavbarImageProps {
+        src: string;
+        alt: string;
+        path: string;
+        location: {
+            pathname: string;
+        };
+    }
+
+    interface NavbarButtonProps {
+        alt: string;
+        path: string;
+    }
+
+    const images: Image[] = [
+        { src: "/pfp.svg", alt: "Home", path: "/i" },
+        { src: "/star.svg", alt: "Accomplishments", path: "/i/accomplishments" },
+        { src: "/scr.svg", alt: "Technology", path: "/i/technology" },
+        { src: "/annoc.svg", alt: "Honourables", path: "/i/honourables" },
+        { src: "/at.svg", alt: "Projects", path: "/i/projects" },
+        { src: "/link.svg", alt: "Links", path: "/i/links" },
+    ];
+
+    const buttons: PathMap[] = [
+        { alt: "Home", path: "/i" },
+        { alt: "Accomplishments", path: "/i/accomplishments" },
+        { alt: "Technology", path: "/i/technology" },
+        { alt: "Honourables", path: "/i/honourables" },
+        { alt: "Projects", path: "/i/projects" },
+        { alt: "Links", path: "/i/links" },
+    ];
+
+    const NavbarImage: FC<NavbarImageProps> = ({ src, alt, path, location }) => (
+        <img
+            onClick={() => goto(path)}
+            className={location.pathname === path ? "navbar-img active" : "navbar-img"}
+            src={src}
+            alt={alt}
+        />
+    );
+
+    const NavbarButton: FC<NavbarButtonProps> = ({ alt, path }) => (
+        <button onClick={() => goto(path)}>{alt}</button>
+    );
+
     return (
         <motion.div
-            initial={{ opacity: location.pathname === "/i" ? 1 : 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}>
             <div id="navbar">
                 <div id="imagebuttons">
-                    <img onClick={() => goto("/i")} className="navbar-img" src="/pfp.svg" alt="Home" />
-                    <img onClick={() => goto("/i")} className="navbar-img" src="/star.svg" alt="Accomplishments" />
-                    <img onClick={() => goto("/i")} className="navbar-img" src="/scr.svg" alt="Technology" />
-                    <img onClick={() => goto("/i")} className="navbar-img" src="/annoc.svg" alt="Honourables" />
-                    <img onClick={() => goto("/i")} className="navbar-img" src="/at.svg" alt="Projects" />
-                    <img onClick={() => goto("/i")} className="navbar-img" src="/link.svg" alt="Links" />
+                    {images.map((image) => (
+                        <NavbarImage
+                            key={image.src}
+                            src={image.src}
+                            alt={image.alt}
+                            path={image.path}
+                            location={location}
+                        />
+                    ))}
                 </div>
                 <div id="mobileheader">
                     {/* Reused code from my Bunyips Chatapp. I couldn't be bothered implementing a new popup menu so this will do. */}
@@ -36,65 +93,12 @@ function Navbar() {
                         <>
                             <div className="outer" onClick={tclose} />
                             <div className="inner">
-                                <div className="buttonarea">
-                                    <button
-                                        onClick={() => {
-                                            tclose();
-                                            goto("/i");
-                                        }}>
-                                        Home
-                                    </button>
-                                </div>
-                                <hr />
-                                <div className="buttonarea">
-                                    <button
-                                        onClick={() => {
-                                            tclose();
-                                            goto("/i");
-                                        }}>
-                                        Accomplishments
-                                    </button>
-                                </div>
-                                <hr />
-                                <div className="buttonarea">
-                                    <button
-                                        onClick={() => {
-                                            tclose();
-                                            goto("/i");
-                                        }}>
-                                        Technology
-                                    </button>
-                                </div>
-                                <hr />
-                                <div className="buttonarea">
-                                    <button
-                                        onClick={() => {
-                                            tclose();
-                                            goto("/i");
-                                        }}>
-                                        Honourables
-                                    </button>
-                                </div>
-                                <hr />
-                                <div className="buttonarea">
-                                    <button
-                                        onClick={() => {
-                                            tclose();
-                                            goto("/i");
-                                        }}>
-                                        Projects
-                                    </button>
-                                </div>
-                                <hr />
-                                <div className="buttonarea">
-                                    <button
-                                        onClick={() => {
-                                            tclose();
-                                            goto("/i");
-                                        }}>
-                                        Links
-                                    </button>
-                                </div>
+                                {buttons.map((button) => (
+                                    <div className="buttonarea">
+                                        <NavbarButton key={button.alt} alt={button.alt} path={button.path} />
+                                        <hr />
+                                    </div>
+                                ))}
                             </div>
                         </>
                     </Popup>
