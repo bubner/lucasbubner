@@ -3,12 +3,13 @@
  * @author Lucas Bubner, 2023
  */
 import Navbar from "./Navbar";
+import "./Home.css";
 
 function Home() {
     return (
         <>
             <Navbar />
-            <div>info page</div>
+            <div className="content-bg" />
         </>
     );
 }

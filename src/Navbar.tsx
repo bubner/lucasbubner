@@ -23,7 +23,12 @@ function Navbar() {
             transition={{ duration: 1 }}>
             <div id="navbar">
                 <div id="imagebuttons">
-                    <img onClick={() => goto("/i")} className="navbar-img" src="/" alt="Home" />
+                    <img onClick={() => goto("/i")} className="navbar-img" src="/pfp.svg" alt="Home" />
+                    <img onClick={() => goto("/i")} className="navbar-img" src="/star.svg" alt="Accomplishments" />
+                    <img onClick={() => goto("/i")} className="navbar-img" src="/scr.svg" alt="Technology" />
+                    <img onClick={() => goto("/i")} className="navbar-img" src="/annoc.svg" alt="Honourables" />
+                    <img onClick={() => goto("/i")} className="navbar-img" src="/at.svg" alt="Projects" />
+                    <img onClick={() => goto("/i")} className="navbar-img" src="/link.svg" alt="Links" />
                 </div>
                 <div id="mobileheader">
                     {/* Reused code from my Bunyips Chatapp. I couldn't be bothered implementing a new popup menu so this will do. */}
@@ -41,6 +46,55 @@ function Navbar() {
                                     </button>
                                 </div>
                                 <hr />
+                                <div className="buttonarea">
+                                    <button
+                                        onClick={() => {
+                                            tclose();
+                                            goto("/i");
+                                        }}>
+                                        Accomplishments
+                                    </button>
+                                </div>
+                                <hr />
+                                <div className="buttonarea">
+                                    <button
+                                        onClick={() => {
+                                            tclose();
+                                            goto("/i");
+                                        }}>
+                                        Technology
+                                    </button>
+                                </div>
+                                <hr />
+                                <div className="buttonarea">
+                                    <button
+                                        onClick={() => {
+                                            tclose();
+                                            goto("/i");
+                                        }}>
+                                        Honourables
+                                    </button>
+                                </div>
+                                <hr />
+                                <div className="buttonarea">
+                                    <button
+                                        onClick={() => {
+                                            tclose();
+                                            goto("/i");
+                                        }}>
+                                        Projects
+                                    </button>
+                                </div>
+                                <hr />
+                                <div className="buttonarea">
+                                    <button
+                                        onClick={() => {
+                                            tclose();
+                                            goto("/i");
+                                        }}>
+                                        Links
+                                    </button>
+                                </div>
                             </div>
                         </>
                     </Popup>

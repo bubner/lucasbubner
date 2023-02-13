@@ -163,7 +163,6 @@ function Main() {
                             <p className="content sm">I am an adaptive problem solver.</p>
                         </AnimationOnScroll>
                     </div>
-
                     <AnimationOnScroll style={{ animationDelay: "1s" }} animateIn="animate__fadeIn" animateOnce={true}>
                         <div className="text-element">
                             <p className="content huge">I am Lucas Bubner.</p>

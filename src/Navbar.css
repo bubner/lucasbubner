@@ -8,7 +8,7 @@
     width: 30%;
     height: 75px;
     margin: auto;
-    background-color: #7f7f7f;
+    background-color: #292929;
 }
 
 #imagebuttons, #mobileheader {
@@ -21,11 +21,12 @@
     display: none;
 }
 
-#imagebuttons:hover, #mobileheader {
+#imagebuttons img:hover, #mobileheader img:hover {
     cursor: pointer;
+    background-color: rgba(70, 70, 70, 0.9);
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1160px) {
     #imagebuttons {
         display: none;
     }
@@ -35,6 +36,8 @@
 }
 
 .navbar-img, #mobileheader img {
+    border-radius: 15px;
+    transition: background-color 0.25s;
     transform: translateY(25%);
     width: 50px;
     height: 50px;
@@ -70,7 +73,7 @@
     border-radius: 10px;
     padding: 12px;
     width: 90%;
-    height: 66%;
+    height: 50%;
 }
 
 .buttonarea button {
