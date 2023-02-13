@@ -45,7 +45,7 @@ function App() {
                             <div className="dots" />
                             <canvas id="stars" />
                             <canvas id="pulse" />
-                            <img id="bg" src="/starbg2.png" />
+                            <img id="bg" src="/starsbg.png" />
                             <div className="arrow-container">
                                 <svg className="arrow" onClick={() => handleIntroFinish()} />
                             </div>

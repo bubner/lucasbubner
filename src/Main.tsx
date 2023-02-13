@@ -29,6 +29,7 @@ function Main() {
             </div>
             {isExplained && (
                 <div id="maincontent">
+                    <div id="stars-bg" />
                     <div id="extd-bg" />
                     <div id="collarband">
                         <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
