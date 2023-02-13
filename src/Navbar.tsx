@@ -4,16 +4,16 @@
  */
 import { useRef, FC } from "react";
 import { motion } from "framer-motion";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Popup from "reactjs-popup";
 import { PopupActions } from "../node_modules/reactjs-popup/dist/types";
+import { Goto } from "./AnimatedRoute";
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ goto }: Goto) {
     const tref = useRef<PopupActions>(null);
     const tclose = () => tref.current?.close();
     const location = useLocation();
-    const goto = useNavigate();
 
     interface PathMap {
         alt: string;
@@ -66,7 +66,13 @@ function Navbar() {
     );
 
     const NavbarButton: FC<NavbarButtonProps> = ({ alt, path }) => (
-        <button onClick={() => goto(path)}>{alt}</button>
+        <button
+            onClick={() => {
+                tclose();
+                goto(path);
+            }}>
+            {alt}
+        </button>
     );
 
     return (

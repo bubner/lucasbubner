@@ -3,10 +3,11 @@
  * @author Lucas Bubner, 2023
  */
 import { motion } from "framer-motion";
+import { Goto } from "./AnimatedRoute";
 import Navbar from "./Navbar";
 import "./Home.css";
 
-function Home() {
+function Home({ goto }: Goto) {
     // Gets a quote from my text, "Computational Brilliance."
     const quotes = [
         "Reality's stones cannot be taken under clear circumstances, in which controlling the natural gateway is the beholder's responsibility to make a powerful abstraction of their own understanding.",
@@ -23,7 +24,7 @@ function Home() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}>
-            <Navbar />
+            <Navbar goto={goto} />
             <div className="content-bg" />
             <div className="container">
                 <div className="box">
