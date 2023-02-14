@@ -85,6 +85,10 @@
     overflow: hidden;
 }
 
+.box h1 {
+    line-height: 2rem;
+}
+
 @media only screen and (max-width: 1160px) {
     .box {
         flex-basis: 75%;
