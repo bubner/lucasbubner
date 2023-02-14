@@ -5,12 +5,16 @@
 import { createRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import { awaitImages } from "./AnimatedRoute";
 import "./Main.css";
 
 function Main() {
     const [isExplained, setIsExplained] = useState(false);
+    const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
     const winRef = createRef<HTMLDivElement>();
+
     useEffect(() => {
+        awaitImages().then(() => setIsBackgroundLoaded(true));
         winRef.current?.scrollIntoView({ behavior: "auto" });
         setTimeout(() => {
             setIsExplained(true);
@@ -43,7 +47,7 @@ function Main() {
     ];
 
     return (
-        <div id="main">
+        <div id="main" className={isBackgroundLoaded ? "fade-in" : "fade-out"}>
             <div ref={winRef} />
             <div className="text-container">
                 <p className="text-line">I am a self-driven,</p>

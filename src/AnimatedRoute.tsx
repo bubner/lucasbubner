@@ -13,6 +13,49 @@ import Honour from "./Honour";
 import Proj from "./Proj";
 import Links from "./Links";
 
+export function awaitImages() {
+    return new Promise((resolve, reject) => {
+        resolve(true);
+        // const images = document.querySelectorAll("img, [style*='background-image']") as NodeListOf<
+        //     HTMLImageElement | (HTMLElement & { style: any })
+        // >;
+        // const numImages = images.length;
+
+        // // if (numImages === 0) {
+        // //     resolve(true);
+        // // }
+
+        // let loadedImages = 0;
+        // const imageLoaded = () => {
+        //     loadedImages++;
+        //     if (loadedImages === numImages) {
+        //         images.forEach((img) => {
+        //             img.removeEventListener("load", imageLoaded);
+        //         });
+        //         resolve(true);
+        //     }
+        // };
+
+        // images.forEach((img) => {
+        //     if (img instanceof HTMLImageElement && (img.complete || img.src)) {
+        //         imageLoaded();
+        //     } else if (img instanceof HTMLElement) {
+        //         const matches = img.style.backgroundImage.match(/url\(["']?(.*?)["']?\)/i);
+        //         if (matches) {
+        //             const url = matches[1];
+        //             const bgImg = new Image();
+        //             bgImg.addEventListener("load", imageLoaded);
+        //             bgImg.addEventListener("error", () => reject(new Error(`Failed to load image: ${url}`)));
+        //             bgImg.src = url;
+        //         } else {
+        //             img.addEventListener("load", imageLoaded);
+        //             img.addEventListener("error", () => reject(new Error(`Failed to load image: ${img}`)));
+        //         }
+        //     }
+        // });
+    });
+}
+
 export interface Goto {
     goto: (path: string) => void;
 }
@@ -24,31 +67,7 @@ function AnimatedRoute() {
     const [pageLoaded, setPageLoaded] = useState(false);
 
     useEffect(() => {
-      const images = document.querySelectorAll('img');
-      const numImages = images.length;
-      console.log("run");
-  
-      let loadedImages = 0;
-      const imageLoaded = () => {
-        loadedImages++;
-        if (loadedImages === numImages) {
-          setPageLoaded(true);
-        }
-      };
-  
-      images.forEach((img) => {
-        if (img.complete) {
-          imageLoaded();
-        } else {
-          img.addEventListener('load', imageLoaded);
-        }
-      });
-  
-      return () => {
-        images.forEach((img) => {
-          img.removeEventListener('load', imageLoaded);
-        });
-      };
+        awaitImages().then(() => setPageLoaded(true));
     }, [location]);
 
     function goto(path: string) {
@@ -59,7 +78,7 @@ function AnimatedRoute() {
     }
 
     return (
-        <div className={pageLoaded ? 'fade-in' : 'fade-out'}>
+        <div className={pageLoaded ? "fade-in" : "fade-out"}>
             <AnimatePresence>
                 <Routes location={location} key={location.pathname}>
                     <Route path="/">
