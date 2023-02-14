@@ -6,6 +6,12 @@ body {
     padding: 0;
 }
 
+.rightarrow {
+    height: 24px;
+    position: relative;
+    top: 5px;
+}
+
 #skip {
     transition: opacity 1s;
     color: #727272;

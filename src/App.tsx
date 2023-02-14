@@ -56,7 +56,7 @@ function App() {
             {!introDone && (
                 <>
                     <Link id="skip" to="/i" style={{ opacity: shouldMove ? "0" : "1" }}>
-                        Skip sequence ⮞
+                        Skip sequence <img src="/rightarrow.svg" className="rightarrow" />
                     </Link>
                     <div id="heading" style={{ transform: shouldMove ? "translate(-50vw, -200vh)" : "reset" }}>
                         <Typewriter
