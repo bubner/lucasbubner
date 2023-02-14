@@ -5,7 +5,7 @@
 import { motion } from "framer-motion";
 import { Goto } from "./AnimatedRoute";
 import Navbar from "./Navbar";
-import "./Home.css";
+import "./Boxes.css";
 
 function Home({ goto }: Goto) {
     // Gets a quote from my text, "Computational Brilliance."

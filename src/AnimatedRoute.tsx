@@ -7,6 +7,11 @@ import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import App from "./App";
 import Home from "./Home";
+import Accom from "./Accom";
+import Tech from "./Tech";
+import Honour from "./Honour";
+import Proj from "./Proj";
+import Links from "./Links";
 
 export interface Goto {
     goto: (path: string) => void;
@@ -32,11 +37,11 @@ function AnimatedRoute() {
                 </Route>
                 <Route path="/i">
                     <Route index element={<Home goto={goto} />} />
-                    <Route path="accomplishments" element={<Home goto={goto} />} />
-                    <Route path="technology" element={<Home goto={goto} />} />
-                    <Route path="honourables" element={<Home goto={goto} />} />
-                    <Route path="projects" element={<Home goto={goto} />} />
-                    <Route path="links" element={<Home goto={goto} />} />
+                    <Route path="accomplishments" element={<Accom goto={goto} />} />
+                    <Route path="technology" element={<Tech goto={goto} />} />
+                    <Route path="honourables" element={<Honour goto={goto} />} />
+                    <Route path="projects" element={<Proj goto={goto} />} />
+                    <Route path="links" element={<Links goto={goto} />} />
                 </Route>
                 <Route path="*" element={<App />} />
             </Routes>
