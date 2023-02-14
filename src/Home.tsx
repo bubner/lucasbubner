@@ -23,22 +23,21 @@ function Home({ goto }: Goto) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}>
+            transition={{ duration: 1 }}
+        >
             <Navbar goto={goto} />
             <div className="content-bg" />
             <div className="container">
                 <div className="box">
-                    <h2>Hi!</h2>
+                    <h1>Hi!</h1>
                     <p>
-                        My name is Lucas Bubner. I am an aspiring software developer and current secondary student. I
-                        started programming and development in 2022, before being promoted to the captain of FTC
-                        Robotics Team 15215 in May 2022. Ever since, I have been passionate about a wide range of
-                        computer science topics and continued to expand my knowledge through courses, projects, and
-                        content.
+                        I'm Lucas Bubner, a high school student and aspiring software developer. I started programming
+                        in 2022 and became captain of FTC Robotics Team 15215 in May 2022. I'm passionate about computer
+                        science and constantly expanding my knowledge through courses, projects, and content.
                     </p>
                 </div>
                 <div className="box">
-                    <h2>A word about me</h2>
+                    <h1>A word about me</h1>
                     <p>
                         I specialise in technologies and innovation, looking to develop high-quality applications that
                         target real-world problems. I am vastly improving my toolkit per day, learning the new
@@ -47,9 +46,9 @@ function Home({ goto }: Goto) {
                     </p>
                 </div>
                 <div className="box">
-                    <h2>
+                    <h1>
                         <i>"Computational Brilliance."</i>
-                    </h2>
+                    </h1>
                     <p>
                         <i>{quotes[Math.floor(Math.random() * quotes.length)]}</i>
                     </p>

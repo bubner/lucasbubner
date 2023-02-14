@@ -12,7 +12,8 @@
     background-color: #292929;
 }
 
-#imagebuttons, #mobileheader {
+#imagebuttons,
+#mobileheader {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -22,7 +23,8 @@
     display: none;
 }
 
-#imagebuttons img:hover, #mobileheader img:hover {
+#imagebuttons img:hover,
+#mobileheader img:hover {
     cursor: pointer;
     background-color: rgba(70, 70, 70, 0.9);
 }
@@ -36,7 +38,8 @@
     }
 }
 
-.navbar-img, #mobileheader img {
+.navbar-img,
+#mobileheader img {
     border-radius: 15px;
     transition: background-color 0.25s;
     transform: translateY(25%);
@@ -74,7 +77,7 @@
     border-radius: 10px;
     padding: 12px;
     width: 90%;
-    height: 50%;
+    height: fit-content;
 }
 
 .buttonarea button {

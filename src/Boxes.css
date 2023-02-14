@@ -36,10 +36,15 @@
     z-index: -1;
     height: 100vh;
     width: 100vw;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/bgblur.png");
 }
 
 .container {
+    background: inherit;
     z-index: -1;
     position: relative;
     display: flex;
@@ -49,19 +54,38 @@
     height: 100vh;
 }
 
+.box:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.25);
+    filter: blur(10px);
+}
+
 .box {
-    background: radial-gradient(circle at center, #470000, #000000);
-    border: 4px solid #777777;
-    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
     padding: 20px;
     text-align: center;
     width: 300px;
     margin: 20px;
-    height: fit-content;
+    min-height: 25vh;
     flex-basis: calc(25% - 40px);
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1160px) {
     .box {
         flex-basis: 75%;
     }
