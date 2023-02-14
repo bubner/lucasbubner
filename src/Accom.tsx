@@ -19,7 +19,27 @@ function Accom({ goto }: Goto) {
             <div className="content-bg" />
             <div className="container">
                 <div className="box">
-                    <h1>Accomplishments</h1>
+                    <h1>My accomplishments</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam</p>
+                </div>
+                <div className="box">
+                    <h1>What I'm proud for</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam</p>
+                </div>
+                <div className="box">
+                    <h1>Murray Bridge Bunyips</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam</p>
+                </div>
+                <div className="box">
+                    <h1>Academics</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam</p>
+                </div>
+                <div className="box">
+                    <h1>Programming</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam</p>
+                </div>
+                <div className="box">
+                    <h1>Capabilities</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam</p>
                 </div>
             </div>
