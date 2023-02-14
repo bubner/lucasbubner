@@ -73,8 +73,8 @@ function Main() {
                             <p className="content">influenced by soul.</p>
                         </AnimationOnScroll>
                     </div>
-                    {comments.map((comment) => (
-                        <div className="text-element">
+                    {comments.map((comment, index) => (
+                        <div className="text-element" key={index}>
                             <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
                                 <p className="content sm">{comment}</p>
                             </AnimationOnScroll>

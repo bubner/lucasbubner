@@ -101,8 +101,8 @@ function Navbar({ goto }: Goto) {
                         <>
                             <div className="outer" onClick={tclose} />
                             <div className="inner">
-                                {buttons.map((button) => (
-                                    <div className="buttonarea">
+                                {buttons.map((button, index) => (
+                                    <div className="buttonarea" key={index}>
                                         <NavbarButton key={button.alt} alt={button.alt} path={button.path} />
                                         <hr />
                                     </div>
