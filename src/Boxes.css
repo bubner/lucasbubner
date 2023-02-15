@@ -1,7 +1,7 @@
 .container > * {
     opacity: 0;
     animation: gen 2s;
-    animation-delay: 0.8s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
 
@@ -15,6 +15,22 @@
 
 .container > *:nth-child(3) {
     animation-delay: 1.4s;
+}
+
+.container > *:nth-child(4) {
+    animation-delay: 1.6s;
+}
+
+.container > *:nth-child(5) {
+    animation-delay: 1.8s;
+}
+
+.container > *:nth-child(6) {
+    animation-delay: 2s;
+}
+
+.container > *:nth-child(7) {
+    animation-delay: 2.2s;
 }
 
 /* I've used this same keyframe in at least four projects */
@@ -51,6 +67,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    align-content: center;
     height: 100vh;
 }
 
@@ -83,6 +100,7 @@
     z-index: 1;
     background: inherit;
     overflow: hidden;
+    backdrop-filter: blur(15px);
 }
 
 .box h1 {
