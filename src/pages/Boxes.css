@@ -107,6 +107,14 @@
     transition: box-shadow 350ms;
 }
 
+.bsm {
+    min-height: fit-content;
+}
+
+.clk:hover {
+    cursor: pointer;
+}
+
 .box:hover {
     box-shadow: 0 0 20px #ed1c24;
 }
