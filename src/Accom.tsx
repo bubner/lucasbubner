@@ -16,9 +16,7 @@ function Accom({ goto }: Goto) {
             transition={{ duration: 1 }}
         >
             <Navbar goto={goto} />
-            <div className="content-bg">
-                <img src="/bgblur.png" alt="Background image" />
-            </div>
+            <div className="content-bg" />
             <div className="container">
                 <div className="box">
                     <h1>My accomplishments</h1>
