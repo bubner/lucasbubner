@@ -17,7 +17,7 @@ function Tech() {
                         programming languages in order to implement solutions.
                     </p>
                 </div>
-                <div className="box" style={{ backgroundImage: "url('/reactts.png')" }}>
+                <div className="box" style={{ backgroundImage: "url('/reactts.png')", backgroundSize: "100%" }}>
                     <h1>TypeScript & React</h1>
                     <p>
                         Utilising TypeScript in complex web development environments mixed with the React framework to
