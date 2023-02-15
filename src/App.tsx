@@ -12,6 +12,7 @@ import "./App.css";
 function App() {
     const [isWritten, setIsWritten] = useState(false);
     const [introDone, setIntroDone] = useState(false);
+    const [isBgLoaded, setIsBgLoaded] = useState(false);
     const [shouldMove, setShouldMove] = useState(false);
 
     const handleIntroFinish = () => {
@@ -30,6 +31,23 @@ function App() {
         window.addEventListener("wheel", handleIntroFinish);
     }, [isWritten]);
 
+    function waitForBg() {
+        const bg = document.getElementById("bg") as HTMLImageElement;
+        if (bg) {
+            if (bg.complete) {
+                setIsBgLoaded(true);
+            } else {
+                bg.addEventListener("load", () => setIsBgLoaded(true));
+            }
+        } else {
+            setTimeout(waitForBg, 1000);
+        }
+    }
+
+    useEffect(() => {
+        waitForBg();
+    }, []);
+
     return (
         <motion.div
             id="App"
@@ -45,7 +63,7 @@ function App() {
                             <div className="dots" />
                             <canvas id="stars" />
                             <canvas id="pulse" />
-                            <img id="bg" src="/starsbg.png" />
+                            <img id="bg" src="/starsbg.png" className={isBgLoaded ? "fade-in" : "fade-out"} />
                             <div className="arrow-container">
                                 <svg className="arrow" onClick={() => handleIntroFinish()} />
                             </div>
