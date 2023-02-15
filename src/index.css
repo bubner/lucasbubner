@@ -47,7 +47,7 @@ body::-webkit-scrollbar {
 }
 
 .fade-in {
-    opacity: 1;
+    opacity: reset;
     animation: fadeIn ease 1s;
     -webkit-animation: fadeIn ease 1s;
     -moz-animation: fadeIn ease 1s;
@@ -69,7 +69,7 @@ body::-webkit-scrollbar {
         opacity: 0;
     }
     100% {
-        opacity: 1;
+        opacity: reset;
     }
 }
 
@@ -78,7 +78,7 @@ body::-webkit-scrollbar {
         opacity: 0;
     }
     100% {
-        opacity: 1;
+        opacity: reset;
     }
 }
 
@@ -87,7 +87,7 @@ body::-webkit-scrollbar {
         opacity: 0;
     }
     100% {
-        opacity: 1;
+        opacity: reset;
     }
 }
 
@@ -96,7 +96,7 @@ body::-webkit-scrollbar {
         opacity: 0;
     }
     100% {
-        opacity: 1;
+        opacity: reset;
     }
 }
 
@@ -105,7 +105,7 @@ body::-webkit-scrollbar {
         opacity: 0;
     }
     100% {
-        opacity: 1;
+        opacity: reset;
     }
 }
 

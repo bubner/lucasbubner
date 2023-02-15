@@ -2,24 +2,37 @@
  * Content module with primary information showcase.
  * @author Lucas Bubner, 2023
  */
-import { createRef, useEffect, useState } from "react";
+import { createRef, useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "./Main.css";
 
 function Main() {
     const [isExplained, setIsExplained] = useState(false);
-    const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
+    const [isRedLineReady, setIsRedLineReady] = useState(false);
+    const scriptAppended = useRef(false);
     const winRef = createRef<HTMLDivElement>();
 
     useEffect(() => {
         winRef.current?.scrollIntoView({ behavior: "auto" });
         setTimeout(() => {
             setIsExplained(true);
-            const script = document.createElement("script");
-            script.src = "/globe.js";
-            document.body.appendChild(script);
+            if (!scriptAppended.current) {
+                const script = document.createElement("script");
+                script.src = "/globe.js";
+                document.body.appendChild(script);
+                scriptAppended.current = true;
+            }
         }, 1000);
+    }, []);
+
+    // Await the background image to load before fading the screen in
+    useEffect(() => {
+        const img = new Image();
+        img.src = "/holobg.png";
+        img.onload = () => {
+            setIsRedLineReady(true);
+        };
     }, []);
 
     const comments = [
@@ -54,7 +67,7 @@ function Main() {
             {isExplained && (
                 <div id="maincontent">
                     <div id="stars-bg" />
-                    <div id="extd-bg" />
+                    <div id="extd-bg" className={isRedLineReady ? "fade-in" : "fade-out"} />
                     <div id="collarband">
                         <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
                             <img id="collar-l" src="/collar.png" />

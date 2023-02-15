@@ -2,12 +2,23 @@
  * Homepage component after initial landing
  * @author Lucas Bubner, 2023
  */
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Goto } from "./AnimatedRoute";
 import Navbar from "./Navbar";
 import "./Boxes.css";
 
 function Home({ goto }: Goto) {
+    // Ensure that the background image is loaded before displaying anything
+    // We only have to do this on the main page as it will be the landing page and subsequent pages will be loaded after the main page
+    const [loaded, setLoaded] = useState(false);
+
+    useEffect(() => {
+        const img = new Image();
+        img.src = "/bgblur.png";
+        img.onload = () => setLoaded(true);
+    }, []);
+
     // Gets a quote from my text, "Computational Brilliance."
     const quotes = [
         "Reality's stones cannot be taken under clear circumstances, in which controlling the natural gateway is the beholder's responsibility to make a powerful abstraction of their own understanding.",
@@ -24,6 +35,7 @@ function Home({ goto }: Goto) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
+            className={loaded ? "fade-in" : "fade-out"}
         >
             <Navbar goto={goto} />
             <div className="content-bg" />
