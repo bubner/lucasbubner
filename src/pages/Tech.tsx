@@ -2,20 +2,12 @@
  * Technologies I work with display page.
  * @author Lucas Bubner, 2023
  */
-import { motion } from "framer-motion";
-import { Goto } from "./AnimatedRoute";
-import Navbar from "./Navbar";
 import "./Boxes.css";
+import PageWrapper from "../PageWrapper";
 
-function Tech({ goto }: Goto) {
+function Tech() {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-        >
-            <Navbar goto={goto} />
+        <PageWrapper>
             <div className="content-bg" />
             <div className="container">
                 <div className="box">
@@ -23,7 +15,7 @@ function Tech({ goto }: Goto) {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam</p>
                 </div>
             </div>
-        </motion.div>
+        </PageWrapper>
     );
 }
 

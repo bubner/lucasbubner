@@ -5,17 +5,14 @@
 import { useState } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { GotoContext } from "./GotoContext";
 import App from "./App";
-import Home from "./Home";
-import Accom from "./Accom";
-import Tech from "./Tech";
-import Honour from "./Honour";
-import Proj from "./Proj";
-import Links from "./Links";
-
-export interface Goto {
-    goto: (path: string) => void;
-}
+import Home from "./pages/Home";
+import Accom from "./pages/Accom";
+import Tech from "./pages/Tech";
+import Honour from "./pages/Honour";
+import Proj from "./pages/Proj";
+import Links from "./pages/Links";
 
 function AnimatedRoute() {
     const location = useLocation();
@@ -30,24 +27,24 @@ function AnimatedRoute() {
     }
 
     return (
-        <div>
+        <GotoContext.Provider value={goto}>
             <AnimatePresence>
                 <Routes location={location} key={location.pathname}>
                     <Route path="/">
                         <Route index element={<App />} />
                     </Route>
                     <Route path="/i">
-                        <Route index element={<Home goto={goto} />} />
-                        <Route path="accomplishments" element={<Accom goto={goto} />} />
-                        <Route path="technology" element={<Tech goto={goto} />} />
-                        <Route path="honourables" element={<Honour goto={goto} />} />
-                        <Route path="projects" element={<Proj goto={goto} />} />
-                        <Route path="links" element={<Links goto={goto} />} />
+                        <Route index element={<Home />} />
+                        <Route path="accomplishments" element={<Accom />} />
+                        <Route path="technology" element={<Tech />} />
+                        <Route path="honourables" element={<Honour />} />
+                        <Route path="projects" element={<Proj />} />
+                        <Route path="links" element={<Links />} />
                     </Route>
                     <Route path="*" element={<App />} />
                 </Routes>
             </AnimatePresence>
-        </div>
+        </GotoContext.Provider>
     );
 }
 

@@ -3,12 +3,10 @@
  * @author Lucas Bubner, 2023
  */
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { Goto } from "./AnimatedRoute";
-import Navbar from "./Navbar";
+import PageWrapper from "../PageWrapper";
 import "./Boxes.css";
 
-function Home({ goto }: Goto) {
+function Home() {
     // Ensure that the background image is loaded before displaying anything
     // We only have to do this on the main page as it will be the landing page and subsequent pages will be loaded after the main page
     const [loaded, setLoaded] = useState(false);
@@ -30,13 +28,7 @@ function Home({ goto }: Goto) {
     ];
 
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-        >
-            <Navbar goto={goto} />
+        <PageWrapper>
             <div className={loaded ? "fade-in content-bg" : "fade-out content-bg"} />
             <div className="container">
                 <div className="box">
@@ -65,7 +57,7 @@ function Home({ goto }: Goto) {
                     </p>
                 </div>
             </div>
-        </motion.div>
+        </PageWrapper>
     );
 }
 

@@ -1,19 +1,20 @@
 /**
- * Standard information module with links and other metadata.
+ * Standard navigation module with page linking functionality for both mobile and desktop.
  * @author Lucas Bubner, 2023
  */
-import { useRef, FC } from "react";
+import { useRef, FC, useContext } from "react";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import Popup from "reactjs-popup";
 import { PopupActions } from "../node_modules/reactjs-popup/dist/types";
-import { Goto } from "./AnimatedRoute";
+import { GotoContext } from "./GotoContext";
 import "./Navbar.css";
 
-function Navbar({ goto }: Goto) {
+function Navbar() {
     const tref = useRef<PopupActions>(null);
     const tclose = () => tref.current?.close();
     const location = useLocation();
+    const goto = useContext(GotoContext);
 
     interface PathMap {
         alt: string;
