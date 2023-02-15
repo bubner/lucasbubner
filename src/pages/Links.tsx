@@ -39,7 +39,7 @@ function Links() {
                     style={{ backgroundImage: "url('/proton.png')", backgroundSize: "25%" }}
                     onClick={() => {
                         alert("lkbubner@proton.me");
-                        window.open("mailto:lkbubner@proton.me");
+                        window.open("mailto:lkbubner@proton.me", "_parent");
                     }}
                 >
                     <h1>Personal Email</h1>
