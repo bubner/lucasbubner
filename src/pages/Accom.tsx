@@ -15,7 +15,7 @@ function Accom() {
                     <p>Attained knowledge of multiple programming langugages and processing through the CS50x online course, shown levels of leadership and evaluation through captaincy of FTC Robotics Team 15215, multi-year Murray Bridge High School Dux.</p>
                 </div>
                 <div className="box">
-                    <h1>What I'm proud for</h1>
+                    <h1>What I'm proud of</h1>
                     <p>Development of industry-standard web applications using leading-edge technologies, achieving high grade work production in all my academic study, and being a proud captain of the Murray Bridge Bunyips.</p>
                 </div>
                 <div className="box">

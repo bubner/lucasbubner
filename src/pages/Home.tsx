@@ -31,7 +31,7 @@ function Home() {
         <PageWrapper>
             <div className={loaded ? "fade-in content-bg" : "fade-out content-bg"} />
             <div className="container">
-                <div className="box">
+                <div className="box" style={{ backgroundImage: "url('/hololine.png')", backgroundSize: "100%" }}>
                     <h1>Hi!</h1>
                     <p>
                         I'm Lucas Bubner, a high school student and aspiring software developer. I started programming
@@ -39,8 +39,8 @@ function Home() {
                         science and constantly expanding my knowledge through courses, projects, and content.
                     </p>
                 </div>
-                <div className="box">
-                    <h1>A word about me</h1>
+                <div className="box" style={{ backgroundImage: "url('/holov2te2.png')", backgroundSize: "75%" }}>
+                    <h1>What I do</h1>
                     <p>
                         I specialise in technologies and innovation, looking to develop high-quality applications that
                         target real-world problems. I am vastly improving my toolkit per day, learning the new
@@ -48,7 +48,7 @@ function Home() {
                         self-motivated and self-directed in what I do, and I'm more than passionate about what I enjoy.
                     </p>
                 </div>
-                <div className="box">
+                <div className="box" style={{ backgroundImage: "url('/transparent.png')", backgroundSize: "60%" }}>
                     <h1>
                         <i>"Computational Brilliance."</i>
                     </h1>

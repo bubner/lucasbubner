@@ -68,7 +68,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .box:before {
@@ -99,8 +99,16 @@
     position: relative;
     z-index: 1;
     background: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     overflow: hidden;
     backdrop-filter: blur(15px);
+    transition: box-shadow 350ms;
+}
+
+.box:hover {
+    box-shadow: 0 0 20px #ed1c24;
 }
 
 .box h1 {
