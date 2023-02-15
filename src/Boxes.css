@@ -40,6 +40,7 @@
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    /* Load the background here and in the HTML so frosted glass effect still works due to CSS inheritance */
     background-image: url("/bgblur.png");
 }
 

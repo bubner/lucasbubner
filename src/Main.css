@@ -153,6 +153,7 @@
     width: 100%;
     height: 420%;
     object-fit: cover;
+    /* This background image should load before the <img> await cycle completes */
     background-image: url("/starsbg.png");
     background-size: 200%;
     background-repeat: repeat;
@@ -165,17 +166,13 @@
 }
 
 #extd-bg {
-    z-index: -3;
     position: absolute;
+    opacity: 0.33;
     top: 0;
-    opacity: 0.3;
+    left: 0;
     width: 100%;
-    height: 0;
-    padding-top: 212.604%; /* (img-height / img-width * container-width) = (4082 / 1920 * 100)*/
+    height: 100%;
     object-fit: cover;
-    background-image: url("/holobg.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
 }
 
 #canvas {

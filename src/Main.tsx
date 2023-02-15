@@ -56,7 +56,9 @@ function Main() {
             {isExplained && (
                 <div id="maincontent">
                     <div id="stars-bg" />
-                    <div id="extd-bg" />
+                    <div id="extd-bg" style={{ position: "absolute" }}>
+                        <img src="/holobg.png" alt="Background Image" />
+                    </div>
                     <div id="collarband">
                         <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
                             <img id="collar-l" src="/collar.png" />
