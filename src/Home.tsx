@@ -35,10 +35,9 @@ function Home({ goto }: Goto) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
-            className={loaded ? "fade-in" : "fade-out"}
         >
             <Navbar goto={goto} />
-            <div className="content-bg" />
+            <div className={loaded ? "fade-in content-bg" : "fade-out content-bg"} />
             <div className="container">
                 <div className="box">
                     <h1>Hi!</h1>

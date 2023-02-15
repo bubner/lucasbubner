@@ -56,7 +56,7 @@ body::-webkit-scrollbar {
 }
 
 .fade-out {
-    opacity: 0;
+    opacity: 0 !important;
     animation: fadeOut ease 0.25s;
     -webkit-animation: fadeOut ease 0.25s;
     -moz-animation: fadeOut ease 0.25s;
