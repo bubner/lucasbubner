@@ -103,19 +103,20 @@
     background-position: center;
     background-size: cover;
     overflow: hidden;
-    backdrop-filter: blur(10px);
-    transition: box-shadow 350ms;
+    transition: box-shadow 350ms, backdrop-filter 350ms;
 }
 
 .bsm {
     min-height: fit-content;
 }
 
-.clk:hover {
-    cursor: pointer;
+.box:hover {
+    box-shadow: 0 0 33px #505050;
+    backdrop-filter: blur(10px);
 }
 
-.box:hover {
+.clk:hover {
+    cursor: pointer;
     box-shadow: 0 0 20px #ed1c24;
 }
 
