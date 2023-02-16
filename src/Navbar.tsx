@@ -58,12 +58,15 @@ function Navbar() {
     ];
 
     const NavbarImage: FC<NavbarImageProps> = ({ src, alt, path, location }) => (
-        <img
-            onClick={() => goto(path)}
-            className={location.pathname === path ? "navbar-img active" : "navbar-img"}
-            src={src}
-            alt={alt}
-        />
+        <div className="navbar">
+            <img
+                onClick={() => goto(path)}
+                className={location.pathname === path ? "navbar-img active" : "navbar-img"}
+                src={src}
+                alt={alt}
+            />
+            {location.pathname === path ? <div id="locator" /> : null}
+        </div>
     );
 
     const NavbarButton: FC<NavbarButtonProps> = ({ alt, path }) => (
@@ -103,7 +106,11 @@ function Navbar() {
                             <div className="outer" onClick={tclose} />
                             <div className="inner">
                                 {buttons.map((button, index) => (
-                                    <div className="buttonarea" key={index}>
+                                    <div
+                                        className="buttonarea"
+                                        style={{ fontWeight: location.pathname === button.path ? "800" : "revert" }}
+                                        key={index}
+                                    >
                                         <NavbarButton key={button.alt} alt={button.alt} path={button.path} />
                                         <hr />
                                     </div>

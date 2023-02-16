@@ -52,7 +52,6 @@
     z-index: -1;
     height: 100vh;
     width: 100vw;
-    /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -103,7 +102,7 @@
     background-position: center;
     background-size: cover;
     overflow: hidden;
-    transition: box-shadow 350ms, backdrop-filter 350ms;
+    transition: box-shadow 500ms, backdrop-filter 500ms;
 }
 
 .bsm {
@@ -111,7 +110,7 @@
 }
 
 .box:hover {
-    box-shadow: 0 0 33px #505050;
+    box-shadow: inset 0 0 33px #505050, 0 0 24px #505050;
     backdrop-filter: blur(10px);
 }
 

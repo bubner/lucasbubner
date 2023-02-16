@@ -95,3 +95,26 @@
 #mobileheader > * {
     transition: fadeIn 0.5s;
 }
+
+#locator {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0;
+    width: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+
+#locator::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -12.5px;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: #ed1c24;
+}

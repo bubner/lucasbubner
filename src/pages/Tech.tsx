@@ -42,8 +42,8 @@ function Tech() {
                 <div className="box" style={{ backgroundImage: "url('/scrmod.svg')", backgroundSize: "50%" }}>
                     <h1>Linux systems</h1>
                     <p>
-                        Familiar with the Bash command line and a deep understanding of internal computer system kernels
-                        and low-level implementations such as hardware operations.
+                        Experienced in Linux servers, Bash command line, and knowledgeable in computer system kernels,
+                        low-level implementations, and hardware operations.
                     </p>
                 </div>
                 <div className="box" style={{ backgroundImage: "url('/git.svg')", backgroundSize: "40%" }}>

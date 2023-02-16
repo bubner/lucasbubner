@@ -7,7 +7,7 @@ body {
     user-select: none;
     overflow-x: hidden;
     --scrollbarBG: #000000;
-    --thumbBG: #343a40;
+    --thumbBG: #ffffff;
 }
 
 :root {
