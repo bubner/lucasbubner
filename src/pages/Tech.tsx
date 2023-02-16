@@ -42,16 +42,16 @@ function Tech() {
                 <div className="box" style={{ backgroundImage: "url('/scrmod.svg')", backgroundSize: "50%" }}>
                     <h1>Linux systems</h1>
                     <p>
-                        Experienced in Linux servers, Bash command line, and knowledgeable in computer system kernels,
-                        low-level implementations, and hardware operations.
+                        Experienced in the operation of Linux servers, Bash command line tools, and capable of data and
+                        information manipulation through relational database queries and file management abilities.
                     </p>
                 </div>
                 <div className="box" style={{ backgroundImage: "url('/git.svg')", backgroundSize: "40%" }}>
                     <h1>Services & workflows</h1>
                     <p>
                         Utilised Backend-as-a-Service products such as Google's Firebase to build highly scalable
-                        applications. Integrates the Git workflow into projects and is familiar with branch and database
-                        protection rules.
+                        applications with OAuth and relational databases. Integrates the Git workflow into projects and is proficient with branch, database,
+                        and end-user protection rules to build rigourous applications.
                     </p>
                 </div>
             </div>
