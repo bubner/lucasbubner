@@ -6,22 +6,22 @@
 
 // Settings
 var canvas = document.getElementById("stars"),
-    particleCount = 150,
+    particleCount = 100,
 	flareCount = 10,
-	motion = 0.025,
+	motion = 0.03,
 	tilt = 0.05,
 	color = '#ed1c24',
-	particleSizeBase = 1.25,
+	particleSizeBase = 1.1,
 	particleSizeMultiplier = 0.5,
 	flareSizeBase = 100,
 	flareSizeMultiplier = 100,
-	lineWidth = 2,
-	linkChance = 75, // chance per frame of link, higher = smaller chance
+	lineWidth = 1,
+	linkChance = 5, // chance per frame of link, higher = smaller chance
 	linkLengthMin = 7, // min linked vertices
 	linkLengthMax = 10, // max linked vertices
-	linkOpacity = 0.75; // number between 0 & 1
-	linkFade = 250, // link fade-out frames
-	linkSpeed = 0.75, // distance a link travels in 1 frame
+	linkOpacity = 0.2; // number between 0 & 1
+	linkFade = 400, // link fade-out frames
+	linkSpeed = 0.1, // distance a link travels in 1 frame
 	glareAngle = -60,
 	glareOpacityMultiplier = 0.01,
 	renderParticles = true,
@@ -31,7 +31,7 @@ var canvas = document.getElementById("stars"),
 	renderMesh = false,
 	flicker = true,
 	flickerSmoothing = 15, // higher = smoother flicker
-	blurSize = 0,
+	blurSize = 1,
 	orbitTilt = true,
 	randomMotion = true,
 	noiseLength = 1000,
@@ -139,17 +139,17 @@ function init() {
 	// Motion mode
 	//if (Modernizr && Modernizr.deviceorientation) {
 	if ('ontouchstart' in document.documentElement && window.DeviceOrientationEvent) {
-		console.log('Using device orientation');
-		window.addEventListener('deviceorientation', function(e) {
-			mouse.x = (canvas.clientWidth / 2) - ((e.gamma / 90) * (canvas.clientWidth / 2) * 2);
-			mouse.y = (canvas.clientHeight / 2) - ((e.beta / 90) * (canvas.clientHeight / 2) * 2);
-			//console.log('Center: x:'+(canvas.clientWidth/2)+' y:'+(canvas.clientHeight/2));
-			//console.log('Orientation: x:'+mouse.x+' ('+e.gamma+') y:'+mouse.y+' ('+e.beta+')');
-		}, true);
+		// lag
+		// console.log('Using device orientation');
+		// window.addEventListener('deviceorientation', function(e) {
+		// 	mouse.x = (canvas.clientWidth / 2) - ((e.gamma / 90) * (canvas.clientWidth / 2) * 2);
+		// 	mouse.y = (canvas.clientHeight / 2) - ((e.beta / 90) * (canvas.clientHeight / 2) * 2);
+		// 	//console.log('Center: x:'+(canvas.clientWidth/2)+' y:'+(canvas.clientHeight/2));
+		// 	//console.log('Orientation: x:'+mouse.x+' ('+e.gamma+') y:'+mouse.y+' ('+e.beta+')');
+		// }, true);
 	}
 	else {
 		// Mouse move listener
-		console.log('Using mouse movement');
 		document.body.addEventListener('mousemove', function(e) {
 			//console.log('moved');
 			mouse.x = e.clientX;
@@ -172,6 +172,7 @@ function init() {
 }
 
 function render() {
+	if (!canvas) return;
 	if (randomMotion) {
 		n++;
 		if (n >= noiseLength) {
@@ -259,6 +260,7 @@ function render() {
 }
 
 function resize() {
+	if (!canvas) return;
 	canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
 	canvas.height = canvas.width * (canvas.clientHeight / canvas.clientWidth);
 }
