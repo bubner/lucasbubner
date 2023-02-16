@@ -50,8 +50,9 @@ function Tech() {
                     <h1>Services & workflows</h1>
                     <p>
                         Utilised Backend-as-a-Service products such as Google's Firebase to build highly scalable
-                        applications with OAuth and relational databases. Integrates the Git workflow into projects and is proficient with branch, database,
-                        and end-user protection rules to build rigourous applications.
+                        applications with OAuth and relational databases. Integrates the Git workflow into projects and
+                        is proficient with branch, database, and end-user protection rules to build rigourous
+                        applications.
                     </p>
                 </div>
             </div>
