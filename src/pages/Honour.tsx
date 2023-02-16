@@ -9,7 +9,7 @@ function Honour() {
     return (
         <PageWrapper>
             <div className="content-bg" />
-            <div className="container">
+            <div className="container no-mid">
                 <div className="box">
                     <h1>CS50 Certificate</h1>
                     <p>

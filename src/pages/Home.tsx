@@ -30,7 +30,7 @@ function Home() {
     return (
         <PageWrapper>
             <div className={loaded ? "fade-in content-bg" : "fade-out content-bg"} />
-            <div className="container">
+            <div className="container no-mid">
                 <div className="box" style={{ backgroundImage: "url('/hololine.png')", backgroundSize: "100%" }}>
                     <h1>Hi!</h1>
                     <p>

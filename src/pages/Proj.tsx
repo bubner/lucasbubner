@@ -9,7 +9,7 @@ function Proj() {
     return (
         <PageWrapper>
             <div className="content-bg" />
-            <div className="container">
+            <div className="container no-mid">
                 <div
                     className="box clk"
                     style={{ backgroundImage: "url('/bunyipsc.png')", backgroundSize: "40%" }}

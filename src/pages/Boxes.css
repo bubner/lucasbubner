@@ -59,6 +59,7 @@
 }
 
 .container {
+    transition: margin-top 300ms;
     background: inherit;
     z-index: -1;
     position: relative;
@@ -68,6 +69,21 @@
     align-items: center;
     align-content: center;
     min-height: 100vh;
+}
+
+@media only screen and (max-width: 1650px) {
+    .container:not(.no-mid) {
+        margin-top: 5%;
+    }
+    .no-mid {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin-top: 15%;
+    }
 }
 
 .box:before {
