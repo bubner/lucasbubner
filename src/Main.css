@@ -179,8 +179,7 @@
 }
 
 #canvas {
-    animation-delay: 1s;
-    animation: rotation 75s infinite linear;
+    transform: translate(-50%, -50%);
     position: absolute;
     opacity: 0.6;
     top: 100%;
@@ -200,15 +199,6 @@
     transform: translate(-50%, -50%);
     top: 100%;
     left: 50%;
-}
-
-@keyframes rotation {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
 }
 
 .text-line:nth-child(2) {
