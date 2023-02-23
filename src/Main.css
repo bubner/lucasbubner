@@ -234,3 +234,23 @@
 .sm {
     font-size: calc(0.2rem + 2vw);
 }
+
+.scroll-indicator {
+    position: absolute;
+    top: 9%;
+    right: 0%;
+    margin-left: -20px;
+}
+
+#mouse {
+    opacity: 0.8;
+    display: block;
+    width: 50px;
+    height: 100%;
+    background-image: url("/mouse.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+    animation: headShake 1.5s 5s infinite;
+    transition: opacity 1s;
+}
