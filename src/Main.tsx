@@ -10,8 +10,14 @@ import "./Main.css";
 function Main() {
     const [isExplained, setIsExplained] = useState(false);
     const [isRedLineReady, setIsRedLineReady] = useState(false);
+    const [hasntScrolled, setHasntScrolled] = useState(true);
     const scriptAppended = useRef(false);
     const winRef = createRef<HTMLDivElement>();
+
+    const scrollListener = () => {
+        setHasntScrolled(false);
+        window.removeEventListener("scroll", scrollListener);
+    };
 
     useEffect(() => {
         winRef.current?.scrollIntoView({ behavior: "auto" });
@@ -24,15 +30,16 @@ function Main() {
                 scriptAppended.current = true;
             }
         }, 1000);
-    }, []);
 
-    // Await the background image to load before fading the screen in
-    useEffect(() => {
+        // Await for the background image to load before rendering it
         const img = new Image();
         img.src = "/holobg.png";
         img.onload = () => {
             setIsRedLineReady(true);
         };
+
+        // Attach a listener to to remove the scroll indicator when the user scrolls
+        window.addEventListener("scroll", scrollListener);
     }, []);
 
     const comments = [
@@ -65,47 +72,56 @@ function Main() {
                 <p className="text-line">young software developer.</p>
             </div>
             {isExplained && (
-                <div id="maincontent">
-                    <div id="stars-bg" />
-                    <div id="extd-bg" className={isRedLineReady ? "fade-in" : "fade-out"} />
-                    <div id="collarband">
-                        <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
-                            <img id="collar-l" src="/collar.png" />
-                        </AnimationOnScroll>
-                        <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}>
-                            <img id="collar-r" src="/collar2.png" />
-                        </AnimationOnScroll>
-                        <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
-                            <div id="geo-globe">
-                                <img id="pfp" src="/transparent.png" />
-                                <canvas id="canvas" />
+                <>
+                    <div className="scroll-indicator animate__animated animate__bounceInDown">
+                        <svg id="mouse" style={{ opacity: hasntScrolled ? "1" : "0" }} />
+                    </div>
+                    <div id="maincontent">
+                        <div id="stars-bg" />
+                        <div id="extd-bg" className={isRedLineReady ? "fade-in" : "fade-out"} />
+                        <div id="collarband">
+                            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                                <img id="collar-l" src="/collar.png" />
+                            </AnimationOnScroll>
+                            <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}>
+                                <img id="collar-r" src="/collar2.png" />
+                            </AnimationOnScroll>
+                            <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
+                                <div id="geo-globe">
+                                    <img id="pfp" src="/transparent.png" />
+                                    <canvas id="canvas" />
+                                </div>
+                            </AnimationOnScroll>
+                        </div>
+                        <div className="text-element big">
+                            <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
+                                <p className="content">Powered by intuition,</p>
+                                <p className="content">influenced by soul.</p>
+                            </AnimationOnScroll>
+                        </div>
+                        {comments.map((comment, index) => (
+                            <div className="text-element" key={index}>
+                                <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                                    <p className="content sm">{comment}</p>
+                                </AnimationOnScroll>
+                            </div>
+                        ))}
+                        <AnimationOnScroll
+                            style={{ animationDelay: "1s" }}
+                            animateIn="animate__fadeIn"
+                            animateOnce={true}
+                        >
+                            <div className="text-element">
+                                <p className="content huge">I am Lucas Bubner.</p>
+                            </div>
+                            <div className="mini-element">
+                                <Link to="/i" id="next">
+                                    View more information <img src="/rightarrow.svg" className="rightarrow" />
+                                </Link>
                             </div>
                         </AnimationOnScroll>
                     </div>
-                    <div className="text-element big">
-                        <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
-                            <p className="content">Powered by intuition,</p>
-                            <p className="content">influenced by soul.</p>
-                        </AnimationOnScroll>
-                    </div>
-                    {comments.map((comment, index) => (
-                        <div className="text-element" key={index}>
-                            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
-                                <p className="content sm">{comment}</p>
-                            </AnimationOnScroll>
-                        </div>
-                    ))}
-                    <AnimationOnScroll style={{ animationDelay: "1s" }} animateIn="animate__fadeIn" animateOnce={true}>
-                        <div className="text-element">
-                            <p className="content huge">I am Lucas Bubner.</p>
-                        </div>
-                        <div className="mini-element">
-                            <Link to="/i" id="next">
-                                View more information <img src="/rightarrow.svg" className="rightarrow" />
-                            </Link>
-                        </div>
-                    </AnimationOnScroll>
-                </div>
+                </>
             )}
         </div>
     );
