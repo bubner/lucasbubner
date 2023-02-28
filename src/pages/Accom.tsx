@@ -14,16 +14,16 @@ function Accom() {
                     <h1>My accomplishments</h1>
                     <p>
                         Attained knowledge of multiple programming langugages and processing through the CS50x online
-                        course, shown levels of leadership and evaluation through captaincy of FTC Robotics Team 15215,
-                        multi-year Murray Bridge High School Dux.
+                        course and self-learning, shown levels of leadership and evaluation through captaincy of FTC Robotics Team 15215,
+                        and given multi-year Murray Bridge High School Dux awards.
                     </p>
                 </div>
                 <div className="box">
                     <h1>What I'm proud of</h1>
                     <p>
-                        Development of industry-standard web applications using leading-edge technologies, achieving
-                        high grade work production in all my academic study, and being a proud captain of the Murray
-                        Bridge Bunyips.
+                        Development and continuous integration of industry-standard web applications using leading-edge
+                        technologies, which include my Bunyips Chatapp project negotiated and integrated into the
+                        official Murray Bridge High School software ecosystem.
                     </p>
                 </div>
                 <div className="box">
@@ -39,7 +39,7 @@ function Accom() {
                     <p>
                         High achieving student and multi-year Dux at Murray Bridge High School, averaging grade of A+
                         across all subjects, awarded for high understanding of reflection, innovation, and intellectual
-                        capability.
+                        capability. Proven to have negotiated with school administration on a wide matter of enterprise implementations.
                     </p>
                 </div>
                 <div className="box">
@@ -56,7 +56,7 @@ function Accom() {
                         Able to work in a high-stress environment, while producing intellectual property to which
                         quality is not lost, proven to have capabilities to lead and construct large projects with
                         complex implementations. Able to self-reflect and discover vulnerabilities in workflow
-                        environments.
+                        environments and communicate these ideas to others.
                     </p>
                 </div>
             </div>
