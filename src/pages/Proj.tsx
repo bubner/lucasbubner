@@ -18,7 +18,7 @@ function Proj() {
                     <h1>Bunyips Chatapp</h1>
                     <p>
                         A real-time chat application built for the members of the Murray Bridge Bunyips. Built in React
-                        and TypeScript.
+                        and TypeScript. Integrated as an official and approved application at Murray Bridge High School.
                     </p>
                 </div>
                 <div
