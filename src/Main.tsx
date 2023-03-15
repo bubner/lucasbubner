@@ -53,7 +53,7 @@ function Main() {
         "I captain and program for FTC Robotics Team 15215.",
         "I create intellectual property to improve and provide.",
         "I have experience in project management and delivering on time.",
-        "I desire to positively impact the world through technology",
+        "I desire to positively impact the world through technology.",
         "I am a high-achieving academic student.",
         "I am a critical thinker.",
         "I am proficient in multiple programming languages.",
