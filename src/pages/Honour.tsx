@@ -35,7 +35,7 @@ function Honour() {
                     <h1>Academic Achievement</h1>
                     <p>
                         <b>Murray Bridge High School</b> <br /> Conferred multiple awards for high grade academic
-                        achivement, scoring end of year grade point averages of A+ (14.9 / 15.0) in 2022 and 2023
+                        achivement, scoring end of year grade point averages of A+ (14.9 / 15.0) in 2021 and 2022
                     </p>
                 </div>
             </div>
