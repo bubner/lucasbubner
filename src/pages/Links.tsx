@@ -13,7 +13,7 @@ function Links() {
                 <div
                     className="box clk"
                     style={{ backgroundImage: "url('/github.svg')", backgroundSize: "40%" }}
-                    onClick={() => window.open("https://github.com/holo-lb/")}
+                    onClick={() => window.open("https://github.com/hololb/")}
                 >
                     <h1>GitHub</h1>
                     <p>Development of all my major projects and software.</p>
