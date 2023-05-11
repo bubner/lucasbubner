@@ -10,11 +10,11 @@ function Tech() {
         <PageWrapper>
             <div className="content-bg" />
             <div className="container">
-                <div className="box" style={{ backgroundImage: "url('/technology.svg')", backgroundSize: "40%" }}>
+                <div className="box" style={{ backgroundImage: "url('/scrmod.svg')", backgroundSize: "40%" }}>
                     <h1>Technology</h1>
                     <p>
                         I am experienced in usage of industry-used programming tools and services, as well as a range of
-                        programming languages in order to implement solutions.
+                        programming languages in order to implement and design solutions to real-world problems.
                     </p>
                 </div>
                 <div className="box" style={{ backgroundImage: "url('/reactts.png')", backgroundSize: "100%" }}>
@@ -24,7 +24,7 @@ function Tech() {
                         develop dynamic applications.
                     </p>
                 </div>
-                <div className="box" style={{ backgroundImage: "url('/kotlin.svg')" }}>
+                <div className="box" style={{ backgroundImage: "url('/kotlin.svg')", backgroundSize: "40%" }}>
                     <h1>Kotlin</h1>
                     <p>
                         Utilising to develop robot software with complex control-loops for autonomy and locomotion,
@@ -34,16 +34,16 @@ function Tech() {
                 <div className="box" style={{ backgroundImage: "url('/python.svg')", backgroundSize: "50%" }}>
                     <h1>Python</h1>
                     <p>
-                        Utilising to develop computationally intensive applications such as data management or simple
-                        applications. Able to solve and construct solutions through implementing features and
-                        constraints throughout a workflow.
+                        Utilising to develop web application backends and computationally intensive applications to
+                        compute complex matters, including analysis of data and usage of artificial intelligence.
                     </p>
                 </div>
-                <div className="box" style={{ backgroundImage: "url('/scrmod.svg')", backgroundSize: "50%" }}>
-                    <h1>Linux systems</h1>
+                <div className="box" style={{ backgroundImage: "url('/ai.svg')", backgroundSize: "50%" }}>
+                    <h1>Artificial Intelligence</h1>
                     <p>
-                        Experienced in the operation of Linux servers, Bash command line tools, and capable of data and
-                        information manipulation through relational database queries and file management abilities.
+                        Currently learning about the usage and implementation of artificial intelligence in real-world
+                        applications, including the usage of neural networks and machine learning to solve complex
+                        problems.
                     </p>
                 </div>
                 <div className="box" style={{ backgroundImage: "url('/git.svg')", backgroundSize: "40%" }}>

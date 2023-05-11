@@ -16,6 +16,7 @@ function Links() {
                     onClick={() => window.open("https://github.com/holo-lb/")}
                 >
                     <h1>GitHub</h1>
+                    <span className="clicknoti">(click)</span>
                     <p>Development of all my major projects and software.</p>
                 </div>
                 <div
@@ -24,6 +25,7 @@ function Links() {
                     onClick={() => window.open("https://replit.com/@LUCASBUBNER/")}
                 >
                     <h1>Replit</h1>
+                    <span className="clicknoti">(click)</span>
                     <p>Development of smaller projects and proof-of-concept activities.</p>
                 </div>
                 <div
@@ -32,6 +34,7 @@ function Links() {
                     onClick={() => window.open("https://linkedin.com/in/lucas-bubner/")}
                 >
                     <h1>LinkedIn</h1>
+                    <span className="clicknoti">(click)</span>
                     <p>Portfolio with my awarded certifications and certificates.</p>
                 </div>
                 <div
@@ -43,6 +46,7 @@ function Links() {
                     }}
                 >
                     <h1>Personal Email</h1>
+                    <span className="clicknoti">(click)</span>
                 </div>
                 <div
                     className="box bsm clk"
@@ -50,6 +54,7 @@ function Links() {
                     onClick={() => window.open("https://www.instagram.com/lucas.kbubner/")}
                 >
                     <h1>Instagram</h1>
+                    <span className="clicknoti">(click)</span>
                 </div>
                 <div
                     className="box bsm clk"
@@ -60,6 +65,7 @@ function Links() {
                     }}
                 >
                     <h1>Discord</h1>
+                    <span className="clicknoti">(click)</span>
                 </div>
             </div>
         </PageWrapper>

@@ -17,16 +17,6 @@ function Home() {
         img.onload = () => setLoaded(true);
     }, []);
 
-    // Gets a quote from my text, "Computational Brilliance."
-    const quotes = [
-        "Reality's stones cannot be taken under clear circumstances, in which controlling the natural gateway is the beholder's responsibility to make a powerful abstraction of their own understanding.",
-        "Alas, the one comprehension of our reality must command the reign of a new era under high authority, for which it must be solely up to one to control.",
-        "The concept of existence is still merely a perception of reality, an abstraction of reality's true meanings and life. Language is an abstraction to deep neurological links and is in itself an abstraction to the greater hidden light.",
-        "An interstellar revolution constructed by the adolescent soul meres not to cross the boundary of the unmarked territory, for it has not found the method to travel without seeing the light in the tunnel.",
-        "In this, the next intercepting and forever subsequent actions are guided under a plethora of oaths and dignities, to where the new era sustains eminently superior to the theorem of perception.",
-        "Change, the differences in what we know; the hollow abstractions of life described now and forever as the constant to drive the universal understanding of the next world.",
-    ];
-
     return (
         <PageWrapper>
             <div className={loaded ? "fade-in content-bg" : "fade-out content-bg"} />
@@ -34,26 +24,17 @@ function Home() {
                 <div className="box" style={{ backgroundImage: "url('/hololine.png')", backgroundSize: "100%" }}>
                     <h1>Hi!</h1>
                     <p>
-                        I'm Lucas Bubner, a high school student and aspiring software developer. I started programming
-                        in 2022 and became captain of FTC Robotics Team 15215 in May 2022. I'm passionate about computer
-                        science and constantly expanding my knowledge through courses, projects, and content.
+                        I'm Lucas Bubner, a 16-year-old software developer. <br /> I am currently in high school as a
+                        Year 10 student and am looking to pursue a career in software development and the STEM pathways.
+                        This website is a showcase of my work and achievements.
                     </p>
                 </div>
-                <div className="box" style={{ backgroundImage: "url('/holov2te2.png')", backgroundSize: "75%" }}>
+                <div className="box" style={{ backgroundImage: "url('/holov2te2.png')", backgroundSize: "55%" }}>
                     <h1>What I do</h1>
                     <p>
-                        I specialise in technologies and innovation, looking to develop high-quality applications that
-                        target real-world problems. I am vastly improving my toolkit per day, learning the new
-                        leading-edge technologies and tech stacks, in spite of better development. I am highly
-                        self-motivated and self-directed in what I do, and I'm more than passionate about what I enjoy.
-                    </p>
-                </div>
-                <div className="box" style={{ backgroundImage: "url('/transparent.png')", backgroundSize: "60%" }}>
-                    <h1>
-                        <i>"Computational Brilliance."</i>
-                    </h1>
-                    <p>
-                        <i>{quotes[Math.floor(Math.random() * quotes.length)]}</i>
+                        I specialise in digital technologies and innovation, looking to develop high-quality
+                        applications that target real-world problems. I am highly self-motivated in what I do, always
+                        looking to learn new things.
                     </p>
                 </div>
             </div>
