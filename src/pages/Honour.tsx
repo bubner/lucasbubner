@@ -25,7 +25,9 @@ function Honour() {
                     </p>
                 </div>
                 <div className="box" style={{ backgroundImage: "url('/mbhs.png')", backgroundSize: "75%" }}>
-                    <h1>Year 8 Dux of 2021 <br /> Year 9 Dux of 2022</h1>
+                    <h1>
+                        Year 8 Dux of 2021 <br /> Year 9 Dux of 2022
+                    </h1>
                     <p>
                         <b>Murray Bridge High School</b> <br /> Attained in December of 2021 and 2022, highest achieving
                         academic student for grade point averages.
@@ -36,6 +38,14 @@ function Honour() {
                     <p>
                         <b>Murray Bridge High School</b> <br /> Conferred multiple awards for high grade academic
                         achivement, scoring end of year grade point averages of A+ (14.9 / 15.0) in 2021 and 2022
+                    </p>
+                </div>
+                <div className="box" style={{ backgroundImage: "url('/bunyipst.png')", backgroundSize: "50%" }}>
+                    <h1>Murray Bridge Bunyips Captain</h1>
+                    <p>
+                        <b>May 2022 - Present</b> <br /> Mentored and lead a team of 10+ students in the FIRST Tech
+                        Challenge robotics competition, while developing software solutions targetting a wide range of
+                        problems.
                     </p>
                 </div>
             </div>

@@ -101,7 +101,7 @@ function Main() {
                         </div>
                         {comments.map((comment, index) => (
                             <div className="text-element" key={index}>
-                                <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
+                                <AnimationOnScroll animateIn="animate__fadeInDown" animateOnce={true}>
                                     <p className="content sm">{comment}</p>
                                 </AnimationOnScroll>
                             </div>

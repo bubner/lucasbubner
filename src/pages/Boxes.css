@@ -127,7 +127,7 @@
 
 .box:hover {
     box-shadow: inset 0 0 33px #505050, 0 0 24px #505050;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
 }
 
 .clk:hover {
@@ -137,6 +137,13 @@
 
 .box h1 {
     line-height: 2rem;
+}
+
+.clicknoti {
+    margin: 0;
+    line-height: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
 @media only screen and (max-width: 1160px) {
