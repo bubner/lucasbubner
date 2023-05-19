@@ -24,6 +24,18 @@ function Proj() {
                 </div>
                 <div
                     className="box clk"
+                    style={{ backgroundImage: "url('/rre.png')", backgroundSize: "50%" }}
+                    onClick={() => window.open("https://github.com/hololb/RoboRegistry/")}
+                >
+                    <h1>RoboRegistry</h1>
+                    <span className="clicknoti">(click)</span>
+                    <p>
+                        A digital registrar for RoboLeague event coordinators to handle school and entity
+                        registration and manage logistics with event registration and QR code check-ins. Built with Flask and Firebase.
+                    </p>
+                </div>
+                <div
+                    className="box clk"
                     style={{ backgroundImage: "url('/bunyipsc.png')", backgroundSize: "40%" }}
                     onClick={() => window.open("https://github.com/hololb/BunyipsChatapp/")}
                 >
@@ -42,7 +54,7 @@ function Proj() {
                     <h1>BunyipsFTC</h1>
                     <span className="clicknoti">(click)</span>
                     <p>
-                        Kotlin project containing all code used for FTC 15215's robots, involving control loops, robot
+                        Kotlin project containing contributed code used for FTC 15215's robots, involving control loops, robot
                         protocols, and routes used at official events and competitions.
                     </p>
                 </div>
@@ -68,18 +80,6 @@ function Proj() {
                     <p>
                         This very website! Built in React and TypeScript, using features from react-router and
                         framer-motion.
-                    </p>
-                </div>
-                <div
-                    className="box clk"
-                    style={{ backgroundImage: "url('/jsdos.png')", backgroundSize: "40%" }}
-                    onClick={() => window.open("https://replit.com/@LUCASBUBNER/DosGames/")}
-                >
-                    <h1>DosGames</h1>
-                    <span className="clicknoti">(click)</span>
-                    <p>
-                        Web-powered DosBox capable of playing a few games selectable at startup, utilising the JSDOS
-                        framework. One of 50 winners for the Replit Creator Fund, August 2022.
                     </p>
                 </div>
             </div>
