@@ -60,7 +60,7 @@ function Links() {
                     className="box bsm clk"
                     style={{ backgroundImage: "url('/discord.svg')", backgroundSize: "15%" }}
                     onClick={() => {
-                        alert("holo#0911");
+                        alert("username: holo911");
                         window.open("https://discord.com/users/616524858746077184/");
                     }}
                 >
