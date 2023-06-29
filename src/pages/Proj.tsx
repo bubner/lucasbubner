@@ -39,11 +39,12 @@ function Proj() {
                     style={{ backgroundImage: "url('/bunyipsc.png')", backgroundSize: "40%" }}
                     onClick={() => window.open("https://github.com/hololb/BunyipsChatapp/")}
                 >
-                    <h1>Bunyips Chatapp</h1>
+                    <h1>Bunyip Bellower</h1>
                     <span className="clicknoti">(click)</span>
                     <p>
                         A real-time Firebase chat application built for the members of the Murray Bridge Bunyips. Built
-                        in React and TypeScript. Designed to solve our club's issue of internal communication.
+                        in React and TypeScript. Originally designed to solve our club's issue of internal communication, now being refactored
+                        into a national innovation.
                     </p>
                 </div>
                 <div

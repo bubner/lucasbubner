@@ -35,22 +35,22 @@ function Links() {
                 >
                     <h1>LinkedIn</h1>
                     <span className="clicknoti">(click)</span>
-                    <p>Portfolio with my awarded certifications and certificates.</p>
+                    <p>Portfolio with my projects and industry certifications.</p>
                 </div>
                 <div
                     className="box bsm clk"
-                    style={{ backgroundImage: "url('/proton.png')", backgroundSize: "25%" }}
+                    style={{ backgroundImage: "url('/proton.png')", backgroundSize: "20%" }}
                     onClick={() => {
                         alert("lkbubner@proton.me");
                         window.open("mailto:lkbubner@proton.me", "_parent");
                     }}
                 >
-                    <h1>Personal Email</h1>
+                    <h1>Contact Email</h1>
                     <span className="clicknoti">(click)</span>
                 </div>
                 <div
                     className="box bsm clk"
-                    style={{ backgroundImage: "url('/insta.svg')", backgroundSize: "15%" }}
+                    style={{ backgroundImage: "url('/insta.svg')", backgroundSize: "13%" }}
                     onClick={() => window.open("https://www.instagram.com/lucas.kbubner/")}
                 >
                     <h1>Instagram</h1>

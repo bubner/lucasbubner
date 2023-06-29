@@ -10,6 +10,21 @@ function Honour() {
         <PageWrapper>
             <div className="content-bg" />
             <div className="container no-mid">
+                <div className="box" style={{ backgroundImage: "url('/iawards.png')", backgroundSize: "75%" }}>
+                    <h1>SA/NT iAwards Winner</h1>
+                    <p>
+                        <b>Australian Information Industry Association</b> <br /> Winner of the 2023 SA/NT Student & Education iAward, for the development
+                        of the Bunyip Bellower project.
+                        <br />
+                        <a
+                            style={{ color: "white" }}
+                            href="https://aiia.com.au/iaward/2023-sa-nt-winners-and-merit-recipients/"
+                            target="_blank"
+                        >
+                            aiia.com.au/iaward/2023-sa-nt-winners-and-merit-recipients
+                        </a>
+                    </p>
+                </div>
                 <div className="box" style={{ backgroundImage: "url('/harvard.png')", backgroundSize: "50%" }}>
                     <h1>CS50 Certificate</h1>
                     <p>
@@ -43,7 +58,7 @@ function Honour() {
                 <div className="box" style={{ backgroundImage: "url('/bunyipst.png')", backgroundSize: "50%" }}>
                     <h1>Murray Bridge Bunyips Captain</h1>
                     <p>
-                        <b>May 2022 - Present</b> <br /> Mentored and lead a team of 10+ students in the FIRST Tech
+                        <b>May 2022 - Present</b> <br /> Mentored and lead teams of many students in the FIRST Tech
                         Challenge robotics competition, while developing software solutions targetting a wide range of
                         problems.
                     </p>

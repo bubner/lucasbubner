@@ -13,34 +13,32 @@ function Accom() {
                 <div className="box">
                     <h1>My accomplishments</h1>
                     <p>
-                        Attained knowledge of multiple programming langugages through multiple CS50 online courses and
-                        through self-motivation; shown levels of leadership and evaluation through captaincy of FTC
-                        Robotics Team 15215; given multi-year Murray Bridge High School Dux awards.
+                        High self-motivation to learn complex topics by intuition shown levels of leadership and evaluation through captaincy of the
+                        Murray Bridge Bunyips Student Robotics Club; given multi-year Murray Bridge High School Dux awards; winner at iAwards SA/NT 2023.
                     </p>
                 </div>
                 <div className="box">
                     <h1>What I'm proud of</h1>
                     <p>
                         Development and continuous integration of industry-standard web applications using leading-edge
-                        technologies, which include my Bunyips Chatapp project which underwent negotiation and
-                        presentation with Murray Bridge High School administration.
+                        technologies, which include my Bunyips Chatapp (later Bunyip Bellower) project which underwent negotiation and
+                        presentation with school administration. This project was recognised by the AIIA at iAwards 2023.
                     </p>
                 </div>
                 <div className="box">
                     <h1>Murray Bridge Bunyips</h1>
                     <p>
                         Developed captaincy, leadership, and software development skills through being a member of the
-                        Murray Bridge Bunyips FTC Team 15215. Outreached to multiple students as a teacher of
+                        Bunyips FTC Robotics Team 15215. Outreached to multiple students as a teacher of
                         programming, developed advanced control loops for robotic locomotion and autonomous operation.
                     </p>
                 </div>
                 <div className="box">
                     <h1>Academics</h1>
                     <p>
-                        High achieving student and multi-year Dux at Murray Bridge High School, averaging grade of A+
-                        across all subjects, awarded for high understanding of reflection, innovation, and intellectual
-                        capability. Proven to have negotiated with school administration on a wide matter of enterprise
-                        implementations.
+                        High achieving student and multi-year Dux at Murray Bridge High School, awarded for high understanding
+                        of reflection, innovation, and intellectual capability. Proven to have negotiated with school administration
+                        on a wide matter of enterprise implementations.
                     </p>
                 </div>
                 <div className="box">
