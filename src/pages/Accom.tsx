@@ -13,49 +13,49 @@ function Accom() {
                 <div className="box">
                     <h1>My accomplishments</h1>
                     <p>
-                        High self-motivation to learn complex topics by intuition shown levels of leadership and evaluation through captaincy of the
-                        Murray Bridge Bunyips Student Robotics Club; given multi-year Murray Bridge High School Dux awards; winner at iAwards SA/NT 2023.
+                        Accredited <b>self-motivation</b> to learn complex topics by intuition; shown levels of <b>leadership</b> and <b>management</b> through captaincy of the
+                        MBHS Student Robotics Club; developed multiple <b>real-use</b> applications to solve <b>real-world problems</b>; winner at iAwards SA/NT 2023.
                     </p>
                 </div>
                 <div className="box">
                     <h1>What I'm proud of</h1>
                     <p>
-                        Development and continuous integration of industry-standard web applications using leading-edge
-                        technologies, which include my Bunyips Chatapp (later Bunyip Bellower) project which underwent negotiation and
-                        presentation with school administration. This project was recognised by the AIIA at iAwards 2023.
+                        <b>Development</b> and continuous integration of <b>industry-standard</b> applications using <b>leading-edge </b>
+                        technologies, which include my Bunyip Bellower project which underwent discussion and
+                        presentation with <b>school and government entities</b>. This project was <b>recognised by the AIIA</b> at the 2023 iAwards.
                     </p>
                 </div>
                 <div className="box">
                     <h1>Murray Bridge Bunyips</h1>
                     <p>
-                        Developed captaincy, leadership, and software development skills through being a member of the
-                        Bunyips FTC Robotics Team 15215. Outreached to multiple students as a teacher of
-                        programming, developed advanced control loops for robotic locomotion and autonomous operation.
+                        Developed <b>team management</b>, <b>leadership</b>, and <b>oftware development</b> skills through being a member of the
+                        Bunyips FTC Robotics Team 15215. <b>Outreached</b> to multiple students as a <b>mentor of
+                        programming</b>, developed advanced control loops for robotic locomotion and <b>autonomous operation.</b>
                     </p>
                 </div>
                 <div className="box">
                     <h1>Academics</h1>
                     <p>
-                        High achieving student and multi-year Dux at Murray Bridge High School, awarded for high understanding
-                        of reflection, innovation, and intellectual capability. Proven to have negotiated with school administration
-                        on a wide matter of enterprise implementations.
+                        <b>High-achieving</b> student and <b>multi-year</b> Dux at Murray Bridge High School, awarded for high understanding
+                        of <b>innovation</b>, evaluation, and intellectual <b>capability</b>. Proven to have <b>negotiated</b> with school and non-school based
+                        administration on a wide matter of <b>enterprise implementations</b>.
                     </p>
                 </div>
                 <div className="box">
                     <h1>Programming</h1>
                     <p>
-                        Comphrehension and proficient understanding of programming structures involving object oriented
-                        design, functional patterns, and module based constructs. Proficiency in multiple programming
-                        languages appropriate for a wide range of projects.
+                        <b>Comprehensive</b> and <b>in-depth</b> understanding of programming structures involving object-oriented
+                        design, functional patterns, and module based constructs. Proficiency in <b>multiple</b> programming
+                        languages appropriate for a <b>wide range</b> of projects.
                     </p>
                 </div>
                 <div className="box">
                     <h1>Capabilities</h1>
                     <p>
-                        Able to work in a high-stress environment, while producing intellectual property to which
-                        quality is not lost, proven to have capabilities to lead and construct large projects with
-                        complex implementations. Able to self-reflect and discover vulnerabilities in workflow
-                        environments and communicate these ideas to others.
+                        Able to work in a <b>high-stress</b> environment, while producing intellectual property to which
+                        quality is not lost, proven to have capabilities to <b>lead and construct</b> large projects with
+                        <b> complex</b> implementations. Able to <b>self-reflect</b> and <b>discover</b> vulnerabilities in workflow
+                        environments and <b>communicate</b> these ideas to others.
                     </p>
                 </div>
             </div>

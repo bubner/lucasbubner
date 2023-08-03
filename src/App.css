@@ -75,7 +75,7 @@ body {
 
 .arrow-container {
     position: absolute;
-    bottom: calc(6rem + 10vh);
+    bottom: 10vh;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
