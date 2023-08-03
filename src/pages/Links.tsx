@@ -17,7 +17,7 @@ function Links() {
                 >
                     <h1>GitHub</h1>
                     <span className="clicknoti">(click)</span>
-                    <p>Development of all my major projects and software.</p>
+                    <p className="small">Major projects and software.</p>
                 </div>
                 <div
                     className="box clk"
@@ -26,7 +26,7 @@ function Links() {
                 >
                     <h1>Replit</h1>
                     <span className="clicknoti">(click)</span>
-                    <p>Development of smaller projects and proof-of-concept activities.</p>
+                    <p className="small">Smaller projects and proof-of-concept activities.</p>
                 </div>
                 <div
                     className="box clk"
@@ -35,7 +35,7 @@ function Links() {
                 >
                     <h1>LinkedIn</h1>
                     <span className="clicknoti">(click)</span>
-                    <p>Portfolio with my projects and industry certifications.</p>
+                    <p className="small">Portfolio with my projects and industry certifications.</p>
                 </div>
                 <div
                     className="box bsm clk"
