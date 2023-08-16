@@ -80,7 +80,7 @@ function Proj() {
                     <span className="clicknoti">(click)</span>
                     <p>
                         This very website! Built in <b>React</b> and <b>TypeScript</b>, using features from <b>react-router</b> and
-                        <b>framer-motion</b>.
+                        <b> framer-motion</b>.
                     </p>
                 </div>
             </div>
