@@ -10,63 +10,69 @@ function Links() {
         <PageWrapper>
             <div className="content-bg" />
             <div className="container no-mid">
-                <div
+                <a
                     className="box clk"
                     style={{ backgroundImage: "url('/github.svg')", backgroundSize: "40%" }}
-                    onClick={() => window.open("https://github.com/hololb/")}
+                    href="https://github.com/hololb/"
+                    target="_blank"
                 >
                     <h1>GitHub</h1>
                     <span className="clicknoti">(click)</span>
                     <p className="small">Major projects and software.</p>
-                </div>
-                <div
+                </a>
+                <a
                     className="box clk"
                     style={{ backgroundImage: "url('/replit.png')", backgroundSize: "50%" }}
-                    onClick={() => window.open("https://replit.com/@LUCASBUBNER/")}
+                    href="https://replit.com/@LUCASBUBNER/"
+                    target="_blank"
                 >
                     <h1>Replit</h1>
                     <span className="clicknoti">(click)</span>
                     <p className="small">Smaller projects and proof-of-concept activities.</p>
-                </div>
-                <div
+                </a>
+                <a
                     className="box clk"
                     style={{ backgroundImage: "url('/linkedin.png')", backgroundSize: "33%" }}
-                    onClick={() => window.open("https://linkedin.com/in/lucas-bubner/")}
+                    href="https://linkedin.com/in/lucas-bubner/"
+                    target="_blank"
                 >
                     <h1>LinkedIn</h1>
                     <span className="clicknoti">(click)</span>
-                    <p className="small">Portfolio with my projects and industry certifications.</p>
-                </div>
-                <div
+                    <p className="small">Industry certifications and experiences.</p>
+                </a>
+                <a
                     className="box bsm clk"
                     style={{ backgroundImage: "url('/proton.png')", backgroundSize: "20%" }}
                     onClick={() => {
                         alert("lkbubner@proton.me");
-                        window.open("mailto:lkbubner@proton.me", "_parent");
                     }}
+                    href="mailto:lkbubner@proton.me"
+                    target="_blank"
                 >
                     <h1>Contact Email</h1>
                     <span className="clicknoti">(click)</span>
-                </div>
-                <div
+                </a>
+                <a
                     className="box bsm clk"
                     style={{ backgroundImage: "url('/insta.svg')", backgroundSize: "13%" }}
-                    onClick={() => window.open("https://www.instagram.com/lucas.kbubner/")}
+                    href="https://www.instagram.com/lucas.kbubner/"
+                    target="_blank"
                 >
                     <h1>Instagram</h1>
                     <span className="clicknoti">(click)</span>
-                </div>
-                <div
+                </a>
+                <a
                     className="box bsm clk"
                     style={{ backgroundImage: "url('/discord.svg')", backgroundSize: "15%" }}
                     onClick={() => {
                         alert("username: holo911");
-                        window.open("https://discord.com/users/616524858746077184/");
                     }}
+                    href="https://discord.com/users/616524858746077184/"
+                    target="_blank"
                 >
                     <h1>Discord</h1>
                     <span className="clicknoti">(click)</span>
-                </div>
+                </a>
             </div>
         </PageWrapper>
     );

@@ -89,7 +89,7 @@ function Main() {
                             </AnimationOnScroll>
                             <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
                                 <div id="geo-globe">
-                                    <img id="pfp" src="/transparent.png" />
+                                    <img id="pfp" src="/transparent.png" draggable={false} />
                                     <canvas id="canvas" />
                                 </div>
                             </AnimationOnScroll>

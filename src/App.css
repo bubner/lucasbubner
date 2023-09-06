@@ -162,3 +162,10 @@ body {
         transform: scale(1.5);
     }
 }
+
+.text-element,
+.content,
+p,
+h1 {
+    user-select: text;
+}
