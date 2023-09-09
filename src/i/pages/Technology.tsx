@@ -2,13 +2,13 @@
  * Technologies I work with display page.
  * @author Lucas Bubner, 2023
  */
-import "./Boxes.css";
-import PageWrapper from "../PageWrapper";
-import Box from "./Box";
+import "../../css/Boxes.css";
+import Layout from "../Layout";
+import Box from "../../components/Box";
 
-function Tech() {
+function Technology() {
     return (
-        <PageWrapper>
+        <Layout>
             <div className="content-bg" />
             <div className="container">
                 <Box src="/scrmod.svg" size={40}>
@@ -51,13 +51,13 @@ function Tech() {
                     <p>
                         Fluent with BaaS products such as <b>Firebase</b> and <b>Vercel</b> to build highly <b>scalable </b>
                         applications with <b>OAuth</b> and <b>relational databases</b>. Integrates the <b>Git</b> workflow into projects and
-                        is proficient with branch, database, and end-user protection rules to build <b>rigourous </b>
+                        is proficient with branch, database, and end-user protection rules to build <b>rigorous </b>
                         applications.
                     </p>
                 </Box>
             </div>
-        </PageWrapper>
+        </Layout>
     );
 }
 
-export default Tech;
+export default Technology;

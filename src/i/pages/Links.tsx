@@ -2,13 +2,13 @@
  * My social links display page.
  * @author Lucas Bubner, 2023
  */
-import PageWrapper from "../PageWrapper";
-import Box from "./Box";
-import "./Boxes.css";
+import Layout from "../Layout";
+import Box from "../../components/Box";
+import "../../css/Boxes.css";
 
 function Links() {
     return (
-        <PageWrapper>
+        <Layout>
             <div className="content-bg" />
             <div className="container">
                 <Box src="/github.svg" size={150} href="https://github.com/hololb/">
@@ -55,7 +55,7 @@ function Links() {
                     <span className="clicknoti">(click)</span>
                 </Box>
             </div>
-        </PageWrapper>
+        </Layout>
     );
 }
 

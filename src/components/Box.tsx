@@ -33,7 +33,7 @@ function Box({
 
     const backgroundImage = (
         <div className={`bog${extrablur ? " inc" : ""}`}>
-            <img src={src} style={imgStyle} />
+            <img alt="" src={src} style={imgStyle} />
         </div>
     );
 

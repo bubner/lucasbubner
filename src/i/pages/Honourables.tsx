@@ -2,13 +2,13 @@
  * My honourables display page.
  * @author Lucas Bubner, 2023
  */
-import PageWrapper from "../PageWrapper";
-import Box from "./Box";
-import "./Boxes.css";
+import Layout from "../Layout";
+import Box from "../../components/Box";
+import "../../css/Boxes.css";
 
-function Honour() {
+function Honourables() {
     return (
-        <PageWrapper>
+        <Layout>
             <div className="content-bg" />
             <div className="container">
                 <Box src="/iawards.png" size={110}>
@@ -68,13 +68,13 @@ function Honour() {
                     <h1>Murray Bridge Bunyips Captain</h1>
                     <p>
                         <b>May 2022 - Present</b> <br /> Mentored and led teams of many students in the FIRST Tech
-                        Challenge robotics competition, while developing software solutions targetting a wide range of
+                        Challenge robotics competition, while developing software solutions targeting a wide range of
                         problems.
                     </p>
                 </Box>
             </div>
-        </PageWrapper>
+        </Layout>
     );
 }
 
-export default Honour;
+export default Honourables;

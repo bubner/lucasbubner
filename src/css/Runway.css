@@ -228,7 +228,7 @@
 .scroll-indicator {
     position: absolute;
     top: 9%;
-    right: 0%;
+    right: 0;
     margin-left: -20px;
 }
 

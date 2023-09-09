@@ -3,13 +3,13 @@
  * @author Lucas Bubner, 2023
  */
 import { useEffect, useState } from "react";
-import PageWrapper from "../PageWrapper";
-import Box from "./Box";
-import "./Boxes.css";
+import Layout from "./Layout";
+import Box from "../components/Box";
+import "../css/Boxes.css";
 
 function Home() {
     // Ensure that the background image is loaded before displaying anything
-    // We only have to do this on the main page as it will be the landing page and subsequent pages will be loaded after the main page
+    // We only have to do this on the main page as it will be the landing page and subsequently will be loaded after the main page
     const [loaded, setLoaded] = useState(false);
     const age = Math.abs(new Date(Date.now() - new Date("2007-05-03").getTime()).getUTCFullYear() - 1970);
 
@@ -20,7 +20,7 @@ function Home() {
     }, []);
 
     return (
-        <PageWrapper>
+        <Layout>
             <div className={loaded ? "fade-in content-bg" : "fade-out content-bg"} />
             <div className="container no-mid">
                 <Box src="/hololine.png" size={100}>
@@ -40,7 +40,7 @@ function Home() {
                     </p>
                 </Box>
             </div>
-        </PageWrapper>
+        </Layout>
     );
 }
 

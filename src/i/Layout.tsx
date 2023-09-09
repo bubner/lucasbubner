@@ -4,12 +4,12 @@
  */
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 
-function PageWrapper({ children }: { children: React.ReactNode }) {
+function Layout({ children }: { children: React.ReactNode }) {
     function onLoad() {
         // DOM takes some time to update even after framer-motion says the animation is complete, so
-        // we must wait a bit so we don't calculate leaving boxes
+        // we must wait a bit, so we don't calculate leaving boxes
         setTimeout(() => {
             const boxHeights = Array.from(document.getElementsByClassName("box")).map((el) => (el as HTMLDivElement).getBoundingClientRect().height);
             const tallestBox = Math.max(...boxHeights);
@@ -55,4 +55,4 @@ function PageWrapper({ children }: { children: React.ReactNode }) {
     );
 }
 
-export default PageWrapper;
+export default Layout;

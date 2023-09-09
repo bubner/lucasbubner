@@ -1,13 +1,13 @@
 /**
- * Content module with primary information showcase.
+ * Content module with runway scroll information showcase.
  * @author Lucas Bubner, 2023
  */
 import { createRef, useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import "./Main.css";
+import "../css/Runway.css";
 
-function Main() {
+function Runway() {
     const [isExplained, setIsExplained] = useState(false);
     const [isRedLineReady, setIsRedLineReady] = useState(false);
     const [hasntScrolled, setHasntScrolled] = useState(true);
@@ -38,7 +38,7 @@ function Main() {
             setIsRedLineReady(true);
         };
 
-        // Attach a listener to to remove the scroll indicator when the user scrolls
+        // Attach a listener to remove the scroll indicator when the user scrolls
         window.addEventListener("scroll", scrollListener);
     }, []);
 
@@ -82,14 +82,14 @@ function Main() {
                         <div id="extd-bg" className={isRedLineReady ? "fade-in" : "fade-out"} />
                         <div id="collarband">
                             <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
-                                <img id="collar-l" src="/collar.png" />
+                                <img alt="" id="collar-l" src="/collar.png" />
                             </AnimationOnScroll>
                             <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}>
-                                <img id="collar-r" src="/collar2.png" />
+                                <img alt="" id="collar-r" src="/collar2.png" />
                             </AnimationOnScroll>
                             <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
                                 <div id="geo-globe">
-                                    <img id="pfp" src="/transparent.png" draggable={false} />
+                                    <img id="pfp" alt="Lucas Bubner" src="/transparent.png" draggable={false} />
                                     <canvas id="canvas" />
                                 </div>
                             </AnimationOnScroll>
@@ -117,7 +117,7 @@ function Main() {
                             </div>
                             <div className="mini-element">
                                 <Link to="/i" id="next">
-                                    View more information <img src="/rightarrow.svg" className="rightarrow" />
+                                    View more information <img alt="right arrow" src="/rightarrow.svg" className="rightarrow" />
                                 </Link>
                             </div>
                         </AnimationOnScroll>
@@ -128,4 +128,4 @@ function Main() {
     );
 }
 
-export default Main;
+export default Runway;

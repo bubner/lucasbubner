@@ -1,15 +1,15 @@
 /**
- * Primary application module for the end-user.
+ * lucasbubner.me
  * @author Lucas Bubner, 2023
  */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
-import Main from "./Main";
-import "./App.css";
+import Runway from "./Runway";
+import "../css/Landing.css";
 
-function App() {
+function Landing() {
     const [isWritten, setIsWritten] = useState(false);
     const [introDone, setIntroDone] = useState(false);
     const [isBgLoaded, setIsBgLoaded] = useState(false);
@@ -63,7 +63,7 @@ function App() {
                             <div className="dots" />
                             <canvas id="stars" />
                             <canvas id="pulse" />
-                            <img id="bg" src="/starsbg.png" className={isBgLoaded ? "fade-in" : "fade-out"} />
+                            <img alt="" id="bg" src="/starsbg.png" className={isBgLoaded ? "fade-in" : "fade-out"} />
                             <div className="arrow-container">
                                 <svg className="arrow" onClick={() => handleIntroFinish()} />
                             </div>
@@ -74,7 +74,7 @@ function App() {
             {!introDone && (
                 <>
                     <Link id="skip" to="/i" style={{ opacity: shouldMove ? "0" : "1" }}>
-                        Skip sequence <img src="/rightarrow.svg" className="rightarrow" />
+                        Skip sequence <img alt="" src="/rightarrow.svg" className="rightarrow" />
                     </Link>
                     <div id="heading" style={{ transform: shouldMove ? "translate(-50vw, -200vh)" : "reset" }}>
                         <Typewriter
@@ -91,9 +91,9 @@ function App() {
                     </div>
                 </>
             )}
-            {introDone && <Main />}
+            {introDone && <Runway />}
         </motion.div>
     );
 }
 
-export default App;
+export default Landing;

@@ -2,12 +2,12 @@
  * Accomplishments display page.
  * @author Lucas Bubner, 2023
  */
-import PageWrapper from "../PageWrapper";
-import "./Boxes.css";
+import Layout from "../Layout";
+import "../../css/Boxes.css";
 
-function Accom() {
+function Accomplishments() {
     return (
-        <PageWrapper>
+        <Layout>
             <div className="content-bg" />
             <div className="container">
                 <div className="box">
@@ -28,7 +28,7 @@ function Accom() {
                 <div className="box">
                     <h1>Murray Bridge Bunyips</h1>
                     <p>
-                        Developed <b>team management</b>, <b>leadership</b>, and <b>oftware development</b> skills through being a member of the
+                        Developed <b>team management</b>, <b>leadership</b>, and <b>software development</b> skills through being a member of the
                         Bunyips FTC Robotics Team 15215. <b>Outreached</b> to multiple students as a <b>mentor of
                         programming</b>, developed advanced control loops for robotic locomotion and <b>autonomous operation.</b>
                     </p>
@@ -59,8 +59,8 @@ function Accom() {
                     </p>
                 </div>
             </div>
-        </PageWrapper>
+        </Layout>
     );
 }
 
-export default Accom;
+export default Accomplishments;

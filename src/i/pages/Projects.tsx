@@ -2,13 +2,13 @@
  * My worked on projects display page.
  * @author Lucas Bubner, 2023
  */
-import PageWrapper from "../PageWrapper";
-import Box from "./Box";
-import "./Boxes.css";
+import Layout from "../Layout";
+import Box from "../../components/Box";
+import "../../css/Boxes.css";
 
-function Proj() {
+function Projects() {
     return (
-        <PageWrapper>
+        <Layout>
             <div className="content-bg" />
             <div className="container">
                 <Box src="/rre.png" size={45} href="https://github.com/hololb/RoboRegistry/">
@@ -48,7 +48,7 @@ function Proj() {
                     <h1>Mind</h1>
                     <span className="clicknoti">(click)</span>
                     <p>
-                        A <b>Flask</b> adventure game with over 65 endings, featuring <b>autosaving</b> savestates, <b>sessions</b>, and
+                        A <b>Flask</b> adventure game with over 65 endings, featuring <b>auto-saving</b> user progress, <b>sessions</b>, and
                         password protection.
                     </p>
                 </Box>
@@ -61,8 +61,8 @@ function Proj() {
                     </p>
                 </Box>
             </div>
-        </PageWrapper>
+        </Layout>
     );
 }
 
-export default Proj;
+export default Projects;

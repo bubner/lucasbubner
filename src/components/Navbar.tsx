@@ -2,16 +2,16 @@
  * Standard navigation module with page linking functionality for both mobile and desktop.
  * @author Lucas Bubner, 2023
  */
-import { useRef, FC, useContext } from "react";
+import { useRef, FC, useContext, Ref } from "react";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import Popup from "reactjs-popup";
-import { PopupActions } from "../node_modules/reactjs-popup/dist/types";
+import { PopupActions } from "reactjs-popup/dist/types";
 import { GotoContext } from "./GotoContext";
-import "./Navbar.css";
+import "../css/Navbar.css";
 
 function Navbar() {
-    const tref = useRef<PopupActions>(null);
+    const tref = useRef<PopupActions>();
     const tclose = () => tref.current?.close();
     const location = useLocation();
     const goto = useContext(GotoContext);
@@ -100,8 +100,8 @@ function Navbar() {
                     ))}
                 </div>
                 <div id="mobileheader">
-                    {/* Reused code from my Bunyips Chatapp. I couldn't be bothered implementing a new popup menu so this will do. */}
-                    <Popup ref={tref} trigger={<img src="/bbq.svg" alt="Menu" />}>
+                    {/* Reused code from my Bunyip Bellower project. I couldn't be bothered implementing a new popup menu so this will do. */}
+                    <Popup ref={tref as Ref<PopupActions>} trigger={<img src="/bbq.svg" alt="Menu" />}>
                         <>
                             <div className="outer" onClick={tclose} />
                             <div className="inner">
