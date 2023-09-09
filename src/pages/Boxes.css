@@ -71,7 +71,7 @@
     min-height: 100vh;
 }
 
-@media only screen and (max-width: 1650px) {
+@media only screen and (max-width: 1650px), (max-height: 800px) {
     .container:not(.no-mid) {
         margin-top: 5%;
     }
@@ -104,8 +104,8 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border-radius: 2rem;
-    padding: 20px;
+    border-radius: 3rem;
+    padding: 12px;
     text-align: center;
     width: 300px;
     margin: 20px;
@@ -123,6 +123,7 @@
 
 .bsm {
     min-height: fit-content;
+    border-radius: 2rem;
 }
 
 .box:hover {
@@ -141,6 +142,7 @@
 
 .clicknoti {
     margin: 0;
+    margin-bottom: 10px;
     line-height: 0;
     font-size: 0.8rem;
     font-weight: 600;
@@ -160,4 +162,19 @@
 a:not(.internallink) {
     text-decoration: none;
     color: inherit;
+}
+
+.internallink {
+    color: white;
+}
+
+.bog {
+    position: absolute;
+    z-index: -1;
+    filter: blur(1px);
+    transition: filter 500ms;
+}
+
+.inc {
+    filter: blur(3px);
 }
