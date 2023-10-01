@@ -3,7 +3,7 @@
  * @author Lucas Bubner, 2023
  */
 import { useState } from "react";
-import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { Routes, Route, useLocation, useNavigate, Navigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { GotoContext } from "./components/GotoContext";
 import Landing from "./main/Landing";
@@ -40,8 +40,9 @@ function Router() {
                         <Route path="honourables" element={<Honourables />} />
                         <Route path="projects" element={<Projects />} />
                         <Route path="links" element={<Links />} />
+                        <Route path="*" element={<Navigate to="/i" />} />
                     </Route>
-                    <Route path="*" element={<Landing />} />
+                    <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             </AnimatePresence>
         </GotoContext.Provider>

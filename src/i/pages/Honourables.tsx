@@ -31,14 +31,14 @@ function Honourables() {
                     <p>
                         <b>Australian Information Industry Association</b> <br /> Merit recipient of the 2023 National Student & Education category at the iAwards, undergoing
                         Stage II judging against other prestigious projects at a tertiary level.
-                        {/* <br />
+                        <br />
                         <a
                             className="internallink"
-                            href=""
+                            href="https://www.linkedin.com/feed/update/urn:li:activity:7106212481345212417/"
                             target="_blank"
                         >
-                            anicelink.com
-                        </a> */}
+                            www.linkedin.com/feed/update/urn:li:activity:7106212481345212417/
+                        </a>
                     </p>
                 </Box>
                 <Box src="/harvard.png" size={40} extrablur>
