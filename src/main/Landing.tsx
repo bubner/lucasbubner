@@ -53,17 +53,28 @@ function Landing() {
             id="App"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, x: "-100vw", transition: { duration: 0.75 } }}
             transition={{ duration: 0.25 }}
+            onAnimationStart={() => {
+                const collarband = document.getElementById("collarband");
+                if (collarband) {
+                    collarband.style.opacity = "0";
+                }
+            }}
         >
             <div id="intro" style={{ transform: shouldMove ? "translateY(-150vh)" : "translate(0)" }}>
                 {isWritten && !introDone && (
                     <>
                         <div className="bg-elem">
-                            <div className="dots" />
                             <canvas id="stars" />
                             <canvas id="pulse" />
-                            <img alt="" id="bg" src="/starsbg.png" className={isBgLoaded ? "fade-in" : "fade-out"} />
+                            <img
+                                alt=""
+                                id="bg"
+                                src="/starsbg.png"
+                                className={isBgLoaded ? "fade-in" : "fade-out"}
+                                draggable={false}
+                            />
                             <div className="arrow-container">
                                 <svg className="arrow" onClick={() => handleIntroFinish()} />
                             </div>
@@ -74,20 +85,39 @@ function Landing() {
             {!introDone && (
                 <>
                     <Link id="skip" to="/i" style={{ opacity: shouldMove ? "0" : "1" }}>
-                        Skip sequence <img alt="" src="/rightarrow.svg" className="rightarrow" />
+                        Skip <img alt="" src="/rightarrow.svg" className="rightarrow" />
                     </Link>
                     <div id="heading" style={{ transform: shouldMove ? "translate(-50vw, -200vh)" : "reset" }}>
-                        <Typewriter
-                            onInit={(typewriter) => {
-                                typewriter
-                                    .pauseFor(500)
-                                    .typeString("computational<br />brilliance.")
-                                    .callFunction(() => {
-                                        setIsWritten(true);
-                                    })
-                                    .start();
-                            }}
-                        />
+                        <div id="header">
+                            {isWritten && (
+                                <div id="supertext">
+                                    computational
+                                    <br />
+                                    brilliance.
+                                </div>
+                            )}
+                            <span id="typer">
+                                <Typewriter
+                                    options={{
+                                        cursor: "",
+                                        delay: 90,
+                                        onCreateTextNode: (_, node) => {
+                                            // Somehow this removes the entire text node when completed, and this is desired
+                                            return node;
+                                        },
+                                    }}
+                                    onInit={(typewriter) => {
+                                        typewriter
+                                            .pauseFor(500)
+                                            .typeString("computational<br>brilliance.")
+                                            .callFunction(() => {
+                                                setIsWritten(true);
+                                            })
+                                            .start();
+                                    }}
+                                />
+                            </span>
+                        </div>
                     </div>
                 </>
             )}
