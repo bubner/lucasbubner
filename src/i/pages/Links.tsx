@@ -7,6 +7,7 @@ import Box from "../../components/Box";
 import "../../css/Boxes.css";
 
 function Links() {
+    document.title = "Lucas Bubner • Links";
     return (
         <Layout>
             <div className="content-bg" />

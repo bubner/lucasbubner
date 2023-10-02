@@ -7,11 +7,12 @@ import Box from "../../components/Box";
 import "../../css/Boxes.css";
 
 function Honourables() {
+    document.title = "Lucas Bubner • Honourables";
     return (
         <Layout>
             <div className="content-bg" />
             <div className="container">
-                <Box src="/iawards.png" size={110}>
+                <Box src="/iawards.png" size={50}>
                     <h1>SA/NT iAwards Winner</h1>
                     <p>
                         <b>Australian Information Industry Association</b> <br /> Winner of the 2023 SA/NT Student & Education category at the iAwards, developing
@@ -26,7 +27,7 @@ function Honourables() {
                         </a>
                     </p>
                 </Box>
-                <Box src="/iawards.png" size={110}>
+                <Box src="/iawards.png" size={50}>
                     <h1>National iAwards Merit</h1>
                     <p>
                         <b>Australian Information Industry Association</b> <br /> Merit recipient of the 2023 National Student & Education category at the iAwards, undergoing

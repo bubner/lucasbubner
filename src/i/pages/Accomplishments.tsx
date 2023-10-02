@@ -6,6 +6,7 @@ import Layout from "../Layout";
 import "../../css/Boxes.css";
 
 function Accomplishments() {
+    document.title = "Lucas Bubner • Accomplishments";
     return (
         <Layout>
             <div className="content-bg" />

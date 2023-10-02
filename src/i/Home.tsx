@@ -8,6 +8,8 @@ import Box from "../components/Box";
 import "../css/Boxes.css";
 
 function Home() {
+    document.title = "Lucas Bubner • Home";
+
     // Ensure that the background image is loaded before displaying anything
     // We only have to do this on the main page as it will be the landing page and subsequently will be loaded after the main page
     const [loaded, setLoaded] = useState(false);

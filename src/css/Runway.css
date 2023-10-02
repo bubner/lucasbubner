@@ -155,7 +155,7 @@
     top: 0;
     opacity: 0.2;
     width: 100%;
-    height: 423%;
+    height: 100%; /* Will be handled dynamically */
     object-fit: cover;
     background-image: url("/starsbg.png");
     background-size: 200%;
@@ -257,7 +257,7 @@
 }
 
 .section-image img {
-    width: 100%;
+    width: 130px;
 }
 
 .text-scrolling {
@@ -354,28 +354,24 @@ strong {
     transform: translate(-50%, -50%);
 }
 
-.section-image img {
-    width: 15%;
-}
-
 .section-image img:nth-child(1) {
     transform: translate(calc(-50% - 150px), -50%);
-    animation: orbit1 15s linear infinite;
+    animation: orbit1 20s linear infinite;
 }
 
 .section-image img:nth-child(2) {
     transform: translate(calc(-50% + 150px), -50%);
-    animation: orbit2 15s linear infinite;
+    animation: orbit2 20s linear infinite;
 }
 
 .section-image img:nth-child(3) {
     transform: translate(-50%, calc(-50% + 150px));
-    animation: orbit3 15s linear infinite;
+    animation: orbit3 20s linear infinite;
 }
 
 .section-image img:nth-child(4) {
     transform: translate(-50%, calc(-50% - 150px));
-    animation: orbit4 15s linear infinite;
+    animation: orbit4 20s linear infinite;
 }
 
 @keyframes orbit1 {

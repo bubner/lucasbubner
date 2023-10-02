@@ -4,12 +4,12 @@
  */
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
-function Section({ comments, images, index, animateIn, animateOnce }: { comments: string[][], images: string[], index: number, animateIn: string, animateOnce: boolean }) {
+function Section({ comments, titles, images, index, animateIn, animateOnce }: { comments: string[][], titles: string[], images: string[], index: number, animateIn: string, animateOnce: boolean }) {
     return (
         <div className={`section ${index % 2 === 0 ? '' : 'r'}`}>
             <AnimationOnScroll className="section-image" animateIn={animateIn} animateOnce={animateOnce}>
                 {images.map((image, i) => (
-                    <img alt="" src={image} draggable={false} key={i} />
+                    <img alt={titles[i]} src={image} title={titles[i]} draggable={false} key={i} />
                 ))}
             </AnimationOnScroll>
             <div className="section-text">

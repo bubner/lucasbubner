@@ -7,6 +7,7 @@ import Layout from "../Layout";
 import Box from "../../components/Box";
 
 function Technology() {
+    document.title = "Lucas Bubner • Technology";
     return (
         <Layout>
             <div className="content-bg" />

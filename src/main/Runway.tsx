@@ -20,13 +20,26 @@ function Runway() {
         window.removeEventListener("scroll", scrollListener);
     };
 
+    function calculateBackgroundHeight() {
+        const bg = document.getElementById("stars-bg");
+        const redline = document.getElementById("extd-bg");
+        if (bg) {
+            const redHeight = redline !== null ? redline.getBoundingClientRect().height : 0
+            bg.style.height = `${Math.max(document.body.offsetHeight, redHeight)}px`;
+        }
+    }
+
+    useEffect(() => {
+        calculateBackgroundHeight();
+    }, [isRedLineReady, isExplained]);
+
     useEffect(() => {
         winRef.current?.scrollIntoView({ behavior: "auto" });
         setTimeout(() => {
             setIsExplained(true);
             if (!scriptAppended.current) {
                 const script = document.createElement("script");
-                script.src = "/globe.js";
+                script.src = "/globe.min.js";
                 document.body.appendChild(script);
                 scriptAppended.current = true;
             }
@@ -41,6 +54,7 @@ function Runway() {
 
         // Attach a listener to remove the scroll indicator when the user scrolls
         window.addEventListener("scroll", scrollListener);
+        window.addEventListener("resize", calculateBackgroundHeight);
     }, []);
 
     const comments = [
@@ -74,12 +88,18 @@ function Runway() {
         ],
     ];
 
-    // TODO: Add two or four rotating images for each section
     const images = [
-        [],
-        [],
-        [],
-        []
+        ["/iawards.png", "/bunyipst.png", "/ftc.png", "/bunyipsc.png"],
+        ["/vsc.svg", "/as.png", "/rider.svg", "/wsl.png"],
+        ["/react.svg", "/flask.png", "/firebase.png", "/unity.png"],
+        ["/cs.svg", "/typescript.svg", "/pythonf.svg", "/kotlin.svg"]
+    ];
+
+    const titles = [
+        ["Society: iAwards 2023", "Society: Murray Bridge High School Student Robotics Club", "Society: FIRST Tech Challenge Team", "Society: Bunyip Bellower Developer"],
+        ["Platform: Visual Studio Code", "Platform: Android Studio", "Platform: JetBrains Rider", "Platform: Windows Subsystem for Linux"],
+        ["Framework: React", "Framework: Flask", "Framework: Firebase", "Framework: Unity"],
+        ["Language: C#", "Language: TypeScript", "Language: Python", "Language: Kotlin"]
     ];
 
     return (
@@ -124,7 +144,7 @@ function Runway() {
                         </AnimationOnScroll>
                         <br />
                         {[0, 1, 2, 3].map((index) => (
-                            <Section key={index} comments={comments} images={images[index]} index={index} animateIn={index % 2 === 0 ? 'animate__fadeInRight' : 'animate__fadeInLeft'} animateOnce={true} />
+                            <Section key={index} comments={comments} titles={titles[index]} images={images[index]} index={index} animateIn={index % 2 === 0 ? 'animate__fadeInRight' : 'animate__fadeInLeft'} animateOnce={true} />
                         ))}
                         <AnimationOnScroll
                             style={{ animationDelay: "1s" }}
