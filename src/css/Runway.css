@@ -252,12 +252,8 @@
     transition: opacity 1s;
 }
 
-.section-image {
-    grid-area: img;
-}
-
 .section-image img {
-    width: 130px;
+    width: 140px;
 }
 
 .text-scrolling {
@@ -343,6 +339,7 @@ strong {
 }
 
 .section-image {
+    grid-area: img;
     position: relative;
     height: 500px;
 }

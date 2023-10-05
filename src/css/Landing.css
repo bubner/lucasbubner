@@ -18,7 +18,8 @@ body {
     top: 3px;
 }
 
-#supertext {
+#supertext,
+#blinker {
     background: linear-gradient(to left, #ffffff, #cf8184, #f78488);
     background-size: 200% 100%;
     background-position: 100% 0;
@@ -38,7 +39,12 @@ body {
     animation: blink 2s ease-in-out infinite;
     transition: transform 80ms;
     position: relative;
+}
 
+#blinker {
+    /* Somehow setting `all` to an invalid value makes it work?? This is a delirious hack */
+    all: why-does-this-work;
+    animation: blink 2s ease-in-out infinite;
 }
 
 @keyframes blink {

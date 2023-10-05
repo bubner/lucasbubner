@@ -90,16 +90,16 @@ function Runway() {
 
     const images = [
         ["/iawards.png", "/bunyipst.png", "/ftc.png", "/bunyipsc.png"],
-        ["/vsc.svg", "/as.png", "/rider.svg", "/wsl.png"],
-        ["/react.svg", "/flask.png", "/firebase.png", "/unity.png"],
-        ["/cs.svg", "/typescript.svg", "/pythonf.svg", "/kotlin.svg"]
+        ["/firebase.png", "/vercelc.png", "/unity.png", "/githubw.png"],
+        ["/react.svg", "/flask.png", "/nextjs.svg", "/tailwind.svg"],
+        ["/cs.svg", "/typescript.svg", "/pythonf.svg", "/java.png"]
     ];
 
     const titles = [
         ["Society: iAwards 2023", "Society: Murray Bridge High School Student Robotics Club", "Society: FIRST Tech Challenge Team", "Society: Bunyip Bellower Developer"],
-        ["Platform: Visual Studio Code", "Platform: Android Studio", "Platform: JetBrains Rider", "Platform: Windows Subsystem for Linux"],
-        ["Framework: React", "Framework: Flask", "Framework: Firebase", "Framework: Unity"],
-        ["Language: C#", "Language: TypeScript", "Language: Python", "Language: Kotlin"]
+        ["Platform: Firebase", "Platform: Vercel", "Platform: Unity", "Platform: GitHub"],
+        ["Framework: React", "Framework: Flask", "Framework: Next.js", "Framework: Tailwind CSS"],
+        ["Language: C#", "Language: TypeScript", "Language: Python", "Language: Java"]
     ];
 
     return (
@@ -155,7 +155,7 @@ function Runway() {
                                 <p className="content huge">I am <span className="text-or">Lucas Bubner</span>.</p>
                             </div>
                             <div className="mini-element">
-                                <Link to="/i" id="next">
+                                <Link to="/pages/home" id="next">
                                     Read more{" "}
                                     <img alt="right arrow" src="/rightarrow.svg" className="rightarrow moving" />
                                 </Link>

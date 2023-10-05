@@ -4,7 +4,7 @@
  */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import Runway from "./Runway";
 import "../css/Landing.css";
@@ -84,38 +84,40 @@ function Landing() {
             </div>
             {!introDone && (
                 <>
-                    <Link id="skip" to="/i" style={{ opacity: shouldMove ? "0" : "1" }}>
+                    <Link id="skip" to="/pages/home" style={{ opacity: shouldMove ? "0" : "1" }}>
                         Skip <img alt="" src="/rightarrow.svg" className="rightarrow" />
                     </Link>
                     <div id="heading" style={{ transform: shouldMove ? "translate(-50vw, -200vh)" : "reset" }}>
                         <div id="header">
                             {isWritten && (
-                                <div id="supertext">
-                                    computational
-                                    <br />
-                                    brilliance.
-                                </div>
+                                <>
+                                    <div id="supertext">
+                                        computational
+                                        <br />
+                                        brilliance.
+                                        <span id="blinker">🢐</span>
+                                    </div>
+                                </>
                             )}
                             <span id="typer">
-                                <Typewriter
-                                    options={{
-                                        cursor: "",
-                                        delay: 90,
-                                        onCreateTextNode: (_, node) => {
-                                            // Somehow this removes the entire text node when completed, and this is desired
-                                            return node;
-                                        },
-                                    }}
-                                    onInit={(typewriter) => {
-                                        typewriter
-                                            .pauseFor(500)
-                                            .typeString("computational<br>brilliance.")
-                                            .callFunction(() => {
-                                                setIsWritten(true);
-                                            })
-                                            .start();
-                                    }}
-                                />
+                                    {!isWritten && (
+                                        <Typewriter
+                                            options={{
+                                                cursor: "🢐",
+                                                delay: 90,
+                                            }}
+                                            onInit={(typewriter) => {
+                                                typewriter
+                                                    .pauseFor(800)
+                                                    .typeString("computational<br>brilliance.")
+                                                    .pauseFor(100)
+                                                    .callFunction(() => {
+                                                        setIsWritten(true);
+                                                    })
+                                                    .start();
+                                            }}
+                                        />
+                                    )}
                             </span>
                         </div>
                     </div>

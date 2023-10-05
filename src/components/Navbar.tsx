@@ -40,21 +40,21 @@ function Navbar() {
     }
 
     const images: Image[] = [
-        { src: "/pfp.svg", alt: "Home", path: "/i" },
-        { src: "/star.svg", alt: "Accomplishments", path: "/i/accomplishments" },
-        { src: "/scr.svg", alt: "Technology", path: "/i/technology" },
-        { src: "/annoc.svg", alt: "Honourables", path: "/i/honourables" },
-        { src: "/at.svg", alt: "Projects", path: "/i/projects" },
-        { src: "/link.svg", alt: "Links", path: "/i/links" },
+        { src: "/pfp.svg", alt: "Home", path: "/pages/home" },
+        { src: "/star.svg", alt: "Accomplishments", path: "/pages/accomplishments" },
+        { src: "/scr.svg", alt: "Technology", path: "/pages/technology" },
+        { src: "/annoc.svg", alt: "Honourables", path: "/pages/honourables" },
+        { src: "/at.svg", alt: "Projects", path: "/pages/projects" },
+        { src: "/link.svg", alt: "Links", path: "/pages/links" },
     ];
 
     const buttons: PathMap[] = [
-        { alt: "Home", path: "/i" },
-        { alt: "Accomplishments", path: "/i/accomplishments" },
-        { alt: "Technology", path: "/i/technology" },
-        { alt: "Honourables", path: "/i/honourables" },
-        { alt: "Projects", path: "/i/projects" },
-        { alt: "Links", path: "/i/links" },
+        { alt: "Home", path: "/pages/home" },
+        { alt: "Accomplishments", path: "/pages/accomplishments" },
+        { alt: "Technology", path: "/pages/technology" },
+        { alt: "Honourables", path: "/pages/honourables" },
+        { alt: "Projects", path: "/pages/projects" },
+        { alt: "Links", path: "/pages/links" },
     ];
 
     const NavbarImage: FC<NavbarImageProps> = ({ src, alt, path, location }) => (

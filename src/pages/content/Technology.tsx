@@ -12,25 +12,25 @@ function Technology() {
         <Layout>
             <div className="content-bg" />
             <div className="container">
-                <Box src="/scrmod.svg" size={40}>
-                    <h1>Technology</h1>
-                    <p>
-                        I am <b>experienced</b> in usage of industry-used programming tools and services, as well as a range of
-                        programming languages in order to implement and design solutions to <b>real-world problems</b>.
-                    </p>
-                </Box>
                 <Box src="/reactts.png" size={85}>
-                    <h1>TypeScript & React</h1>
+                    <h1>React & TypeScript</h1>
                     <p>
-                        Experienced with the <b>React</b> framework to build single-page applications with integrations on
-                        a <b>full-stack</b> level. Proficient with TypeScript to build <b>type-safe</b>, <b>well-documented</b> and <b>maintainable</b> code.
+                        Experienced with the <b>React</b> framework to build applications with integrations on
+                        a <b>full-stack</b> level with <b>Next.js</b>. Proficient with TypeScript to build <b>type-safe</b>, <b>well-documented</b> and <b>maintainable</b> code.
                     </p>
                 </Box>
-                <Box src="/kotlin.svg" size={40}>
-                    <h1>Kotlin</h1>
+                <Box src="/javakotlin.png" size={100}>
+                    <h1>Java & Kotlin</h1>
                     <p>
-                        Experienced with <b>object-oriented design</b> and Java/Kotlin programming, using these languages as <b>teaching
-                        tools</b> for other members of the Bunyips Robotics Team.
+                        Experienced with <b>object-oriented design</b> and Java/Kotlin programming, in contexts of <b>robotics</b> and <b>game modding</b>, using these
+                        languages as <b>teaching tools</b> for the Bunyips Robotics Team.
+                    </p>
+                </Box>
+                <Box src="/csu.png" size={105}>
+                    <h1>C#</h1>
+                    <p>
+                        Currently learning C# to develop applications with the <b>Unity</b> platform, expanding upon previous knowledge in <b>object-oriented design principles</b>, while expanding into
+                        skills within game development.
                     </p>
                 </Box>
                 <Box src="/python.svg" size={50}>

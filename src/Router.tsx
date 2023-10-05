@@ -7,12 +7,12 @@ import { Routes, Route, useLocation, useNavigate, Navigate } from "react-router-
 import { AnimatePresence } from "framer-motion";
 import { GotoContext } from "./components/GotoContext";
 import Landing from "./main/Landing";
-import Home from "./i/Home";
-import Accomplishments from "./i/pages/Accomplishments";
-import Technology from "./i/pages/Technology";
-import Honourables from "./i/pages/Honourables";
-import Projects from "./i/pages/Projects";
-import Links from "./i/pages/Links";
+import Home from "./pages/Home";
+import Accomplishments from "./pages/content/Accomplishments";
+import Technology from "./pages/content/Technology";
+import Honourables from "./pages/content/Honourables";
+import Projects from "./pages/content/Projects";
+import Links from "./pages/content/Links";
 
 function Router() {
     const location = useLocation();
@@ -33,14 +33,14 @@ function Router() {
                     <Route path="/">
                         <Route index element={<Landing />} />
                     </Route>
-                    <Route path="/i">
-                        <Route index element={<Home />} />
+                    <Route path="/pages">
+                        <Route index path="*" element={<Navigate to="/pages/home" />} />
+                        <Route path="home" element={<Home />} />
                         <Route path="accomplishments" element={<Accomplishments />} />
                         <Route path="technology" element={<Technology />} />
                         <Route path="honourables" element={<Honourables />} />
                         <Route path="projects" element={<Projects />} />
                         <Route path="links" element={<Links />} />
-                        <Route path="*" element={<Navigate to="/i" />} />
                     </Route>
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
