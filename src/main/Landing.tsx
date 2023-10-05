@@ -95,7 +95,7 @@ function Landing() {
                                         computational
                                         <br />
                                         brilliance.
-                                        <span id="blinker">🢐</span>
+                                        <span id="blinker">|</span>
                                     </div>
                                 </>
                             )}
@@ -103,7 +103,7 @@ function Landing() {
                                     {!isWritten && (
                                         <Typewriter
                                             options={{
-                                                cursor: "🢐",
+                                                cursor: "|",
                                                 delay: 90,
                                             }}
                                             onInit={(typewriter) => {
