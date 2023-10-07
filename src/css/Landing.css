@@ -43,19 +43,21 @@ body {
 
 #blinker {
     /* Somehow setting `all` to an invalid value makes it work?? This is a delirious hack */
+    /* I looked at this the next day and it works without it now, but I'm too scared to remove it */
+    /* Cache invalidation be damned */
     all: why-does-this-work;
     animation: blink 2s ease-in-out infinite;
 }
 
 @keyframes blink {
     0% {
-        opacity: 1;
+        opacity: 0.75;
     }
     50% {
         opacity: 0;
     }
     100% {
-        opacity: 1;
+        opacity: 0.75;
     }
 }
 

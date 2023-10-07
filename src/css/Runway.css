@@ -268,7 +268,7 @@
 .section {
     display: grid;
     align-items: center;
-    grid-template-columns: 50% 1fr;
+    grid-template-columns: 60% 1fr;
     grid-template-rows: auto;
     gap: 0px 0px;
     grid-template-areas: "text img";
