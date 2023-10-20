@@ -36,9 +36,9 @@ function Home() {
                 <Box src="/holov2te2.png" size={80}>
                     <h1>What I do</h1>
                     <p>
-                        I specialise in <b>digital technologies and innovation</b>, striving to develop high-quality
-                        applications that target real-world problems. I am highly <b>self-motivated</b> in what I do, always
-                        looking to learn and teach new things.
+                        I specialise in <b>digital technologies and software</b>, striving to develop high-quality
+                        solutions that target real-world problems. I am highly <b>self-motivated</b>, always
+                        looking to learn and teach new things in a range of IT industries.
                     </p>
                 </Box>
             </div>

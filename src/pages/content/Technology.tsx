@@ -23,7 +23,7 @@ function Technology() {
                     <h1>Java & Kotlin</h1>
                     <p>
                         Experienced with <b>object-oriented design</b> and Java/Kotlin programming, in contexts of <b>robotics</b> and <b>game modding</b>, using these
-                        languages as <b>teaching tools</b> for the Bunyips Robotics Team.
+                        languages as <b>teaching tools</b> for the Bunyips Student Robotics Club.
                     </p>
                 </Box>
                 <Box src="/csu.png" size={105}>
