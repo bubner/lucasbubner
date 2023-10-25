@@ -11,7 +11,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         // DOM takes some time to update even after framer-motion says the animation is complete, so
         // we must wait a bit, so we don't calculate leaving boxes
         setTimeout(() => {
-            const boxHeights = Array.from(document.getElementsByClassName("box")).map((el) => (el as HTMLDivElement).getBoundingClientRect().height);
+            const boxHeights: Array<number> = Array.from(document.getElementsByClassName("box")).map((el) => (el as HTMLDivElement).getBoundingClientRect().height);
             const tallestBox = Math.max(...boxHeights);
             Array.from(document.getElementsByClassName("box")).forEach((el) => {
                 // Don't resize box elements intended to be small
@@ -42,6 +42,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 
     return (
         <motion.div
+            id="content"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

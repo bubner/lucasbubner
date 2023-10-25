@@ -4,7 +4,7 @@
  */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import Runway from "./Runway";
 import "../css/Landing.css";
