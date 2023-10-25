@@ -26,13 +26,17 @@ function Router() {
 
     useEffect(() => {
         const root = document.getElementById("root");
+
         const observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
                 mutation.removedNodes.forEach((node) => {
                     if (node.nodeType === Node.ELEMENT_NODE) {
                         const el = node as HTMLElement;
-                        if (el.id === "content") {
+                        // If the user moves through the pages, there might be a third content page that will be removed from the DOM
+                        // during the transition, therefore, we check if there are two content pages in the DOM and cancel if there are
+                        if (el.id === "content" && document.querySelectorAll("#content").length === 1) {
                             // Restore navigation when the page is removed from the DOM
+                            // This eliminates most transitionary bugs without having to impose a mandatory fixed timeout
                             setLock(false);
                             document.querySelector("html")!.style.overflowY = "auto";
                         }
@@ -40,11 +44,11 @@ function Router() {
                 });
             });
         });
+
         observer.observe(root!, { childList: true, subtree: true });
-        return () => {
-            observer.disconnect();
-        }
-    }, [])
+
+        return () => observer.disconnect();
+    }, []);
 
     useEffect(() => {
         // Without this lock, framer-motion will position the page incorrectly and leave the content 1vh too low
