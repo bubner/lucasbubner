@@ -66,11 +66,11 @@ function Router() {
 
     function serveRedirector() {
         // Redirect all requests to /serve/* to serve.lucasbubner.me/*
-        const href = `https://serve.lucasbubner.me/${location.pathname.split("/serve/")[1]}${location.search}${location.hash}`;
+        const href = `https://serve.lucasbubner.me/${location.pathname.split("/serve/")[1] ?? ""}${location.search}${location.hash}`;
         return (
             <>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh", color: "white", backgroundColor: "black" }}>
-                    <meta http-equiv="refresh" content={`0;url=${href}`} />
+                    <meta httpEquiv="refresh" content={`0;url=${href}`} />
                     <div style={{ fontSize: "1.5rem", fontWeight: "bold", margin: "5px" }}>Redirecting...</div>
                     <br />
                     <div>
