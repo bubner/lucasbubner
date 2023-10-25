@@ -70,7 +70,7 @@ function Router() {
         return (
             <>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh", color: "white", backgroundColor: "black" }}>
-                    <meta http-equiv="refresh" content={`1;url=${href}`} />
+                    <meta http-equiv="refresh" content={`0;url=${href}`} />
                     <div style={{ fontSize: "1.5rem", fontWeight: "bold", margin: "5px" }}>Redirecting...</div>
                     <br />
                     <div>
