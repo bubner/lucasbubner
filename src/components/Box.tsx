@@ -13,15 +13,7 @@ interface BoxProps extends HTMLAttributes<HTMLElement> {
     children: React.ReactNode;
 }
 
-function Box({
-    src,
-    size,
-    extrablur,
-    small,
-    href,
-    children,
-    ...rest
-}: BoxProps) {
+function Box({ src, size, extrablur, small, href, children, ...rest }: BoxProps) {
     const imgStyle: CSSProperties = {
         width: `${size}%`,
         height: "auto",

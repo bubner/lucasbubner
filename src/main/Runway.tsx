@@ -24,7 +24,7 @@ function Runway() {
         const bg = document.getElementById("stars-bg");
         const redline = document.getElementById("extd-bg");
         if (bg) {
-            const redHeight = redline !== null ? redline.getBoundingClientRect().height : 0
+            const redHeight = redline !== null ? redline.getBoundingClientRect().height : 0;
             bg.style.height = `${Math.max(document.body.offsetHeight, redHeight)}px`;
         }
     }
@@ -92,22 +92,26 @@ function Runway() {
         ["/iawards.png", "/bunyipst.png", "/ftc.png", "/bunyipsc.png"],
         ["/firebase.png", "/vercelc.png", "/unity.png", "/githubw.png"],
         ["/react.svg", "/flask.png", "/nextjs.svg", "/tailwind.svg"],
-        ["/cs.svg", "/typescript.svg", "/pythonf.svg", "/java.png"]
+        ["/cs.svg", "/typescript.svg", "/pythonf.svg", "/java.png"],
     ];
 
     const titles = [
         ["Society: iAwards 2023", "Society: Murray Bridge High School Student Robotics Club", "Society: FIRST Tech Challenge Team", "Society: Bunyip Bellower Developer"],
         ["Platform: Firebase", "Platform: Vercel", "Platform: Unity", "Platform: GitHub"],
         ["Framework: React", "Framework: Flask", "Framework: Next.js", "Framework: Tailwind CSS"],
-        ["Language: C#", "Language: TypeScript", "Language: Python", "Language: Java"]
+        ["Language: C#", "Language: TypeScript", "Language: Python", "Language: Java"],
     ];
 
     return (
         <div id="main">
             <div ref={winRef} />
             <div className="text-container">
-                <p className="text-line">I am a <span className="text-emp">self-driven</span>,</p>
-                <p className="text-line"><span className="text-emp">young</span> software developer.</p>
+                <p className="text-line">
+                    I am a <span className="text-emp">self-driven</span>,
+                </p>
+                <p className="text-line">
+                    <span className="text-emp">young</span> software developer.
+                </p>
             </div>
             {isExplained && (
                 <>
@@ -133,10 +137,14 @@ function Runway() {
                         </div>
                         <div className="text-element big">
                             <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
-                                <p className="content"><span className="text-emp">Nationally</span> recognised.</p>
+                                <p className="content">
+                                    <span className="text-emp">Nationally</span> recognised.
+                                </p>
                             </AnimationOnScroll>
                             <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
-                                <p className="content">Academically <span className="text-emp">accredited</span>.</p>
+                                <p className="content">
+                                    Academically <span className="text-emp">accredited</span>.
+                                </p>
                             </AnimationOnScroll>
                         </div>
                         <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
@@ -144,7 +152,15 @@ function Runway() {
                         </AnimationOnScroll>
                         <br />
                         {[0, 1, 2, 3].map((index) => (
-                            <Section key={index} comments={comments} titles={titles[index]} images={images[index]} index={index} animateIn={index % 2 === 0 ? 'animate__fadeInRight' : 'animate__fadeInLeft'} animateOnce={true} />
+                            <Section
+                                key={index}
+                                comments={comments}
+                                titles={titles[index]}
+                                images={images[index]}
+                                index={index}
+                                animateIn={index % 2 === 0 ? "animate__fadeInRight" : "animate__fadeInLeft"}
+                                animateOnce={true}
+                            />
                         ))}
                         <AnimationOnScroll
                             style={{ animationDelay: "1s" }}
@@ -152,7 +168,9 @@ function Runway() {
                             animateOnce={true}
                         >
                             <div className="text-element">
-                                <p className="content huge">I am <span className="text-or">Lucas Bubner</span>.</p>
+                                <p className="content huge">
+                                    I am <span className="text-or">Lucas Bubner</span>.
+                                </p>
                             </div>
                             <div className="mini-element">
                                 <Link to="/pages/home" id="next">

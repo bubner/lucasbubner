@@ -43,7 +43,7 @@
     border-radius: 15px;
     transition: background-color 0.25s;
     transform: translateY(25%);
-    width: 50px;
+    width: auto;
     height: 50px;
 }
 

@@ -54,7 +54,7 @@ function Router() {
         // Without this lock, framer-motion will position the page incorrectly and leave the content 1vh too low
         setLock(true);
         document.querySelector("html")!.style.overflowY = "hidden";
-        
+
         // The listener for the DOM will automatically unlock the page when the transitionary content is removed from the DOM
         // This timeout is a failsafe to ensure that the page is unlocked if the DOM listener fails or is not triggered
         // A common situation where the DOM listener fails is when the user initially lands on the page
@@ -69,7 +69,18 @@ function Router() {
         const href = `https://serve.lucasbubner.me/${location.pathname.split("/serve/")[1] ?? ""}${location.search}${location.hash}`;
         return (
             <>
-                <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh", color: "white", backgroundColor: "black" }}>
+                <div
+                    style={{
+                        textAlign: "center",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        height: "100vh",
+                        color: "white",
+                        backgroundColor: "black",
+                    }}
+                >
                     <meta httpEquiv="refresh" content={`0;url=${href}`} />
                     <div style={{ fontSize: "1.5rem", fontWeight: "bold", margin: "5px" }}>Redirecting...</div>
                     <br />

@@ -20,10 +20,10 @@ function Honourables() {
                         <br />
                         <a
                             className="internallink"
-                            href="https://aiia.com.au/iaward/2023-sa-nt-winners-and-merit-recipients/"
+                            href="https://www.murraybridge.news/p/murray-bridge-high-school-students"
                             target="_blank"
                         >
-                            aiia.com.au/iaward/2023-sa-nt-winners-and-merit-recipients
+                            https://www.murraybridge.news/p/murray-bridge-high-school-students
                         </a>
                     </p>
                 </Box>
@@ -31,7 +31,7 @@ function Honourables() {
                     <h1>National iAwards Merit</h1>
                     <p>
                         <b>Australian Information Industry Association</b> <br /> Merit recipient of the 2023 National
-                        Student & Education category at the iAwards, undergoing Stage II judging against other
+                        Student &amp; Education category at the iAwards, undergoing Stage II judging against other
                         prestigious projects at a <b>tertiary level</b>.
                         <br />
                         <a
@@ -39,21 +39,22 @@ function Honourables() {
                             href="https://www.linkedin.com/feed/update/urn:li:activity:7106212481345212417/"
                             target="_blank"
                         >
-                            www.linkedin.com/feed/update/urn:li:activity:7106212481345212417/
+                            https://www.linkedin.com/feed/update/urn:li:activity:7106212481345212417/
                         </a>
                     </p>
                 </Box>
                 <Box src="/harvard.png" size={40} extrablur>
                     <h1>CS50 Certificate</h1>
                     <p>
-                        <b>CS50's Introduction to Computer Science Certificate</b> <br /> Attained in December 2022
+                        <b>CS50's Introduction to Computer Science Certificate</b> <br /> Attained in
+                        <b> December 2022</b> for successful completion of <b>CS50x</b> offered by Harvard University.
                         <br />
                         <a
                             className="internallink"
                             href="https://cs50.harvard.edu/certificates/62d6f9dd-7d87-49a0-a437-f6cd334cdc45"
                             target="_blank"
                         >
-                            cs50.harvard.edu/certificates/62d6f9dd-7d87-49a0-a437-f6cd334cdc45
+                            https://cs50.harvard.edu/certificates/62d6f9dd-7d87-49a0-a437-f6cd334cdc45
                         </a>
                     </p>
                 </Box>
@@ -61,16 +62,24 @@ function Honourables() {
                     <h1>Year 8/9 Dux of 2021/2022</h1>
                     <p>
                         <b>Murray Bridge High School</b> <br /> <b>Multi-year</b> Dux student at MBHS; highest achieving
-                        academic student for grade point average across multiple years. Striving student in{" "}
-                        <b>Specialist and Methods Mathematics</b>, <b>Physics</b>, and <b>Digital Technology</b>.
+                        academic student for grade point average across multiple years. Striving student in
+                        <b> Specialist and Methods Mathematics</b>, <b>Physics</b>, and <b>Digital Technology</b>.
                     </p>
                 </Box>
                 <Box src="/bunyipst.png" size={45}>
                     <h1>Murray Bridge Bunyips Captain</h1>
                     <p>
                         <b>May 2022 - Present</b> <br /> Club captain of multiple registered FIRST Tech Challenge teams.
-                        Served as a <b>programming mentor</b> across <b>multiple seasons</b> in both Java and
-                        block-based languages; presented to councils and entities for needs of the club.
+                        Presented and spoke to councils and entities for needs and requests, representing the club as a
+                        whole.
+                        <br />
+                        <a
+                            className="internallink"
+                            href="https://www.murraybridge.news/p/robotics-students-are-on-a-roll-at"
+                            target="_blank"
+                        >
+                            https://www.murraybridge.news/p/robotics-students-are-on-a-roll-at
+                        </a>
                     </p>
                 </Box>
             </div>

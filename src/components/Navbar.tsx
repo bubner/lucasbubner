@@ -101,10 +101,18 @@ function Navbar() {
                 </div>
                 <div id="mobileheader">
                     {/* Reused code from my Bunyip Bellower project. I couldn't be bothered implementing a new popup menu so this will do. */}
-                    <Popup ref={tref as Ref<PopupActions>} trigger={<img src="/bbq.svg" alt="Menu" />}>
+                    <Popup ref={tref as Ref<PopupActions>} trigger={<img src="/bbq.png" alt="Menu button" />}>
                         <>
                             <div className="outer" onClick={tclose} />
                             <div className="inner">
+                                <div className="buttonarea">
+                                    <p
+                                        onClick={(e) => e.preventDefault()}
+                                        style={{ textAlign: "center", fontStyle: "italic" }}
+                                    >
+                                        lucasbubner.me
+                                    </p>
+                                </div>
                                 {buttons.map((button, index) => (
                                     <div
                                         className="buttonarea"
@@ -112,7 +120,7 @@ function Navbar() {
                                         key={index}
                                     >
                                         <NavbarButton key={button.alt} alt={button.alt} path={button.path} />
-                                        <hr />
+                                        {index !== buttons.length - 1 ? <hr /> : null}
                                     </div>
                                 ))}
                             </div>

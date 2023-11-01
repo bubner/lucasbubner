@@ -100,24 +100,24 @@ function Landing() {
                                 </>
                             )}
                             <span id="typer">
-                                    {!isWritten && (
-                                        <Typewriter
-                                            options={{
-                                                cursor: "|",
-                                                delay: 90,
-                                            }}
-                                            onInit={(typewriter) => {
-                                                typewriter
-                                                    .pauseFor(800)
-                                                    .typeString("computational<br>brilliance.")
-                                                    .pauseFor(100)
-                                                    .callFunction(() => {
-                                                        setIsWritten(true);
-                                                    })
-                                                    .start();
-                                            }}
-                                        />
-                                    )}
+                                {!isWritten && (
+                                    <Typewriter
+                                        options={{
+                                            cursor: "|",
+                                            delay: 90,
+                                        }}
+                                        onInit={(typewriter) => {
+                                            typewriter
+                                                .pauseFor(800)
+                                                .typeString("computational<br>brilliance.")
+                                                .pauseFor(100)
+                                                .callFunction(() => {
+                                                    setIsWritten(true);
+                                                })
+                                                .start();
+                                        }}
+                                    />
+                                )}
                             </span>
                         </div>
                     </div>
