@@ -100,7 +100,7 @@ function Router() {
                         <a style={{ color: "lightblue", textDecoration: "underline" }} href="https://lucasbubner.me">
                             Lucas Bubner
                         </a>
-                        , 2023.
+                        , 2024.
                     </small>
                 </div>
             </>
