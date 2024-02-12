@@ -65,8 +65,8 @@ function Router() {
     }, [location.pathname]);
 
     function serveRedirector() {
-        // Redirect all requests to /serve/* to serve.lucasbubner.me/*
-        const href = `https://serve.lucasbubner.me/${location.pathname.split("/serve/")[1] ?? ""}${location.search}${location.hash}`;
+        // Redirect all requests to /serve/* to serve.bubner.me/*
+        const href = `https://serve.bubner.me/${location.pathname.split("/serve/")[1] ?? ""}${location.search}${location.hash}`;
         return (
             <>
                 <div
