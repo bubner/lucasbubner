@@ -110,7 +110,7 @@ function Navbar() {
                                         onClick={(e) => e.preventDefault()}
                                         style={{ textAlign: "center", fontStyle: "italic" }}
                                     >
-                                        lucasbubner.me
+                                        bubner.me
                                     </p>
                                 </div>
                                 {buttons.map((button, index) => (
