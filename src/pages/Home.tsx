@@ -24,21 +24,19 @@ function Home() {
         <Layout>
             <div className={loaded ? "fade-in content-bg" : "fade-out content-bg"} />
             <div className="container no-mid">
-                <Box src="/hololine.png" size={100}>
+                <Box src={undefined} size={100}>
                     <h1>Hi!</h1>
                     <p>
                         I'm <b>Lucas Bubner</b>, a <b>16-year-old</b> software developer. <br /> I am currently in
-                        high school as a<b> Year 11 student</b> and am looking to pursue a career in
-                        <b> software development</b> and the STEM pathways. This website is a showcase of my work and
-                        achievements.
+                        high school as a<b> Year 11 student</b> passionate in the STEM/IT industries.
+                        This website is a showcase of my work and achievements.
                     </p>
                 </Box>
-                <Box src="/holov2te2.png" size={80}>
+                <Box src={undefined} size={80}>
                     <h1>What I do</h1>
                     <p>
-                        I specialise in <b>digital technologies and software</b>, striving to develop high-quality
-                        solutions that target real-world problems. I am highly <b>self-motivated</b>, always looking to
-                        learn and teach new things in a range of IT industries.
+                        I specialise in <b>software and academics</b>, consistently striving to exceed expectations.
+                        I am highly <b>self-motivated</b>, always looking to learn and teach new things in a range of IT industries.
                     </p>
                 </Box>
             </div>

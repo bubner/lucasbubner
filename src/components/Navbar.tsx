@@ -40,12 +40,13 @@ function Navbar() {
     }
 
     const images: Image[] = [
-        { src: "/pfp.svg", alt: "Home", path: "/pages/home" },
+        { src: "/transparent.png", alt: "Home", path: "/pages/home" },
         { src: "/star.svg", alt: "Accomplishments", path: "/pages/accomplishments" },
         { src: "/scr.svg", alt: "Technology", path: "/pages/technology" },
         { src: "/annoc.svg", alt: "Honourables", path: "/pages/honourables" },
         { src: "/at.svg", alt: "Projects", path: "/pages/projects" },
         { src: "/link.svg", alt: "Links", path: "/pages/links" },
+        { src: "/pfp.svg", alt: "Go to CV/Resume", path: "/serve/cv" },
     ];
 
     const buttons: PathMap[] = [
@@ -55,6 +56,7 @@ function Navbar() {
         { alt: "Honourables", path: "/pages/honourables" },
         { alt: "Projects", path: "/pages/projects" },
         { alt: "Links", path: "/pages/links" },
+        { alt: "Go to CV/Resume", path: "/serve/cv" },
     ];
 
     const NavbarImage: FC<NavbarImageProps> = ({ src, alt, path, location }) => (
