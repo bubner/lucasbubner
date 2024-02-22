@@ -40,22 +40,22 @@ function Navbar() {
     }
 
     const images: Image[] = [
-        { src: "/transparent.png", alt: "Home", path: "/pages/home" },
-        { src: "/star.svg", alt: "Accomplishments", path: "/pages/accomplishments" },
-        { src: "/scr.svg", alt: "Technology", path: "/pages/technology" },
-        { src: "/annoc.svg", alt: "Honourables", path: "/pages/honourables" },
-        { src: "/at.svg", alt: "Projects", path: "/pages/projects" },
-        { src: "/link.svg", alt: "Links", path: "/pages/links" },
+        { src: "/transparent.png", alt: "Home", path: "/@/home" },
+        { src: "/star.svg", alt: "Accomplishments", path: "/@/accomplishments" },
+        { src: "/scr.svg", alt: "Technology", path: "/@/technology" },
+        { src: "/annoc.svg", alt: "Honourables", path: "/@/honourables" },
+        { src: "/at.svg", alt: "Projects", path: "/@/projects" },
+        { src: "/link.svg", alt: "Links", path: "/@/links" },
         { src: "/pfp.svg", alt: "Go to CV/Resume", path: "/serve/cv" },
     ];
 
     const buttons: PathMap[] = [
-        { alt: "Home", path: "/pages/home" },
-        { alt: "Accomplishments", path: "/pages/accomplishments" },
-        { alt: "Technology", path: "/pages/technology" },
-        { alt: "Honourables", path: "/pages/honourables" },
-        { alt: "Projects", path: "/pages/projects" },
-        { alt: "Links", path: "/pages/links" },
+        { alt: "Home", path: "/@/home" },
+        { alt: "Accomplishments", path: "/@/accomplishments" },
+        { alt: "Technology", path: "/@/technology" },
+        { alt: "Honourables", path: "/@/honourables" },
+        { alt: "Projects", path: "/@/projects" },
+        { alt: "Links", path: "/@/links" },
         { alt: "Go to CV/Resume", path: "/serve/cv" },
     ];
 
