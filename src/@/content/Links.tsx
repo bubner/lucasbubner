@@ -17,7 +17,7 @@ function Links() {
                     <span className="clicknoti">(click)</span>
                     <p className="small">All my software projects and code repositories.</p>
                 </Box>
-                <Box src="/linkedin.png" size={30} href="https://linkedin.com/in/lucas-bubner/">
+                <Box src="/linkedin.png" size={30} href="https://linkedin.com/in/bubner/">
                     <h1>LinkedIn</h1>
                     <span className="clicknoti">(click)</span>
                     <p className="small">My industry certifications and experiences.</p>
