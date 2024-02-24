@@ -12,7 +12,7 @@ function Projects() {
         <Layout>
             <div className="content-bg" />
             <div className="container">
-                <Box src="/rre.png" size={45} href="https://github.com/hololb/RoboRegistry/">
+                <Box src="/rre.png" size={45} href="https://github.com/bubner/RoboRegistry/">
                     <h1>RoboRegistry</h1>
                     <span className="clicknoti">(click)</span>
                     <p>
@@ -39,7 +39,7 @@ function Projects() {
                         <b> educational for new programmers</b>.
                     </p>
                 </Box>
-                <Box src="/fchess.png" size={45} href="https://github.com/hololb/FusionChess/">
+                <Box src="/fchess.png" size={45} href="https://github.com/bubner/FusionChess/">
                     <h1>Fusion Chess</h1>
                     <span className="clicknoti">(click)</span>
                     <p>
@@ -47,7 +47,7 @@ function Projects() {
                         <b> piece fusion</b> instead of capturing. Built in <b>React</b> and <b>TypeScript</b>.
                     </p>
                 </Box>
-                <Box src="/ceo.png" size={45} href="https://github.com/hololb/Mind/">
+                <Box src="/ceo.png" size={45} href="https://github.com/bubner/Mind/">
                     <h1>Mind</h1>
                     <span className="clicknoti">(click)</span>
                     <p>
@@ -55,7 +55,7 @@ function Projects() {
                         <b> sessions</b>, and password protection.
                     </p>
                 </Box>
-                <Box src="/transparent.png" size={45} href="https://github.com/hololb/lucasbubner/">
+                <Box src="/transparent.png" size={45} href="https://github.com/bubner/lucasbubner/">
                     <h1>lucasbubner v2</h1>
                     <span className="clicknoti">(click)</span>
                     <p>

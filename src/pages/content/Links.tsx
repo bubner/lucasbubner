@@ -12,7 +12,7 @@ function Links() {
         <Layout>
             <div className="content-bg" />
             <div className="container no-mid">
-                <Box src="/github.svg" size={150} href="https://github.com/hololb/">
+                <Box src="/github.svg" size={150} href="https://github.com/bubner/">
                     <h1>GitHub</h1>
                     <span className="clicknoti">(click)</span>
                     <p className="small">Major projects and software.</p>
