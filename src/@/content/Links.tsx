@@ -12,7 +12,7 @@ function Links() {
         <Layout>
             <div className="content-bg" />
             <div className="container no-mid">
-                <Box src="/github.svg" size={150} href="https://github.com/hololb/">
+                <Box src="/github.svg" size={150} href="https://github.com/bubner/">
                     <h1>GitHub</h1>
                     <span className="clicknoti">(click)</span>
                     <p className="small">All my software projects and code repositories.</p>
@@ -22,7 +22,7 @@ function Links() {
                     <span className="clicknoti">(click)</span>
                     <p className="small">My industry certifications and experiences.</p>
                 </Box>
-                <Box src="/wakatime.svg" size={40} href="https://wakatime.com/@hololb">
+                <Box src="/wakatime.svg" size={40} href="https://wakatime.com/@bubner">
                     <h1>WakaTime</h1>
                     <span className="clicknoti">(click)</span>
                     <p className="small">My programming usage tracking since July 2023.</p>
