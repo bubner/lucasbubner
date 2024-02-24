@@ -22,7 +22,7 @@ function Links() {
                     <span className="clicknoti">(click)</span>
                     <p className="small">Smaller projects and proof-of-concept activities.</p>
                 </Box>
-                <Box src="/linkedin.png" size={30} href="https://linkedin.com/in/lucas-bubner/">
+                <Box src="/linkedin.png" size={30} href="https://linkedin.com/in/bubner/">
                     <h1>LinkedIn</h1>
                     <span className="clicknoti">(click)</span>
                     <p className="small">Industry certifications and experiences.</p>
