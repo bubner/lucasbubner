@@ -173,7 +173,7 @@ function Runway() {
                                 </p>
                             </div>
                             <div className="mini-element">
-                                <Link to="/@/home" id="next">
+                                <Link to="/~" id="next">
                                     Read more{" "}
                                     <img alt="right arrow" src="/rightarrow.svg" className="rightarrow moving" />
                                 </Link>

@@ -7,12 +7,12 @@ import { Routes, Route, useLocation, useNavigate, Navigate } from "react-router-
 import { AnimatePresence } from "framer-motion";
 import { GotoContext } from "./components/GotoContext";
 import Landing from "./main/Landing";
-import Home from "./@/Home";
-import Accomplishments from "./@/content/Accomplishments";
-import Technology from "./@/content/Technology";
-import Honourables from "./@/content/Honourables";
-import Projects from "./@/content/Projects";
-import Links from "./@/content/Links";
+import Home from "./~/Home";
+import Accomplishments from "./~/content/Accomplishments";
+import Technology from "./~/content/Technology";
+import Honourables from "./~/content/Honourables";
+import Projects from "./~/content/Projects";
+import Links from "./~/content/Links";
 
 function Router() {
     const location = useLocation();
@@ -115,9 +115,9 @@ function Router() {
                     <Route path="/">
                         <Route index element={<Landing />} />
                     </Route>
-                    <Route path="/@">
-                        <Route index path="*" element={<Navigate to="/@/home" />} />
-                        <Route path="home" element={<Home />} />
+                    <Route path="/~">
+                        <Route index path="*" element={<Navigate to="/~" />} />
+                        <Route path="" element={<Home />} />
                         <Route path="accomplishments" element={<Accomplishments />} />
                         <Route path="technology" element={<Technology />} />
                         <Route path="honourables" element={<Honourables />} />

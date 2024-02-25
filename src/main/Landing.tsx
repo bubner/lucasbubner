@@ -84,7 +84,7 @@ function Landing() {
             </div>
             {!introDone && (
                 <>
-                    <Link id="skip" to="/@/home" style={{ opacity: shouldMove ? "0" : "1" }}>
+                    <Link id="skip" to="/~" style={{ opacity: shouldMove ? "0" : "1" }}>
                         Skip <img alt="" src="/rightarrow.svg" className="rightarrow" />
                     </Link>
                     <div id="heading" style={{ transform: shouldMove ? "translate(-50vw, -200vh)" : "reset" }}>
