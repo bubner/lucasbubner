@@ -49,7 +49,7 @@ function Links() {
                     href="https://discord.com/users/616524858746077184/"
                     small
                     onClick={() => {
-                        alert("username: holo911");
+                        alert("username: holo" + "911");
                     }}
                 >
                     <h1>Discord</h1>
