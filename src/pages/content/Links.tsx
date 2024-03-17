@@ -30,10 +30,10 @@ function Links() {
                 <Box
                     src="/proton.png"
                     size={20}
-                    href="mailto:lkbubner@proton.me"
+                    href={"mailto:bubner@pro" + "ton.me"}
                     small
                     onClick={() => {
-                        alert("lkbubner@proton.me");
+                        alert("bubner@pro" + "ton.me");
                     }}
                 >
                     <h1>Contact Email</h1>
