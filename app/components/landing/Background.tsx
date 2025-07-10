@@ -20,15 +20,7 @@ export default function Background() {
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 3 }} className="absolute">
             <StarsAnimation />
-            <Image
-                alt=""
-                src={Stars}
-                placeholder="blur"
-                width={1920}
-                height={1080}
-                draggable={false}
-                className="w-screen h-dvh object-cover"
-            />
+            <div className="w-screen __scrolling-anim h-dvh object-cover bg-repeat" style={{ backgroundImage: "url(" + Stars.src + ")" }} />
         </motion.div>
     );
 }

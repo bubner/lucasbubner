@@ -208,6 +208,25 @@
     }
 }
 
+.__scrolling-anim {
+    animation: movingBg 80s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .__scrolling-anim {
+        animation: none !important;
+    }
+}
+
+@keyframes movingBg {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 0% -100%;
+    }
+}
+
 /* PACE.js flash theme, red */
 .pace {
     -webkit-pointer-events: none;
