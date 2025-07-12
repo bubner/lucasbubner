@@ -2,7 +2,7 @@
 
 import { useContext, useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { TreeStatus } from "../tree/TreeStatus";
 import Image from "next/image";
 import { DownArrow, RightArrow } from "@/app/images";
@@ -30,7 +30,7 @@ const shineVariants = {
 
 /**
  * Blocking typewriter effect on landing.
- * @author Lucas Bubner, 2024
+ * @author Lucas Bubner, 2025
  */
 export default function Writer() {
     const [shouldAnimate, setShouldAnimate] = useState(false);
