@@ -142,7 +142,7 @@
 }
 
 .__anim_slide_right {
-    animation: slideRight 30s linear infinite;
+    animation: slideRight 45s linear infinite;
 }
 
 @keyframes slideRight {
@@ -155,7 +155,7 @@
 }
 
 .__anim_slide_left {
-    animation: slideLeft 30s linear infinite;
+    animation: slideLeft 45s linear infinite;
 }
 
 @keyframes slideLeft {

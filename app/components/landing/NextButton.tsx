@@ -11,7 +11,7 @@ import SoundLink from "../SoundLink";
  * Next page and scroll down arrow.
  * @author Lucas Bubner, 2024
  */
-export default function Next() {
+export default function NextButton() {
     const nextPage = useRef<HTMLAnchorElement>(null);
     const writer = useContext(TreeStatus);
 
