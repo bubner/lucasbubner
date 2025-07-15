@@ -4,7 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import AnimationWrapper from "./components/exit/AnimationWrapper";
 import { TreeStatusProvider } from "./components/tree/TreeStatus";
-import { IndicatorPositionProvider } from "./components/info-pages/nav/PageIndicator";
+import { IndicatorPositionProvider } from "./components/PageIndicator";
 
 const inter = Inter({ subsets: ["latin"] });
 

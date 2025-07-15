@@ -39,12 +39,9 @@ export default function PageIndicator() {
     useEffect(() => {
         function calculatePosition() {
             const pathOrder = [
-                "/~/home",
-                "/~/accomplishments",
-                "/~/technology",
-                "/~/honourables",
-                "/~/projects",
-                "/~/links",
+                "/~",
+                "/~/showcase",
+                "/~/robotics",
                 "/~/cv",
             ];
             const index = pathOrder.indexOf(pathname);

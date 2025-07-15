@@ -34,7 +34,7 @@ export default function IconShowcase({ icons, direction, size }: { icons: Icon[]
                 >
                     {icons.map((icon, i) => (
                         <div key={i} className="mx-4 flex items-center justify-center" style={{ height: size, width: size }}>
-                            <Image draggable={false} src={icon.src} alt={icon.alt} title={icon.alt} width={size} height={size} className="grayscale opacity-80" />
+                            <Image draggable={false} src={icon.src} alt={icon.alt} title={icon.alt} width={size} height={size} className="grayscale opacity-60" />
                         </div>
                     ))}
                 </div>
