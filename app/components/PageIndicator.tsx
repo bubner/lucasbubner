@@ -6,7 +6,8 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 interface IndicatorPosition {
     indicatorPosition: number;
-    setIndicatorPosition: (page: number) => void;
+    setIndicatorPosition: (page: number, pathname: string) => void;
+    hasSeenPathname: (path: string) => boolean;
 }
 
 export const IndicatorPosition = createContext<IndicatorPosition | undefined>(undefined);
@@ -18,10 +19,21 @@ export const IndicatorPosition = createContext<IndicatorPosition | undefined>(un
  * @author Lucas Bubner, 2024
  */
 export function IndicatorPositionProvider({ children }: { children: React.ReactNode }) {
-    const [indicatorPosition, setIndicatorPosition] = useState(0);
+    const [indicatorPosition, setStateIndicatorPosition] = useState(0);
+    const [seen, setSeen] = useState<Set<string>>(new Set());
+
+    function hasSeenPathname(path: string): boolean {
+        return seen.has(path);
+    }
+
+    function setIndicatorPosition(page: number, pathname: string) {
+        // TODO: is updated too early
+        setSeen(prev => new Set(prev).add(pathname));
+        setStateIndicatorPosition(page);
+    }
 
     return (
-        <IndicatorPosition.Provider value={{ indicatorPosition, setIndicatorPosition }}>
+        <IndicatorPosition.Provider value={{ indicatorPosition, setIndicatorPosition, hasSeenPathname }}>
             {children}
         </IndicatorPosition.Provider>
     );
@@ -60,7 +72,7 @@ export default function PageIndicator() {
                 initial={{ x: last?.indicatorPosition }}
                 animate={{ x: x }}
                 transition={{ type: "spring", stiffness: 200, damping: 30, delay: 0.2 }}
-                onAnimationComplete={() => last?.setIndicatorPosition(x)}
+                onAnimationComplete={() => last?.setIndicatorPosition(x, pathname)}
                 className="bg-red-600 py-[2px] w-4 px-1 rounded-2xl mb-[1px]"
             />
         </div>

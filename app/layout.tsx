@@ -41,7 +41,7 @@ export default function RootLayout({
                 />
                 <meta name="darkreader-lock" />
             </head>
-            <body className={`${inter.className} bg-black overflow-x-hidden`}>
+            <body className={`${inter.className} bg-black overflow-hidden`}>
                 <noscript
                     // framer-motion does not like it when JavaScript is disabled, often leaving components stuck at opacity: 0, therefore
                     // we will force absolutely everything on the pages to be visible in the event we don't have JavaScript. We also try
