@@ -27,7 +27,6 @@ export function IndicatorPositionProvider({ children }: { children: React.ReactN
     }
 
     function setIndicatorPosition(page: number, pathname: string) {
-        // TODO: is updated too early
         setSeen(prev => new Set(prev).add(pathname));
         setStateIndicatorPosition(page);
     }
