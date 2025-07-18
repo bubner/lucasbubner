@@ -37,6 +37,7 @@ import iAwards25Finalist from "./iawardsfinalist.png";
 import iAwards23Merit from "./iawardsmerit.jpg";
 import Logbook from "./logbook.png";
 import Tag from "./tech.svg";
+import Star from "./star.png";
 
 export {
     Stars,
@@ -77,5 +78,6 @@ export {
     iAwards25Finalist,
     iAwards23Merit,
     Logbook,
-    Tag
+    Tag,
+    Star
 };

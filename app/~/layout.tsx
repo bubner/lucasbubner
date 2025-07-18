@@ -2,7 +2,7 @@ import ContextualFadeIn from "@/app/components/info-pages/ContextualFadeIn";
 import PageIndicator from "@/app/components/PageIndicator";
 import SoundLink from "@/app/components/SoundLink";
 import { TreeStatusProvider } from "@/app/components/tree/TreeStatus";
-import { Bubner, MainBackground } from "@/app/images";
+import { Bubner, Bunyips, MainBackground, Star } from "@/app/images";
 import Image from "next/image";
 import HomeScaleIn from "../components/info-pages/home/HomeScaleIn";
 
@@ -16,9 +16,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
     const hrefs = [
         { src: Bubner, alt: "Home", path: "/~" },
-        { src: Bubner, alt: "Showcase", path: "/~/showcase" },
-        { src: Bubner, alt: "Robotics", path: "/~/robotics" },
-        { src: Bubner, alt: "Go to CV/Resume", path: "/~/cv" },
+        { src: Star, alt: "Showcase", path: "/~/showcase" },
+        { src: Bunyips, alt: "Robotics", path: "/~/robotics" },
     ];
 
     return (

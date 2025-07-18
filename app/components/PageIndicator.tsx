@@ -52,8 +52,7 @@ export default function PageIndicator() {
             const pathOrder = [
                 "/~",
                 "/~/showcase",
-                "/~/robotics",
-                "/~/cv",
+                "/~/robotics"
             ];
             const index = pathOrder.indexOf(pathname);
             if (index === -1) return;
