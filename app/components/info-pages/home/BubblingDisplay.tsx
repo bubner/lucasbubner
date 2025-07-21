@@ -86,14 +86,14 @@ export default function BubblingDisplay({ repos }: { repos: RepoInfo[] }) {
     }, [repos]);
 
     useEffect(() => {
-        // Spawn every 3 seconds
+        // Spawn every 2 seconds
         const id = setInterval(() => {
             // Find items that are not already out there and add a random one
             const birb = repos.filter((waiting) => items.findIndex((item) => item.info === waiting) === -1);
             if (birb.length === 0) return;
             const floor = Math.floor(Math.random() * birb.length);
             addItem(birb[floor]);
-        }, 3000);
+        }, 2000);
 
         return () => clearInterval(id);
     }, [repos, items]);

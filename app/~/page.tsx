@@ -21,7 +21,7 @@ export default function Home() {
                     Contacts
                 </MinBox>
             </div>
-            <div className="w-full 2xl:w-1/2">
+            <div className="w-full sm:w-[700px] 2xl:w-1/2">
                 <MinBox initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: iter.next().value!!, type: "spring", damping: 20, stiffness: 200 }}>
                     <Suspense fallback={<LoadingWheel containerHeight="33vh" />}>
                         <GitHubRepoTree />
