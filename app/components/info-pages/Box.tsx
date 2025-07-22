@@ -16,7 +16,7 @@ interface BoxProps {
     entryDelay?: number | void;
     children: React.ReactNode;
 }
-
+// TODO: rewrite
 /**
  * An information box with a background image and animation.
  * @author Lucas Bubner, 2024

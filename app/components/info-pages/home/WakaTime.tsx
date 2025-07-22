@@ -8,7 +8,7 @@ export default function WakaTime() {
     const [imgLoaded, setImgLoaded] = useState(false);
     return (
         <a target="_blank" href="https://wakatime.com/@bubner">
-            <div style={{ width: 600, height: 100, position: "relative" }}>
+            <div className="relative h-full w-full">
                 {!imgLoaded && (
                     <div className="absolute inset-0 flex items-center justify-center rounded-[2rem]">
                         <LoadingWheel containerHeight="100px" />
@@ -19,7 +19,7 @@ export default function WakaTime() {
                     width={600}
                     height={100}
                     placeholder="blur"
-                    className="h-full w-full rounded-[2rem]"
+                    className="h-full w-full rounded-[1.5rem]"
                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
                     priority
                     src="https://wakatime.com/share/@bubner/5e5091a6-e447-4c50-88f8-0c7c9205ef93.png"
