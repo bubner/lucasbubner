@@ -4,7 +4,7 @@ import { DownArrow } from "@/app/images";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useContext, useEffect, useRef } from "react";
-import { TreeStatus } from "../tree/TreeStatus";
+import { TreeStatus } from "../TreeStatus";
 import SoundLink from "../SoundLink";
 
 /**

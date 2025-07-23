@@ -3,7 +3,7 @@
 import { useContext, useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import { motion, useAnimation } from "framer-motion";
-import { TreeStatus } from "../tree/TreeStatus";
+import { TreeStatus } from "../TreeStatus";
 import Image from "next/image";
 import { DownArrow, RightArrow } from "@/app/images";
 import Link from "next/link";
@@ -48,7 +48,7 @@ export default function Writer() {
     return (
         <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}>
             <motion.div layout className="text-center text-4xl/tight md:text-7xl/tight font-bold text-white flex justify-center">
-                I am&nbsp;
+                <span className="__nsg">I am&nbsp;</span>
                 <motion.div
                     animate={shineEffect}
                     variants={shineVariants}
@@ -84,7 +84,7 @@ export default function Writer() {
                 </motion.div>
             </motion.div>
             {!shouldAnimate && (
-                <div className="m-3 text-[#727272] font-bold text-xs z-10 flex items-center justify-center opacity-50">
+                <div className="m-3 text-[#727272] font-bold text-xs z-10 flex items-center justify-center opacity-50 __nsg">
                     <motion.button
                         layout
                         initial={{ opacity: 0 }}

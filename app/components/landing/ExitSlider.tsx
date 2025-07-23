@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import WavedBar from "../WavedBar";
+import WavedBar from "./WavedBar";
 
 /**
  * Client wrapper for a page exit animation.

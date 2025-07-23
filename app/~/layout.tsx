@@ -1,7 +1,7 @@
 import ContextualFadeIn from "@/app/components/info-pages/ContextualFadeIn";
 import PageIndicator from "@/app/components/PageIndicator";
 import SoundLink from "@/app/components/SoundLink";
-import { TreeStatusProvider } from "@/app/components/tree/TreeStatus";
+import { TreeStatusProvider } from "@/app/components/TreeStatus";
 import { Bubner, Bunyips, MainBackground, Star } from "@/app/images";
 import Image from "next/image";
 import HomeScaleIn from "../components/info-pages/home/HomeScaleIn";

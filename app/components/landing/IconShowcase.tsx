@@ -1,7 +1,7 @@
 "use client";
 
 import { StaticImageData } from "next/image";
-import { TreeStatus } from "../tree/TreeStatus";
+import { TreeStatus } from "../TreeStatus";
 import { useContext } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";

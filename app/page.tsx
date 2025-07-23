@@ -1,10 +1,10 @@
 import Background from "./components/landing/Background";
 import Pulse from "./components/landing/Pulse";
 import Writer from "./components/landing/Writer";
-import { TreeStatusProvider } from "./components/tree/TreeStatus";
+import { TreeStatusProvider } from "./components/TreeStatus";
 
 import NextButton from "./components/landing/NextButton";
-import ExitSlider from "./components/tree/ExitSlider";
+import ExitSlider from "./components/landing/ExitSlider";
 import IconShowcase, { Icon } from "./components/landing/IconShowcase";
 import {
     BunyipBellower,
@@ -44,6 +44,7 @@ export default function Index() {
             .sort((a, b) => a.rand - b.rand)
             .map((vp) => vp.val);
     }
+
     const topImages: Icon[] = shuffle([
         { src: FTC, alt: "Society: FIRST Tech Challenge Team Captain" },
         { src: RoboticsLogos, alt: "Society: Murray Bridge High School Student Robotics Club" },
@@ -57,6 +58,7 @@ export default function Index() {
         { src: RoboRegistry, alt: "Project: RoboRegistry" },
         { src: Bunyips, alt: "Project: BunyipsLib" },
     ]);
+    
     const bottomImages: Icon[] = shuffle([
         { src: Firebase, alt: "Platform: Firebase" },
         { src: Vercel, alt: "Platform: Vercel" },
@@ -72,6 +74,7 @@ export default function Index() {
         { src: Java, alt: "Language: Java" },
         { src: Git, alt: "Tool: Git" },
     ]);
+
     return (
         <ExitSlider exitDirection="up">
             <main role="main">

@@ -20,6 +20,7 @@ import Image from "next/image";
 import SoundLink from "../../SoundLink";
 import { v4 } from "uuid";
 import LoadingWheel from "../LoadingWheel";
+import LazyLoadedImage from "../LazyLoadedImage";
 
 interface ActiveItem {
     info: RepoInfo;
@@ -63,7 +64,7 @@ const Item = memo(
                 >
                     <span className="text-blue-500 underline">{info.name}</span>
                     <div className="flex gap-2 items-center justify-center">
-                        <Image src={imageMap.get(info.language) || Tag} width={20} height={20} alt={info.language} />
+                        <LazyLoadedImage src={imageMap.get(info.language) || Tag} width={20} height={20} alt={info.language} />
                         <span className="text-white">{info.language}</span>
                     </div>
                 </motion.div>
