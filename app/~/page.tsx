@@ -1,48 +1,27 @@
 import { Suspense } from "react";
 import GitHubRepoTree from "../components/info-pages/home/GitHubRepoTree";
 import LoadingWheel from "../components/info-pages/LoadingWheel";
-import MinBox from "../components/info-pages/MinBox";
 import WakaTime from "../components/info-pages/home/WakaTime";
 import entryIncrement from "../components/info-pages/entry-timing";
+import Box from "../components/info-pages/Box";
 
 export default function Home() {
     const iter = entryIncrement(0.2);
     return (
         <div className="w-full xl:w-3/4 h-full flex items-center justify-center flex-col xl:flex-row">
             <div className="w-full xl:w-[700px] flex flex-col">
-                <MinBox
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: iter.next().value!!, type: "spring", damping: 20, stiffness: 200 }}
-                >
-                    CV mini
-                </MinBox>
-                <MinBox
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: iter.next().value!!, type: "spring", damping: 20, stiffness: 200 }}
-                >
+                <Box entryDelay={iter.next().value}>CV mini</Box>
+                <Box entryDelay={iter.next().value}>
                     <WakaTime />
-                </MinBox>
-                <MinBox
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: iter.next().value!!, type: "spring", damping: 20, stiffness: 200 }}
-                >
-                    Contacts
-                </MinBox>
+                </Box>
+                <Box entryDelay={iter.next().value}>Contacts</Box>
             </div>
             <div className="w-full xl:w-1/2">
-                <MinBox
-                    className="min-h-[400px]"
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: iter.next().value!!, type: "spring", damping: 20, stiffness: 200 }}
-                >
+                <Box className="min-h-[400px]" entryDelay={iter.next().value}>
                     <Suspense fallback={<LoadingWheel containerHeight="33vh" />}>
                         <GitHubRepoTree />
                     </Suspense>
-                </MinBox>
+                </Box>
             </div>
         </div>
     );
