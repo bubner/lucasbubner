@@ -109,9 +109,9 @@ export default function BubblingDisplay({ repos }: { repos: RepoInfo[] }) {
     }
 
     return repos.length > 0 ? (
-        <div className="h-[33vh] w-full">
+        <div className="min-h-[400px] w-full">
             <noscript>
-                <div className="flex items-center justify-center h-full w-full">
+                <div className="flex items-center justify-center min-h-[400px] h-full w-full">
                     <LoadingWheel />
                 </div>
             </noscript>

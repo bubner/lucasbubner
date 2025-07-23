@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import WavedBar from "./WavedBar";
+import { useEffect } from "react";
 
 /**
  * Client wrapper for a page exit animation.
@@ -14,6 +15,14 @@ export default function ExitSlider({
     children: React.ReactNode;
     exitDirection: "up" | "down" | "left" | "right"; // Represents the direction the page will move towards on exit
 }) {
+    useEffect(() => {
+        // Using an exit slider must come with the body in overflow-y-hidden state
+        document.body.style.overflowY = "hidden";
+        return () => {
+            document.body.style.overflowY = "auto";
+        };
+    }, []);
+
     return (
         <>
             <motion.div

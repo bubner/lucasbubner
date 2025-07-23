@@ -58,7 +58,7 @@ export default function Index() {
         { src: RoboRegistry, alt: "Project: RoboRegistry" },
         { src: Bunyips, alt: "Project: BunyipsLib" },
     ]);
-    
+
     const bottomImages: Icon[] = shuffle([
         { src: Firebase, alt: "Platform: Firebase" },
         { src: Vercel, alt: "Platform: Vercel" },

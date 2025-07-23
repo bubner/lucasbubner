@@ -11,7 +11,24 @@ export default function Home() {
     return (
         <div className="w-full xl:w-3/4 h-full flex items-center justify-center flex-col xl:flex-row">
             <div className="w-full xl:w-[700px] flex flex-col">
-                <Box entryDelay={iter.next().value}>CV mini</Box>
+                <Box entryDelay={iter.next().value}>
+                    <div className="relative group w-full h-[220px]">
+                        <iframe
+                            src="https://cv.bubner.me"
+                            title="CV"
+                            className="pointer-events-none rounded-[2rem] w-full h-full p-3 transition filter group-hover:blur-sm"
+                            tabIndex={-1}
+                        />
+                        <SoundLink
+                            href="https://cv.bubner.me"
+                            rel="noopener noreferrer"
+                            className="absolute inset-0 flex items-center justify-center rounded-[2rem] text-white text-2xl font-bold !opacity-0 group-hover:!opacity-100 transition-opacity cursor-pointer"
+                        >
+                            Go to CV
+                            <p className="text-blue-400 underline">cv.bubner.me</p>
+                        </SoundLink>
+                    </div>
+                </Box>
                 <Box entryDelay={iter.next().value}>
                     <div className="flex flex-col items-center justify-center gap-4 m-3">
                         <div className="flex gap-4">
@@ -49,14 +66,14 @@ export default function Home() {
                         </SoundLink>
                     </div>
                 </Box>
-                <Box entryDelay={iter.next().value}>Contacts</Box>
             </div>
-            <div className="w-full xl:w-1/2">
-                <Box className="min-h-[400px]" entryDelay={iter.next().value}>
-                    <Suspense fallback={<LoadingWheel containerHeight="33vh" />}>
+            <div className="w-full xl:w-1/2 flex flex-col">
+                <Box className="h-full min-h-[400px]" entryDelay={iter.next().value}>
+                    <Suspense fallback={<LoadingWheel containerHeight="400px" />}>
                         <GitHubRepoTree />
                     </Suspense>
                 </Box>
+                <Box entryDelay={iter.next().value}>Contacts</Box>
             </div>
         </div>
     );
