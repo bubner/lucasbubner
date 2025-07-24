@@ -8,14 +8,14 @@ import LoadingWheel from "./LoadingWheel";
  * A `next/image` instance that will display a loading animation to inevitably load without shifting the page.
  * @author Lucas Bubner, 2025
  */
-export default function LazyLoadedImage({ ...props }: React.ComponentProps<typeof Image>) {
+export default function LazyLoadedImage({ ...props }: React.ComponentProps<typeof Image> & React.ComponentProps<typeof LoadingWheel>) {
     const [imgLoaded, setImgLoaded] = useState(false);
 
     return (
         <div className="relative">
             {!imgLoaded && (
                 <div className="absolute inset-0 flex items-center justify-center rounded __nsg bg-gray-800/10">
-                    <LoadingWheel iconHeight={Number(props["height"])} iconWidth={Number(props["width"])} />
+                    <LoadingWheel {...props} />
                 </div>
             )}
             {/* eslint-disable-next-line jsx-a11y/alt-text */}

@@ -22,7 +22,7 @@ export default function Home() {
                         <SoundLink
                             href="https://cv.bubner.me"
                             rel="noopener noreferrer"
-                            className="absolute inset-0 flex items-center justify-center rounded-[2rem] text-white text-2xl font-bold !opacity-0 group-hover:!opacity-100 transition-opacity cursor-pointer"
+                            className="absolute inset-0 flex items-center justify-center rounded-[2rem] text-white text-2xl font-bold !opacity-0 group-hover:!opacity-100 transition-opacity duration-300 cursor-pointer"
                         >
                             Go to CV
                             <p className="text-blue-400 underline">cv.bubner.me</p>
@@ -38,6 +38,7 @@ export default function Home() {
                                     src="https://wakatime.com/badge/user/617e18c7-273e-4a36-be73-e7a0d8b31d1b.svg?style=for-the-badge"
                                     alt="Total time coded since Jun 30 2023"
                                     height={30}
+                                    iconHeight={15}
                                     width={260}
                                     unoptimized
                                 />
@@ -48,6 +49,7 @@ export default function Home() {
                                     src="https://img.shields.io/github/stars/bubner?style=for-the-badge&logo=github&color=%23006400"
                                     alt="GitHub stars"
                                     height={30}
+                                    iconHeight={15}
                                     width={120}
                                     unoptimized
                                 />

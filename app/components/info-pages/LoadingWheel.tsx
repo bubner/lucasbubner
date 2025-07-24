@@ -22,7 +22,7 @@ export default function LoadingWheel({
             <svg
                 aria-hidden="true"
                 className="inline animate-spin text-transparent fill-red-600"
-                style={{ height: iconHeight ? iconHeight * 0.7 : "32px", width: iconWidth ? iconWidth * 0.7 : "32px" }}
+                style={{ height: iconHeight || "32px", width: iconWidth || "32px" }}
                 viewBox="0 0 100 101"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
