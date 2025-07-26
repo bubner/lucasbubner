@@ -8,9 +8,24 @@ import SoundLink from "../components/SoundLink";
 
 export default function Home() {
     const iter = entryIncrement(0.2);
+    const Red = ({ children }: { children: React.ReactNode }) => <span className="__text-emp-red font-bold">{children}</span>;
+    const age = process.env.DOB ? Math.floor((Date.now() - parseInt(process.env.DOB) * 1000) / (1000 * 60 * 60 * 24 * 365.25)) : "?";
+
     return (
         <div className="w-full xl:w-3/4 h-full flex items-center justify-center flex-col xl:flex-row">
             <div className="w-full xl:w-[700px] flex flex-col">
+                <Box entryDelay={iter.next().value}>
+                    <div className="flex flex-col gap-2 p-2">
+                        <span className="text-lg">
+                            Hi! I'm <Red>Lucas Bubner</Red>, a <b>{age}-year-old</b> software developer.
+                        </span>
+                        {/* <hr className="border-white/40" /> */}
+                        <span>
+                            This website is an <b>introductory portfolio</b> of my work and achievements.
+                        </span>
+                    </div>
+                </Box>
+                <Box entryDelay={iter.next().value}>Contacts</Box>
                 <Box entryDelay={iter.next().value}>
                     <div className="relative group w-full h-[220px]">
                         <iframe
@@ -28,6 +43,13 @@ export default function Home() {
                             <p className="text-blue-400 underline">cv.bubner.me</p>
                         </SoundLink>
                     </div>
+                </Box>
+            </div>
+            <div className="w-full xl:w-1/2 flex flex-col-reverse xl:flex-col">
+                <Box className="h-full min-h-[400px]" entryDelay={iter.next().value}>
+                    <Suspense fallback={<LoadingWheel containerHeight="400px" />}>
+                        <GitHubRepoTree />
+                    </Suspense>
                 </Box>
                 <Box entryDelay={iter.next().value}>
                     <div className="flex flex-col items-center justify-center gap-4 m-3">
@@ -68,14 +90,6 @@ export default function Home() {
                         </SoundLink>
                     </div>
                 </Box>
-            </div>
-            <div className="w-full xl:w-1/2 flex flex-col">
-                <Box className="h-full min-h-[400px]" entryDelay={iter.next().value}>
-                    <Suspense fallback={<LoadingWheel containerHeight="400px" />}>
-                        <GitHubRepoTree />
-                    </Suspense>
-                </Box>
-                <Box entryDelay={iter.next().value}>Contacts</Box>
             </div>
         </div>
     );
