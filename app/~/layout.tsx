@@ -5,6 +5,7 @@ import { TreeStatusProvider } from "@/app/components/TreeStatus";
 import { Bubner, Bunyips, MainBackground, Star } from "@/app/images";
 import HomeScaleIn from "../components/info-pages/home/HomeScaleIn";
 import LazyLoadedImage from "../components/info-pages/LazyLoadedImage";
+import Image from "next/image";
 
 /**
  * Common layout for the bubner.me information pages.
@@ -36,7 +37,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                                 title={href.alt + " • " + href.path}
                                 className="w-[50px] h-[50px] sm:w-[55px] sm:h-[55px] hover:bg-[#202020] transition-colors p-1 rounded-xl"
                             >
-                                <LazyLoadedImage src={href.src} alt={href.alt} width={55} height={55} />
+                                {/* using Image instead of LazyLoadedImage as it is "reloaded" between transitions */}
+                                <Image src={href.src} alt={href.alt} width={55} height={55} />
                             </SoundLink>
                         ))}
                     </div>
