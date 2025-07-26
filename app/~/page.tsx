@@ -15,8 +15,8 @@ export default function Home() {
         <div className="w-full xl:w-3/4 h-full flex items-center justify-center flex-col xl:flex-row">
             <div className="w-full xl:w-[700px] flex flex-col">
                 <Box entryDelay={iter.next().value}>
-                    <div className="flex flex-col gap-2 p-2">
-                        <span className="text-lg">
+                    <div className="flex flex-col gap-2 p-3">
+                        <span className="text-3xl">
                             Hi! I'm <Red>Lucas Bubner</Red>, a <b>{age}-year-old</b> software developer.
                         </span>
                         {/* <hr className="border-white/40" /> */}
