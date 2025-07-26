@@ -2,10 +2,10 @@
 
 import { DownArrow } from "@/app/images";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useContext, useEffect, useRef } from "react";
 import { TreeStatus } from "../TreeStatus";
 import SoundLink from "../SoundLink";
+import LazyLoadedImage from "../info-pages/LazyLoadedImage";
 
 /**
  * Next page and scroll down arrow.
@@ -41,7 +41,7 @@ export default function NextButton() {
                     transition={{ y: { duration: 2, repeat: Infinity }, opacity: { duration: 5 } }}
                     className="pt-10 px-2"
                 >
-                    <Image src={DownArrow} alt="Continue" width={50} height={50} />
+                    <LazyLoadedImage src={DownArrow} alt="Continue" width={50} height={50} />
                 </motion.div>
             </SoundLink>
         </nav>

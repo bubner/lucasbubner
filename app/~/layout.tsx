@@ -3,8 +3,8 @@ import PageIndicator from "@/app/components/PageIndicator";
 import SoundLink from "@/app/components/SoundLink";
 import { TreeStatusProvider } from "@/app/components/TreeStatus";
 import { Bubner, Bunyips, MainBackground, Star } from "@/app/images";
-import Image from "next/image";
 import HomeScaleIn from "../components/info-pages/home/HomeScaleIn";
+import LazyLoadedImage from "../components/info-pages/LazyLoadedImage";
 
 /**
  * Common layout for the bubner.me information pages.
@@ -23,7 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     return (
         <HomeScaleIn>
             <ContextualFadeIn>
-                <Image className="-z-10 object-cover inset-0 w-full h-full fixed" src={MainBackground} alt="" quality={100} />
+                <LazyLoadedImage className="-z-10 object-cover inset-0 w-full h-full fixed" src={MainBackground} alt="" quality={100} />
                 <nav
                     role="navigation"
                     className="z-10 fixed top-3 left-1/2 -translate-x-1/2 rounded-[32px] m-auto bg-[#101111] flex flex-col items-center justify-center px-2 sm:px-6 [box-shadow:8px_4px_32px_0_rgba(100,100,100,0.4)]"
@@ -36,7 +36,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                                 title={href.alt + " • " + href.path}
                                 className="w-[50px] h-[50px] sm:w-[55px] sm:h-[55px] hover:bg-[#202020] transition-colors p-1 rounded-xl"
                             >
-                                <Image src={href.src} alt={href.alt} width={55} height={55} />
+                                <LazyLoadedImage src={href.src} alt={href.alt} width={55} height={55} />
                             </SoundLink>
                         ))}
                     </div>

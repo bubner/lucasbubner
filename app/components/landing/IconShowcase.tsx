@@ -3,8 +3,8 @@
 import { StaticImageData } from "next/image";
 import { TreeStatus } from "../TreeStatus";
 import { useContext } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import LazyLoadedImage from "../info-pages/LazyLoadedImage";
 
 export type Icon = {
     src: StaticImageData;
@@ -34,7 +34,7 @@ export default function IconShowcase({ icons, direction, size }: { icons: Icon[]
                 >
                     {icons.map((icon, i) => (
                         <div key={i} className="mx-4 flex items-center justify-center" style={{ height: size, width: size }}>
-                            <Image draggable={false} src={icon.src} alt={icon.alt} title={icon.alt} width={size} height={size} className="grayscale opacity-60" />
+                            <LazyLoadedImage draggable={false} src={icon.src} alt={icon.alt} title={icon.alt} width={size} height={size} className="grayscale opacity-60" />
                         </div>
                     ))}
                 </div>

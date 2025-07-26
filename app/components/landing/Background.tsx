@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { TreeStatus } from "../TreeStatus";
 import { useContext } from "react";
 import { Stars } from "@/app/images";

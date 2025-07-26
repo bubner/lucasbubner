@@ -4,10 +4,10 @@ import { useContext, useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import { motion, useAnimation } from "framer-motion";
 import { TreeStatus } from "../TreeStatus";
-import Image from "next/image";
 import { DownArrow, RightArrow } from "@/app/images";
 import Link from "next/link";
 import useSound from "use-sound";
+import LazyLoadedImage from "../info-pages/LazyLoadedImage";
 
 const shineVariants = {
     animate: {
@@ -59,7 +59,7 @@ export default function Writer() {
                         <br />
                         <nav className="flex items-center justify-center mt-6">
                             <Link href="~">
-                                <Image src={DownArrow} alt="Continue" width={50} height={50} />
+                                <LazyLoadedImage src={DownArrow} alt="Continue" width={50} height={50} />
                             </Link>
                         </nav>
                     </noscript>
@@ -97,7 +97,7 @@ export default function Writer() {
                         }}
                     >
                         <span>skip</span>
-                        <Image className="translate-y-[0.5px]" src={RightArrow} alt="" width={16} height={16} />
+                        <LazyLoadedImage className="translate-y-[0.5px]" src={RightArrow} alt="" width={16} height={16} />
                     </motion.button>
                 </div>
             )}

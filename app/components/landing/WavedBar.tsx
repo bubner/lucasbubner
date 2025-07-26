@@ -2,7 +2,7 @@
 
 import { SepBar } from "@/app/images";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import LazyLoadedImage from "../info-pages/LazyLoadedImage";
 
 /**
  * Waved red bar separator.
@@ -11,7 +11,7 @@ import Image from "next/image";
 export default function WavedBar() {
     return (
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }} className="__nsg">
-            <Image draggable={false} src={SepBar} alt="" />
+            <LazyLoadedImage draggable={false} src={SepBar} alt="" />
         </motion.div>
     );
 }
