@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import LoadingWheel from "./LoadingWheel";
 
@@ -12,13 +11,13 @@ export default function LazyLoadedIFrame({ ...props }: React.ComponentProps<"ifr
     const [frameLoaded, setFrameLoaded] = useState(false);
 
     return (
-        <>
+        <div className="relative w-full h-full">
+            <iframe onLoad={() => setFrameLoaded(true)} {...props} />
             {!frameLoaded && (
-                <div className="absolute inset-0 flex items-center justify-center rounded __nsg bg-gray-800/10">
+                <div className="absolute inset-0 flex items-center justify-center rounded-[2rem] __nsg bg-gray-800/10 -z-10">
                     <LoadingWheel {...props} />
                 </div>
             )}
-            <iframe onLoad={() => setFrameLoaded(true)} {...props} />
-        </>
+        </div>
     );
 }
