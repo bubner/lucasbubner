@@ -5,6 +5,7 @@ import entryIncrement from "../components/info-pages/entry-timing";
 import Box from "../components/info-pages/Box";
 import LazyLoadedImage from "../components/info-pages/LazyLoadedImage";
 import SoundLink from "../components/SoundLink";
+import LazyLoadedIFrame from "../components/info-pages/LazyLoadedIFrame";
 
 export default function Home() {
     const iter = entryIncrement(0.2);
@@ -28,7 +29,7 @@ export default function Home() {
                 <Box entryDelay={iter.next().value}>Contacts</Box>
                 <Box entryDelay={iter.next().value}>
                     <div className="relative group w-full h-[220px]">
-                        <iframe
+                        <LazyLoadedIFrame
                             src="https://cv.bubner.me"
                             title="CV"
                             className="pointer-events-none rounded-[2rem] w-full h-full p-3 transition filter group-hover:blur-sm"
