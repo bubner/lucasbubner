@@ -104,6 +104,8 @@ export default function BubblingDisplay({ repos }: { repos: RepoInfo[] }) {
             ))}
         </div>
     ) : (
-        <div className="border border-white/25 px-1 w-full" />
+        <div className="min-h-[400px] flex items-center justify-center w-full">
+            <div className="border border-white/25 px-1 w-1/6" />
+        </div>
     );
 }

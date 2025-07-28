@@ -38,6 +38,7 @@ import iAwards23Merit from "./iawardsmerit.jpg";
 import Logbook from "./logbook.png";
 import Tag from "./tech.svg";
 import Star from "./star.png";
+import ProtonBubner from "./email.png";
 
 export {
     Stars,
@@ -79,5 +80,6 @@ export {
     iAwards23Merit,
     Logbook,
     Tag,
-    Star
+    Star,
+    ProtonBubner
 };

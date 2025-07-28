@@ -53,7 +53,8 @@ function fetchAPIData() {
 
             resolve(repos);
         } catch (error) {
-            reject(`Failed to fetch repositories: ${error}`);
+            console.error(`Failed to fetch repositories. ${error}`);
+            resolve([]);
         }
     });
 }

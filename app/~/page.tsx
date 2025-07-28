@@ -6,6 +6,7 @@ import Box from "../components/info-pages/Box";
 import LazyLoadedImage from "../components/info-pages/LazyLoadedImage";
 import SoundLink from "../components/SoundLink";
 import LazyLoadedIFrame from "../components/info-pages/LazyLoadedIFrame";
+import { GitHubBubner, LinkedInBubner, ProtonBubner } from "../images";
 
 export default function Home() {
     const iter = entryIncrement(0.2);
@@ -26,7 +27,22 @@ export default function Home() {
                         </span>
                     </div>
                 </Box>
-                <Box entryDelay={iter.next().value}>Contacts</Box>
+                <Box entryDelay={iter.next().value}>
+                    <div className="flex text-xs font-bold justify-around w-full gap-1 items-center flex-wrap">
+                        <SoundLink href="https://github.com/bubner" target="_blank" className="flex flex-col gap-1">
+                            GitHub
+                            <LazyLoadedImage src={GitHubBubner} className="rounded" height={28} alt="Lucas Bubner's GitHub" />
+                        </SoundLink>
+                        <SoundLink href="https://linkedin.com/in/bubner" target="_blank" className="flex flex-col gap-1">
+                            LinkedIn
+                            <LazyLoadedImage src={LinkedInBubner} className="rounded" height={28} alt="Lucas Bubner's LinkedIn" />
+                        </SoundLink>
+                        <SoundLink href={"mailto:bubner@p" + "roton.me"} target="_blank" className="flex flex-col gap-1">
+                            Email
+                            <LazyLoadedImage src={ProtonBubner} className="rounded" height={28} alt="Lucas Bubner's Email" />
+                        </SoundLink>
+                    </div>
+                </Box>
                 <Box entryDelay={iter.next().value}>
                     <div className="relative group w-full h-[220px]">
                         <LazyLoadedIFrame
@@ -35,10 +51,16 @@ export default function Home() {
                             className="pointer-events-none rounded-[2rem] w-full h-full p-3 transition filter group-hover:blur-sm"
                             tabIndex={-1}
                         />
+                        <div
+                            className="pointer-events-none absolute left-0 right-0 bottom-0 h-1/2 rounded-b-[2rem] z-10 m-3"
+                            style={{
+                                background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
+                            }}
+                        />
                         <SoundLink
                             href="https://cv.bubner.me"
                             rel="noopener noreferrer"
-                            className="absolute inset-0 flex items-center justify-center rounded-[2rem] text-white text-2xl font-bold !opacity-0 group-hover:!opacity-100 transition-opacity duration-300 cursor-pointer"
+                            className="absolute inset-0 flex items-center justify-center rounded-[2rem] text-white text-2xl font-bold !opacity-0 group-hover:!opacity-100 transition-opacity duration-300 cursor-pointer z-20"
                         >
                             Go to CV
                             <p className="text-blue-400 underline">cv.bubner.me</p>
