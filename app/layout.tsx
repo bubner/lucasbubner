@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import AnimationWrapper from "./components/exit/AnimationWrapper";
-import { TreeStatusProvider } from "./components/tree/TreeStatus";
-import { IndicatorPositionProvider } from "./components/info-pages/nav/PageIndicator";
+import { TreeStatusProvider } from "./components/TreeStatus";
+import { IndicatorPositionProvider } from "./components/PageIndicator";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,14 +47,14 @@ export default function RootLayout({
                     // we will force absolutely everything on the pages to be visible in the event we don't have JavaScript. We also try
                     // to select the custom __nsz (no-script-zero) and box classes to reset transform properties for these items that move on entry.
                     dangerouslySetInnerHTML={{
-                        __html: `<style>* { opacity: 1 !important } .__nsi { visibility: hidden } .__nsz, .__box, :has(.__box) { transform: translate(0) !important }</style>`,
+                            __html: `<style>* { opacity: 1 !important; transform: scale(1) !important } .__nsi { visibility: hidden } .__nsg { display: none } .__nsz, .__box, :has(.__box) { transform: translate(0) !important }</style>`,
                     }}
                 />
                 <noscript>
                     <div className="sticky top-0 left-0 text-center w-screen h-auto min-h-9 bg-yellow-600/30 text-white font-bold flex items-center z-50">
                         <p className="mx-3">
-                            Warning: JavaScript is not enabled.{" "}
-                            <span className="font-light">This website may not look or function as intended.</span>
+                            Warning: JavaScript is not enabled.
+                            <p className="font-light">This website may not look or function as intended.</p>
                         </p>
                     </div>
                 </noscript>

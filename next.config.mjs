@@ -6,7 +6,6 @@ const nextConfig = {
                 protocol: "https",
                 hostname: "wakatime.com",
                 port: "",
-                pathname: "/badge/user/*",
             },
         ],
     },

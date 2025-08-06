@@ -1,0 +1,47 @@
+"use client";
+
+import { motion } from "framer-motion";
+import WavedBar from "./WavedBar";
+import { useEffect } from "react";
+
+/**
+ * Client wrapper for a page exit animation.
+ * @author Lucas Bubner, 2024
+ */
+export default function ExitSlider({
+    children,
+    exitDirection,
+}: {
+    children: React.ReactNode;
+    exitDirection: "up" | "down" | "left" | "right"; // Represents the direction the page will move towards on exit
+}) {
+    useEffect(() => {
+        // Using an exit slider must come with the body in overflow-y-hidden state
+        document.body.style.overflowY = "hidden";
+        return () => {
+            document.body.style.overflowY = "auto";
+        };
+    }, []);
+
+    return (
+        <>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{
+                    opacity: 0,
+                    // Move 1 full viewport in the specified direction, dynamic viewports are not
+                    // particularly required here so we can just use vh/vw
+                    x: exitDirection === "left" ? "-100vw" : exitDirection === "right" ? "100vw" : 0,
+                    y: exitDirection === "up" ? "-100vh" : exitDirection === "down" ? "100vh" : 0,
+                }}
+                transition={{ opacity: { duration: 0.8 }, y: { duration: 0.6 }, x: { duration: 0.6 } }}
+            >
+                {children}
+            </motion.div>
+            <motion.div initial={{ opacity: 1, y: "100vh" }} exit={{ y: 0, opacity: 0 }} transition={{ ease: "linear", duration: 0.6 }}>
+                <WavedBar />
+            </motion.div>
+        </>
+    );
+}

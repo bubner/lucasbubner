@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useContext } from "react";
-import { TreeStatus } from "../tree/TreeStatus";
+import { TreeStatus } from "../TreeStatus";
 
 /**
  * Use the global tree context to determine whether a fade-in is required for this component.

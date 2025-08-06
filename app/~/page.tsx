@@ -1,196 +1,118 @@
-import { StaticImageData } from "next/image";
-import Collarband from "../components/scrollway/Collarband";
-import DelayedBackground from "../components/scrollway/DelayedBackground";
-import ScrollWarning from "../components/scrollway/ScrollWarning";
-import UpReveal from "../components/scrollway/UpReveal";
-import WavedBar from "../components/scrollway/WavedBar";
-import TreeLimited from "../components/tree/TreeLimited";
-import TreeLock from "../components/tree/TreeLock";
-import { TreeStatusProvider } from "../components/tree/TreeStatus";
-import {
-    Bunyips,
-    CSharp,
-    Firebase,
-    Flask,
-    FRC,
-    FTC,
-    GitHub,
-    iAwards,
-    Java,
-    MainBackground,
-    Next,
-    Python,
-    React,
-    RedLine,
-    Stars,
-    Tailwind,
-    TypeScript,
-    Unity,
-    Vercel,
-} from "../images";
-import Section from "../components/scrollway/Section";
-import Footer from "../components/scrollway/Footer";
-import ExitSlider from "../components/tree/ExitSlider";
-import ReactDOM from "react-dom";
+import { Suspense } from "react";
+import GitHubRepoTree from "../components/info-pages/home/GitHubRepoTree";
+import LoadingWheel from "../components/info-pages/LoadingWheel";
+import entryIncrement from "../components/info-pages/entry-timing";
+import Box from "../components/info-pages/Box";
+import LazyLoadedImage from "../components/info-pages/LazyLoadedImage";
+import SoundLink from "../components/SoundLink";
+import LazyLoadedIFrame from "../components/info-pages/LazyLoadedIFrame";
+import { GitHubBubner, LinkedInBubner, ProtonBubner } from "../images";
 
-/**
- * bubner.me scrollway page.
- * @author Lucas Bubner, 2024
- */
-export default function Scrollway() {
-    // Preload here again to ensure the browser gets it before the render
-    // as TreeStatus will take some time showing animations before the component with this image is mounted
-    ReactDOM.preload(RedLine.src, { as: "image" });
-    // Preload for next page
-    ReactDOM.preload(MainBackground.src, { as: "image" });
-
-    const comments: JSX.Element[][] = [
-        [
-            <>
-                I have a strong <span className="__text-emp-red">passion</span> for technology and software.
-            </>,
-            <>
-                I build and develop to <span className="__text-emp-red">solve</span> problems.
-            </>,
-            <>
-                I have a <span className="__text-emp-red">dedicated</span> work ethic.
-            </>,
-            <>
-                I ensure my projects are of only the <span className="__text-emp-red">highest</span> standards.
-            </>,
-            <>
-                I have a strong sense of <span className="__text-emp-red">responsibility</span> and always strive to{" "}
-                <span className="__text-emp-red">exceed expectations</span>.
-            </>,
-        ],
-        [
-            <>
-                I have skills with a <span className="__text-emp-red">wide range</span> of hardware and software tools.
-            </>,
-            <>
-                I have experience communicating <span className="__text-emp-red">complex ideas</span> in an{" "}
-                <span className="__text-emp-red">innovative</span> way.
-            </>,
-            <>
-                I captain the Murray Bridge High School <span className="__text-emp-red">Student Robotics Club</span>.
-            </>,
-            <>
-                I am a <span className="__text-emp-red">nationally recognised</span> winner at the AIIA iAwards 2023.
-            </>,
-            <>
-                I create intellectual property to <span className="__text-emp-red">improve and provide</span>.
-            </>,
-        ],
-        [
-            <>
-                I have experience in <span className="__text-emp-red">project management</span> and{" "}
-                <span className="__text-emp-red">delivering on time</span>.
-            </>,
-            <>
-                I follow <span className="__text-emp-red">industry standards</span> and{" "}
-                <span className="__text-emp-red">best practices</span>.
-            </>,
-            <>
-                I desire to <span className="__text-emp-red">positively impact</span> the world through technology.
-            </>,
-            <>
-                I am a <span className="__text-emp-red">high-achieving</span> academic student.
-            </>,
-            <>
-                I am a quick learner and <span className="__text-emp-red">adaptable</span> to new technologies and
-                environments.
-            </>,
-        ],
-        [
-            <>
-                I am proficient with <span className="__text-emp-red">multiple</span> programming languages.
-            </>,
-            <>
-                I am committed to <span className="__text-emp-red">continuous learning</span> and{" "}
-                <span className="__text-emp-red">professional growth</span>.
-            </>,
-            <>
-                I am an adaptive <span className="__text-emp-red">problem solver</span>.
-            </>,
-            <>
-                I am a <span className="__text-emp-red">self-directed</span> learner.
-            </>,
-            <>
-                I am a <span className="__text-emp-red">critical</span> thinker.
-            </>,
-        ],
-    ];
-
-    const images: { src: StaticImageData; alt: string }[][] = [
-        [
-            { src: iAwards, alt: "Society: iAwards 2023" },
-            { src: Bunyips, alt: "Society: Murray Bridge High School Student Robotics Club" },
-            { src: FTC, alt: "Society: FIRST Tech Challenge Club Captain" },
-            { src: FRC, alt: "Society: FIRST Robotics Competition Team Member" },
-        ],
-        [
-            { src: Firebase, alt: "Platform: Firebase" },
-            { src: Vercel, alt: "Platform: Vercel" },
-            { src: Unity, alt: "Platform: Unity" },
-            { src: GitHub, alt: "Platform: GitHub" },
-        ],
-        [
-            { src: React, alt: "Framework: React" },
-            { src: Flask, alt: "Framework: Flask" },
-            { src: Next, alt: "Framework: Next.js" },
-            { src: Tailwind, alt: "Framework: Tailwind CSS" },
-        ],
-        [
-            { src: CSharp, alt: "Language: C#" },
-            { src: TypeScript, alt: "Language: TypeScript" },
-            { src: Python, alt: "Language: Python" },
-            { src: Java, alt: "Language: Java" },
-        ],
-    ];
+export default function Home() {
+    const iter = entryIncrement(0.2);
+    const Red = ({ children }: { children: React.ReactNode }) => <span className="__text-emp-red font-bold">{children}</span>;
+    const age = process.env.DOB ? Math.floor((Date.now() - parseInt(process.env.DOB) * 1000) / (1000 * 60 * 60 * 24 * 365.25)) : "?";
 
     return (
-        <ExitSlider exitDirection="left">
-            <TreeStatusProvider resetRoot>
-                <DelayedBackground background={Stars}>
-                    <TreeLock threshold={2} />
-                    <main role="main">
-                        <div className="flex items-center justify-center h-svh">
-                            <div className="text-center text-white font-extrabold text-2xl/snug md:text-5xl/snug">
-                                <UpReveal delay={0.2} markTree>
-                                    I am a <span className="__text-emp-yellow">self-driven</span>,
-                                </UpReveal>
-                                <UpReveal delay={0.8} markTree>
-                                    <span className="__text-emp-yellow">young</span> software developer.
-                                </UpReveal>
-                            </div>
-                        </div>
-                        <ScrollWarning />
-                        <Collarband />
-                        <TreeLimited threshold={2}>
-                            <div className="flex items-center justify-center mt-24 mb-12">
-                                <div className="text-center text-white font-bold text-2xl/snug md:text-5xl/snug">
-                                    <UpReveal delay={0.8} onScroll>
-                                        <span className="__text-emp-yellow">Nationally</span> recognised.
-                                    </UpReveal>
-                                    <UpReveal delay={1.3} onScroll>
-                                        Academically <span className="__text-emp-yellow">accredited</span>.
-                                    </UpReveal>
-                                </div>
-                            </div>
-                            <WavedBar />
-                            {[0, 1, 2, 3].map((idx) => (
-                                <Section
-                                    key={idx}
-                                    comments={comments[idx]}
-                                    images={images[idx]}
-                                    alignTextLeft={idx % 2 !== 0}
+        <div className="w-full xl:w-3/4 h-full flex items-center justify-center flex-col xl:flex-row">
+            <div className="w-full xl:w-[700px] flex flex-col">
+                <Box entryDelay={iter.next().value}>
+                    <div className="flex flex-col gap-2 p-3">
+                        <span className="text-3xl">
+                            Hi! I'm <Red>Lucas Bubner</Red>, a <b>{age}-year-old</b> software developer.
+                        </span>
+                        <span>
+                            This website is an <b>introductory portfolio</b> of my work and achievements.
+                        </span>
+                    </div>
+                </Box>
+                <Box entryDelay={iter.next().value}>
+                    <div className="flex text-xs font-bold justify-around w-full gap-1 items-center flex-wrap">
+                        <SoundLink href="https://github.com/bubner" target="_blank" className="flex flex-col gap-1">
+                            GitHub
+                            <LazyLoadedImage src={GitHubBubner} className="rounded" height={28} alt="Lucas Bubner's GitHub" />
+                        </SoundLink>
+                        <SoundLink href="https://linkedin.com/in/bubner" target="_blank" className="flex flex-col gap-1">
+                            LinkedIn
+                            <LazyLoadedImage src={LinkedInBubner} className="rounded" height={28} alt="Lucas Bubner's LinkedIn" />
+                        </SoundLink>
+                        <SoundLink href={"mailto:bubner@p" + "roton.me"} target="_blank" className="flex flex-col gap-1">
+                            Email
+                            <LazyLoadedImage src={ProtonBubner} className="rounded" height={28} alt="Lucas Bubner's Email" />
+                        </SoundLink>
+                    </div>
+                </Box>
+                <Box entryDelay={iter.next().value}>
+                    <div className="relative group w-full h-[220px]">
+                        <LazyLoadedIFrame
+                            src="https://cv.bubner.me"
+                            title="CV"
+                            className="pointer-events-none rounded-[2rem] w-full h-full p-3 transition filter group-hover:blur-sm"
+                            tabIndex={-1}
+                        />
+                        <div
+                            className="pointer-events-none absolute left-0 right-0 bottom-0 h-1/2 rounded-b-[2rem] z-10 m-3"
+                            style={{
+                                background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
+                            }}
+                        />
+                        <SoundLink
+                            href="https://cv.bubner.me"
+                            rel="noopener noreferrer"
+                            className="absolute inset-0 flex items-center justify-center rounded-[2rem] text-white text-2xl font-bold !opacity-0 group-hover:!opacity-100 transition-opacity duration-300 cursor-pointer z-20"
+                        >
+                            Go to CV
+                            <p className="text-blue-400 underline">cv.bubner.me</p>
+                        </SoundLink>
+                    </div>
+                </Box>
+            </div>
+            <div className="w-full xl:w-1/2 flex flex-col-reverse xl:flex-col">
+                <Box className="h-full min-h-[400px]" entryDelay={iter.next().value}>
+                    <Suspense fallback={<LoadingWheel containerheight="400px" />}>
+                        <GitHubRepoTree />
+                    </Suspense>
+                </Box>
+                <Box entryDelay={iter.next().value}>
+                    <div className="flex flex-col items-center justify-center gap-4 m-3">
+                        <div className="flex gap-4">
+                            <SoundLink href="https://wakatime.com/@bubner" target="_blank">
+                                <LazyLoadedImage
+                                    className="rounded"
+                                    src="https://wakatime.com/badge/user/617e18c7-273e-4a36-be73-e7a0d8b31d1b.svg?style=for-the-badge"
+                                    alt="Total time coded since Jun 30 2023"
+                                    height={30}
+                                    iconheight={15}
+                                    width={260}
+                                    unoptimized
                                 />
-                            ))}
-                            <Footer />
-                        </TreeLimited>
-                    </main>
-                </DelayedBackground>
-            </TreeStatusProvider>
-        </ExitSlider>
+                            </SoundLink>
+                            <SoundLink href="https://github.com/bubner" target="_blank">
+                                <LazyLoadedImage
+                                    className="rounded"
+                                    src="https://img.shields.io/github/stars/bubner?style=for-the-badge&logo=github&color=%23006400"
+                                    alt="GitHub stars"
+                                    height={30}
+                                    iconheight={15}
+                                    width={120}
+                                    unoptimized
+                                />
+                            </SoundLink>
+                        </div>
+                        <SoundLink target="_blank" href="https://wakatime.com/@bubner">
+                            <LazyLoadedImage
+                                alt="WakaTime activity"
+                                width={600}
+                                height={100}
+                                className="rounded-2xl"
+                                priority
+                                src="https://wakatime.com/share/@bubner/5e5091a6-e447-4c50-88f8-0c7c9205ef93.png"
+                                draggable={false}
+                            />
+                        </SoundLink>
+                    </div>
+                </Box>
+            </div>
+        </div>
     );
 }
