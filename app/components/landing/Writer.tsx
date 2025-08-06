@@ -47,12 +47,12 @@ export default function Writer() {
 
     return (
         <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}>
-            <motion.div layout className="text-center text-4xl/tight md:text-7xl/tight font-bold text-white flex justify-center">
+            <motion.div layout className="text-center text-4xl/tight md:text-7xl/tight font-bold text-white flex justify-center flex-col sm:flex-row">
                 <span className="__nsg">I am&nbsp;</span>
                 <motion.div
                     animate={shineEffect}
                     variants={shineVariants}
-                    className="font-bold bg-clip-text [text-shadow:0_0_10px_rgba(255,255,255,0.5)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] bg-[linear-gradient(to_left,#ffffff,#cf8184,#f78488)] bg-[length:200%_100%] bg-[100%_0]"
+                    className="font-bold bg-clip-text [text-shadow:0_0_10px_rgba(255,255,255,0.5)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] bg-[linear-gradient(to_left,#ffffff,#cf8184,#f78488)] bg-[length:200%_100%] bg-[100%_0] text-nowrap"
                 >
                     <noscript>
                         I am Lucas Bubner.

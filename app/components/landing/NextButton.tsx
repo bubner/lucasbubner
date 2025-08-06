@@ -33,7 +33,7 @@ export default function NextButton() {
     if (!writer?.activityMet()) return;
 
     return (
-        <nav className="absolute bottom-16 left-[50%] translate-x-[-50%] opacity-80">
+        <nav className="absolute bottom-10 left-[50%] translate-x-[-50%] opacity-80">
             <SoundLink href="/~" ref={nextPage}>
                 <motion.div
                     initial={{ opacity: 0 }}

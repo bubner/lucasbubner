@@ -18,10 +18,10 @@ export default function Home() {
             <div className="w-full xl:w-[700px] flex flex-col">
                 <Box entryDelay={iter.next().value}>
                     <div className="flex flex-col gap-2 p-3">
-                        <span className="text-3xl">
+                        <span className="text-xl sm:text-3xl">
                             Hi! I'm <Red>Lucas Bubner</Red>, a <b>{age}-year-old</b> software developer.
                         </span>
-                        <span>
+                        <span className="text-xs sm:text-base">
                             This website is an <b>introductory portfolio</b> of my work and achievements.
                         </span>
                     </div>
