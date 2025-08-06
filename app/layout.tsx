@@ -51,10 +51,10 @@ export default function RootLayout({
                     }}
                 />
                 <noscript>
-                    <div className="sticky top-0 left-0 text-center w-screen h-auto min-h-9 bg-yellow-600/30 text-white font-bold flex items-center z-50">
+                    <div className="sticky top-0 left-0 text-center w-screen h-auto min-h-9 bg-yellow-600/30 text-white flex items-center z-50">
                         <p className="mx-3">
-                            Warning: JavaScript is not enabled.
-                            <p className="font-light">This website may not look or function as intended.</p>
+                            <b>Warning: JavaScript is not enabled. </b>
+                            This website may not look or function as intended.
                         </p>
                     </div>
                 </noscript>

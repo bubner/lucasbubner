@@ -47,7 +47,7 @@ export default function Writer() {
 
     return (
         <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}>
-            <motion.div layout className="text-center text-4xl/tight md:text-7xl/tight font-bold text-white flex justify-center flex-col sm:flex-row">
+            <motion.div layout className="text-center text-2xl/tight sm:text-4xl/tight md:text-7xl/tight font-bold text-white flex justify-center">
                 <span className="__nsg">I am&nbsp;</span>
                 <motion.div
                     animate={shineEffect}
