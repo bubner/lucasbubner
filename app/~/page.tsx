@@ -21,7 +21,6 @@ export default function Home() {
                         <span className="text-3xl">
                             Hi! I'm <Red>Lucas Bubner</Red>, a <b>{age}-year-old</b> software developer.
                         </span>
-                        {/* <hr className="border-white/40" /> */}
                         <span>
                             This website is an <b>introductory portfolio</b> of my work and achievements.
                         </span>
