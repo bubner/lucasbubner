@@ -26,7 +26,6 @@
     text-align: center;
     margin: 20px;
     overflow-wrap: break-word;
-    flex-basis: calc(25% - 40px);
     position: relative;
     z-index: 1;
     background: inherit;

@@ -20,10 +20,9 @@ export default function Box({
             transition={{ delay: entryDelay || 0, type: "spring", damping: 20, stiffness: 200 }}
             onAnimationComplete={() => playAppearSound()}
             {...props}
+            className={"__box " + props.className}
         >
-            <div className="__box">
-                {children}
-            </div>
+            {children}
         </motion.div>
     );
 }

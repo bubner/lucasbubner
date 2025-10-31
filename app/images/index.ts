@@ -39,6 +39,7 @@ import Logbook from "./logbook.png";
 import Tag from "./tech.svg";
 import Star from "./star.png";
 import ProtonBubner from "./email.png";
+import RightArrowWhite from "./rightarrowwhite.svg";
 
 export {
     Stars,
@@ -81,5 +82,6 @@ export {
     Logbook,
     Tag,
     Star,
-    ProtonBubner
+    ProtonBubner,
+    RightArrowWhite
 };
