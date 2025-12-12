@@ -1,8 +1,7 @@
 "use client";
 
 import Box from "@/app/components/info-pages/Box";
-import Background from "@/app/components/landing/Background";
-import { Bubner, BunyipBellower, RightArrowWhite } from "@/app/images";
+import { RightArrowWhite } from "@/app/images";
 import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -18,7 +17,7 @@ export default function Robotics() {
             <div className="embla w-full h-full">
                 <div className="flex my-2 items-end justify-between">
                     <button
-                        className="embla__prev flex text-gray-300 text-xs gap-2 items-center justify-center ml-4 p-1 hover:bg-gray-800 rounded-md transition-colors"
+                        className="embla__prev flex text-gray-300 text-xs gap-2 items-center justify-center ml-4 p-2 hover:bg-black rounded-md transition-colors"
                         onClick={scrollPrev}
                     >
                         <Image src={RightArrowWhite} alt="Previous" className="rotate-180" />
@@ -26,7 +25,7 @@ export default function Robotics() {
                     </button>
                     {/* <span className="font-bold text-2xl">Robotics</span> */}
                     <button
-                        className="embla__next flex text-gray-300 text-xs gap-2 items-center justify-center mr-4 hover:bg-gray-800 p-1 rounded-md transition-colors"
+                        className="embla__next flex text-gray-300 text-xs gap-2 items-center justify-center mr-4 hover:bg-black p-2 rounded-md transition-colors"
                         onClick={scrollNext}
                     >
                         Next

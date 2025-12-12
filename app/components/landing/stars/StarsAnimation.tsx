@@ -17,42 +17,39 @@ export default function StarsAnimation() {
 
     useEffect(() => {
         const config: Config = {
-            particleCount: 50,
-            flareCount: 10,
+            particleCount: 20,
+            flareCount: 0,
             motion: 0.03,
             color: "#ed1c24",
             particleSizeBase: 1.5,
             particleSizeMultiplier: 0.8,
-            flareSizeBase: 100,
-            flareSizeMultiplier: 100,
+            flareSizeBase: 0,
+            flareSizeMultiplier: 0,
             lineWidth: 3,
-            linkChance: 5,
+            linkChance: 10,
             linkLengthMin: 2,
             linkLengthMax: 3,
             linkOpacity: 0.2,
-            linkFade: 500,
-            linkSpeed: 0.2,
+            linkFade: 25,
+            linkSpeed: 0.5,
             glareAngle: -60,
             glareOpacityMultiplier: 0.01,
             renderParticles: true,
             renderParticleGlare: false,
-            renderFlares: true,
+            renderFlares: false,
             renderLinks: true,
             renderMesh: false,
-            flicker: true,
-            flickerSmoothing: 15,
-            blurSize: 1,
+            flicker: false,
+            flickerSmoothing: 0,
+            blurSize: 0.5,
             randomMotion: true,
-            noiseLength: 1000,
+            noiseLength: 500,
             noiseStrength: 1,
         };
 
         // Reduce settings if on mobile
         if (/Mobi/.test(navigator.userAgent)) {
-            config.particleCount = 25;
-            config.flareCount = 5;
-            config.noiseLength = 500;
-            config.blurSize = 0.5;
+            config.particleCount = 10;
         }
 
         if (!canvas.current) return;
