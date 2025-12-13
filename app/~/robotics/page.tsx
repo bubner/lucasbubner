@@ -2,15 +2,41 @@
 
 import Box from "@/app/components/info-pages/Box";
 import { RightArrowWhite } from "@/app/images";
+import { EmblaCarouselType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function Robotics() {
     const [embla, emblaApi] = useEmblaCarousel({ loop: true });
     const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
     const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+    const [title, setTitle] = useState("Robotics");
+
+    useEffect(() => {
+        const slidesInView = (e: EmblaCarouselType) => {
+            const inView = JSON.stringify(e.slidesInView());
+            switch (inView) {
+                case "[0,1]":
+                    setTitle("Page 1");
+                    break;
+                case "[0,1,2]":
+                    setTitle("Page 2");
+                    break;
+                case "[1,2]":
+                    setTitle("Page 3");
+                    break;
+                default:
+                    setTitle("Robotics");
+                    break;
+            }
+        };
+        if (emblaApi) emblaApi.on("slidesInView", slidesInView);
+        return () => {
+            emblaApi?.off("slidesInView", slidesInView);
+        };
+    }, [emblaApi]);
 
     return (
         <Box className="w-full h-full flex items-center justify-center flex-col xl:flex-row">
@@ -21,9 +47,18 @@ export default function Robotics() {
                         onClick={scrollPrev}
                     >
                         <Image src={RightArrowWhite} alt="Previous" className="rotate-180" />
-                        Previous
+                        Back
                     </button>
-                    {/* <span className="font-bold text-2xl">Robotics</span> */}
+                    <motion.span
+                        key={title}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1 }}
+                        className="font-bold text-2xl"
+                    >
+                        {title}
+                    </motion.span>
                     <button
                         className="embla__next flex text-gray-300 text-xs gap-2 items-center justify-center mr-4 hover:bg-black p-2 rounded-md transition-colors"
                         onClick={scrollNext}
@@ -33,16 +68,15 @@ export default function Robotics() {
                     </button>
                 </div>
                 <div className="embla__viewport min-h-[80dvh]" ref={embla}>
-                    <motion.div className="embla__container flex h-full w-full" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 3, delay: 0.75 }}>
-                        <div className="embla__slide flex-shrink-0 w-full h-full flex items-center justify-center text-3xl font-bold">
-                            1
-                        </div>
-                        <div className="embla__slide flex-shrink-0 w-full h-full flex items-center justify-center text-3xl font-bold">
-                            2
-                        </div>
-                        <div className="embla__slide flex-shrink-0 w-full h-full flex items-center justify-center text-3xl font-bold">
-                            3
-                        </div>
+                    <motion.div
+                        className="embla__container flex h-full w-full"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 3, delay: 0.75 }}
+                    >
+                        <div className="embla__slide flex-shrink-0 w-full h-full flex items-center justify-center text-3xl font-bold">1</div>
+                        <div className="embla__slide flex-shrink-0 w-full h-full flex items-center justify-center text-3xl font-bold">2</div>
+                        <div className="embla__slide flex-shrink-0 w-full h-full flex items-center justify-center text-3xl font-bold">3</div>
                     </motion.div>
                 </div>
             </div>
