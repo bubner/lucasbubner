@@ -25,7 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     return (
         <HomeScaleIn>
             <ContextualFadeIn>
-                <LazyLoadedImage className="-z-10 object-cover inset-0 w-full h-full fixed" src={MainBackground} alt="" quality={100} />
+                <LazyLoadedImage className="-z-10 object-cover inset-0 w-full h-full fixed" src={MainBackground} alt="" quality={75} />
                 <nav
                     role="navigation"
                     className="z-10 fixed top-3 left-1/2 -translate-x-1/2 rounded-[32px] m-auto bg-[#101111] flex flex-col items-center justify-center px-2 sm:px-6 [box-shadow:8px_4px_32px_0_rgba(100,100,100,0.4)]"

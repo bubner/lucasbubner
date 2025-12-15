@@ -32,13 +32,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <head>
-                <Script
-                    async
-                    data-pace-options='{"eventLag": false, "restartOnRequestAfter": false}'
-                    src="/external/pace.min.js"
-                    // Ensure we always have a loading bar before anything else
-                    strategy="beforeInteractive"
-                />
+                <Script async data-pace-options='{"eventLag": false, "restartOnRequestAfter": false}' src="/external/pace.min.js" />
                 <meta name="darkreader-lock" />
             </head>
             <body className={`${inter.className} bg-black overflow-x-hidden`}>
@@ -47,7 +41,7 @@ export default function RootLayout({
                     // we will force absolutely everything on the pages to be visible in the event we don't have JavaScript. We also try
                     // to select the custom __nsz (no-script-zero) and box classes to reset transform properties for these items that move on entry.
                     dangerouslySetInnerHTML={{
-                            __html: `<style>* { opacity: 1 !important; transform: scale(1) !important } .__nsi { visibility: hidden } .__nsg { display: none } .__nsz, .__box, :has(.__box) { transform: translate(0) !important }</style>`,
+                        __html: `<style>* { opacity: 1 !important; transform: scale(1) !important } .__nsi { visibility: hidden } .__nsg { display: none } .__nsz, .__box, :has(.__box) { transform: translate(0) !important }</style>`,
                     }}
                 />
                 <noscript>
