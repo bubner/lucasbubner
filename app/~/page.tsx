@@ -69,7 +69,7 @@ export default function Home() {
             </div>
             <div className="w-full xl:w-1/2 flex flex-col-reverse xl:flex-col">
                 <Box className="h-full min-h-[400px]" entryDelay={iter.next().value}>
-                    <Suspense fallback={<LoadingWheel containerheight="400px" />}>
+                    <Suspense fallback={<LoadingWheel containerHeight="400px" />}>
                         <GitHubRepoTree />
                     </Suspense>
                 </Box>
@@ -82,7 +82,7 @@ export default function Home() {
                                     src="https://wakatime.com/badge/user/617e18c7-273e-4a36-be73-e7a0d8b31d1b.svg?style=for-the-badge"
                                     alt="Total time coded since Jun 30 2023"
                                     height={30}
-                                    iconheight={15}
+                                    iconHeight={15}
                                     width={260}
                                     unoptimized
                                 />
@@ -93,7 +93,7 @@ export default function Home() {
                                     src="https://img.shields.io/github/stars/bubner?style=for-the-badge&logo=github&color=%23006400"
                                     alt="GitHub stars"
                                     height={30}
-                                    iconheight={15}
+                                    iconHeight={15}
                                     width={120}
                                     unoptimized
                                 />

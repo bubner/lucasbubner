@@ -49,7 +49,7 @@ const Item = memo(({ info, renderLeftSide, callback }: { info: RepoInfo; renderL
             >
                 <span className="text-blue-500 underline">{info.name}</span>
                 <div className="flex gap-2 items-center justify-center">
-                    <LazyLoadedImage src={imageMap.get(info.language) || Tag} width={20} height={20} iconheight={16} alt={info.language} />
+                    <LazyLoadedImage src={imageMap.get(info.language) || Tag} width={20} height={20} iconHeight={16} alt={info.language} />
                     <span className="text-white">{info.language}</span>
                 </div>
             </motion.div>

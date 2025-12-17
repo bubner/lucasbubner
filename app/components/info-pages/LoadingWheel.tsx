@@ -3,26 +3,26 @@
  * https://flowbite.com/docs/components/spinner/
  */
 export default function LoadingWheel({
-    containerheight,
-    containerwidth,
-    iconheight,
-    iconwidth,
+    containerHeight,
+    containerWidth,
+    iconHeight,
+    iconWidth,
 }: {
-    containerheight?: string;
-    containerwidth?: string;
-    iconheight?: number;
-    iconwidth?: number;
+    containerHeight?: string;
+    containerWidth?: string;
+    iconHeight?: number;
+    iconWidth?: number;
 }) {
     return (
         <div
             role="status"
             className="flex items-center justify-center"
-            style={{ height: containerheight || "auto", width: containerwidth || "auto" }}
+            style={{ height: containerHeight || "auto", width: containerWidth || "auto" }}
         >
             <svg
                 aria-hidden="true"
                 className="inline animate-spin text-transparent fill-red-600"
-                style={{ height: iconheight || "32px", width: iconwidth || "32px" }}
+                style={{ height: iconHeight || "32px", width: iconWidth || "32px" }}
                 viewBox="0 0 100 101"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

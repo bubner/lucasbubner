@@ -1,21 +1,21 @@
 "use client";
 
-import Box from "@/app/components/info-pages/Box";
 import { RightArrowWhite } from "@/app/images";
 import { EmblaCarouselType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { Suspense, useCallback, useEffect, useState } from "react";
 import BunyipsLib from "./BunyipsLib";
 import Impact from "./Impact";
 import Media, { URLData } from "./Media";
+import LoadingWheel from "@/app/components/info-pages/LoadingWheel";
 
-export default function Slides({ urlData }: { urlData: URLData[] }) {
+export default function Slides({ urlData }: { urlData: Promise<URLData | null>[] }) {
     const [embla, emblaApi] = useEmblaCarousel({ loop: true });
     const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
     const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
-    const [title, setTitle] = useState("Robotics");
+    const [title, setTitle] = useState("Robotics — Media");
 
     useEffect(() => {
         const slidesInView = (e: EmblaCarouselType) => {
@@ -31,7 +31,7 @@ export default function Slides({ urlData }: { urlData: URLData[] }) {
                     setTitle("Robotics — Impact");
                     break;
                 default:
-                    setTitle("Robotics");
+                    setTitle("Robotics — Media");
                     break;
             }
         };
@@ -77,7 +77,9 @@ export default function Slides({ urlData }: { urlData: URLData[] }) {
                     transition={{ duration: 3, delay: 0.75 }}
                 >
                     <div className="embla__slide flex-shrink-0 w-full h-full flex items-center justify-center text-3xl font-bold">
-                        <Media urlData={urlData} />
+                        <Suspense fallback={<LoadingWheel containerHeight="600px" />}>
+                            <Media urlData={urlData} />
+                        </Suspense>
                     </div>
                     <div className="embla__slide flex-shrink-0 w-full h-full flex items-center justify-center text-3xl font-bold">
                         <BunyipsLib />
