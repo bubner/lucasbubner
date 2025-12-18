@@ -19,7 +19,13 @@ export default function Robotics() {
         "https://www.murraybridge.news/murray-bridge-high-school-hosts-successful-robotics-scrimmage/",
     ];
     const rateLimit = pLimit(2);
-    const mediaTabUrlData = urls.map((url) => rateLimit(() => getLinkPreview(url).catch(() => null))) as Promise<URLData | null>[];
+    const mediaTabUrlData = urls.map((url) => rateLimit(() => _getLinkPreview(url).catch(() => null))) as Promise<URLData | null>[];
+
+    function _getLinkPreview(url: string) {
+        // TODO: temp delay for Suspense testing
+        const enabled = false;
+        return new Promise((resolve) => setTimeout(() => resolve(getLinkPreview(url)), enabled ? Math.random() * 10000 : 0));
+    }
 
     // TODO: some other links (not robotics)
     // https://www.murraybridge.news/students-recognised-with-2025-barker-shield-awards/

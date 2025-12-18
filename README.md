@@ -1,4 +1,4 @@
-# [lucasbubner v3.0](https://bubner.me/)
+# [lucasbubner v3.1](https://bubner.me/)
 **Source code and deployment environment for my personal website.** <br>
 Built with Next.js 14 (using the `app` router), Tailwind CSS, framer-motion, and deployed with Vercel.
 

@@ -40,6 +40,7 @@ import Tag from "./tech.svg";
 import Star from "./star.png";
 import ProtonBubner from "./email.png";
 import RightArrowWhite from "./rightarrowwhite.svg";
+import NotFound from "./not_found.png";
 
 export {
     Stars,
@@ -83,5 +84,6 @@ export {
     Tag,
     Star,
     ProtonBubner,
-    RightArrowWhite
+    RightArrowWhite,
+    NotFound
 };

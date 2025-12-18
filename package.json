@@ -1,6 +1,6 @@
 {
   "name": "lucasbubner",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -17,6 +17,7 @@
     "pace-js": "^1.2.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-loading-skeleton": "^3.5.0",
     "typewriter-effect": "^2.21.0",
     "use-sound": "^4.0.3",
     "uuid": "^10.0.0"
