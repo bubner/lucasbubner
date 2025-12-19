@@ -6,26 +6,24 @@ import pLimit from "p-limit";
 
 export const fetchCache = "force-cache";
 
-export default function Robotics() {
-    const urls = [
-        "https://www.5mu.com.au/local-news/murray-bridge-robotics-teams-fundraise-for-nationals/",
-        "https://www.murraybridge.news/robotics-students-are-on-a-roll-at/",
-        "https://murrayvalleystandard.com.au/news/2025/12/16/robotics-success-continues/",
-        "https://murrayvalleystandard.com.au/news/2024/11/20/robotics-teams-go-for-gold/",
-        "https://murrayvalleystandard.com.au/news/2023/12/20/community-gives-team-a-special-chance/",
-        "https://murrayvalleystandard.com.au/news/2023/12/07/students-hit-robotic-highs/",
-        "https://murrayvalleystandard.com.au/news/2023/10/31/technological-support/",
-        "https://www.murraybridge.news/can-you-help-murray-bridges-robotics-teams-get-to-the-nationals/",
-        "https://www.murraybridge.news/murray-bridge-high-school-hosts-successful-robotics-scrimmage/",
-    ];
-    const rateLimit = pLimit(2);
-    const mediaTabUrlData = urls.map((url) => rateLimit(() => _getLinkPreview(url).catch(() => null))) as Promise<URLData | null>[];
+const media: { url: string; year: number }[] = [
+    { url: "https://www.murraybridge.news/robotics-students-are-on-a-roll-at/", year: 2023 },
+    { url: "https://murrayvalleystandard.com.au/news/2023/10/31/technological-support/", year: 2023 },
+    { url: "https://murrayvalleystandard.com.au/news/2023/12/07/students-hit-robotic-highs/", year: 2023 },
+    { url: "https://murrayvalleystandard.com.au/news/2023/12/20/community-gives-team-a-special-chance/", year: 2023 },
+    { url: "https://www.murraybridge.news/murray-bridge-high-school-hosts-successful-robotics-scrimmage/", year: 2024 },
+    { url: "https://murrayvalleystandard.com.au/news/2024/11/20/robotics-teams-go-for-gold/", year: 2024 },
+    { url: "https://www.murraybridge.news/can-you-help-murray-bridges-robotics-teams-get-to-the-nationals/", year: 2024 },
+    { url: "https://www.5mu.com.au/local-news/murray-bridge-robotics-teams-fundraise-for-nationals/", year: 2024 },
+    { url: "https://murrayvalleystandard.com.au/news/2025/12/16/robotics-success-continues/", year: 2025 },
+];
+export function getYear(url: string) {
+    return media.find((m) => m.url === url)?.year;
+}
 
-    function _getLinkPreview(url: string) {
-        // TODO: temp delay for Suspense testing
-        const enabled = false;
-        return new Promise((resolve) => setTimeout(() => resolve(getLinkPreview(url)), enabled ? Math.random() * 10000 : 0));
-    }
+export default function Robotics() {
+    const rateLimit = pLimit(2);
+    const mediaTabUrlData = media.map((m) => rateLimit(() => getLinkPreview(m.url).catch(() => null))) as Promise<URLData | null>[];
 
     // TODO: some other links (not robotics)
     // https://www.murraybridge.news/students-recognised-with-2025-barker-shield-awards/

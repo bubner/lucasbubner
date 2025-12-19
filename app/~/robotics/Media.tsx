@@ -2,7 +2,8 @@ import "react-loading-skeleton/dist/skeleton.css";
 import { ReactElement, Suspense, use } from "react";
 import Image from "next/image";
 import { NotFound } from "@/app/images";
-import Skeleton from "react-loading-skeleton";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import { getYear } from "./page";
 
 // ILinkPreviewResponse
 export interface URLData {
@@ -26,6 +27,8 @@ export interface URLData {
 
 function DisplayCard({ data }: { data: URLData | null }) {
     let image: ReactElement;
+    let body: ReactElement;
+
     if (data !== null) {
         image = (
             <Image
@@ -36,10 +39,42 @@ function DisplayCard({ data }: { data: URLData | null }) {
                 src={data.images.length > 0 ? data.images[0] : NotFound}
             />
         );
+        body = (
+            <div className="flex flex-col p-3 w-[300px]">
+                <h3 className="text-lg font-semibold leading-tight line-clamp-2">{data.title}</h3>
+                <h3 className="text-xs mt-2">
+                    {data.siteName} — {getYear(data.url)}
+                </h3>
+                <p className="text-sm text-muted-foreground line-clamp-3 text-ellipsis">{data.description}</p>
+                <span className="text-xs text-blue-400 truncate">{data.url}</span>
+            </div>
+        );
     } else {
-        image = <Skeleton width={300} height={200} baseColor="#111111" highlightColor="#7f7f7f" />;
+        image = <Skeleton width={300} height={200} className="rounded-xl" />;
+        body = (
+            <div className="flex flex-col gap-2 p-3 w-[300px]">
+                <Skeleton width={220} height={18} />
+                <Skeleton width={260} height={14} />
+                <Skeleton width={240} height={14} />
+                <Skeleton width={180} height={12} />
+            </div>
+        );
     }
-    return <div className="flex flex-col">{image}</div>;
+
+    const cn = "flex flex-col rounded-xl overflow-hidden bg-black p-4 m-2";
+    return data !== null ? (
+        <a href={data.url} target="_blank" rel="noopener noreferrer" className={cn + " hover:bg-zinc-900 transition-colors"}>
+            {image}
+            {body}
+        </a>
+    ) : (
+        <div className={cn}>
+            <SkeletonTheme baseColor="#111111" highlightColor="#7f7f7f">
+                {image}
+                {body}
+            </SkeletonTheme>
+        </div>
+    );
 }
 
 function Card({ dataPromise }: { dataPromise: Promise<URLData | null> }) {
