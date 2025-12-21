@@ -1,45 +1,38 @@
 "use client";
 
 import { RightArrowWhite } from "@/app/images";
-import { EmblaCarouselType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Suspense, useCallback, useEffect, useState } from "react";
+import { Suspense, useCallback } from "react";
 import BunyipsLib from "./BunyipsLib";
 import Impact from "./Impact";
 import Media, { URLData } from "./Media";
 import LoadingWheel from "@/app/components/info-pages/LoadingWheel";
+import useSound from "use-sound";
+
+function Slide({ title, children }: { title: string; children: React.ReactNode }) {
+    return (
+        <div className="embla__slide flex-shrink-0 w-full h-full flex items-center justify-center text-3xl font-bold">
+            <div className="flex flex-col">
+                <span className="text-bold text-xl">{title}</span>
+                {children}
+            </div>
+        </div>
+    );
+}
 
 export default function Slides({ urlData }: { urlData: Promise<URLData | null>[] }) {
     const [embla, emblaApi] = useEmblaCarousel({ loop: true });
-    const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-    const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
-    const [title, setTitle] = useState("Robotics — Media");
-
-    useEffect(() => {
-        const slidesInView = (e: EmblaCarouselType) => {
-            const inView = JSON.stringify(e.slidesInView());
-            switch (inView) {
-                case "[0,1]":
-                    setTitle("Robotics — Media");
-                    break;
-                case "[0,1,2]":
-                    setTitle("Robotics — BunyipsLib");
-                    break;
-                case "[1,2]":
-                    setTitle("Robotics — Impact");
-                    break;
-                default:
-                    setTitle("Robotics — Media");
-                    break;
-            }
-        };
-        emblaApi?.on("slidesInView", slidesInView);
-        return () => {
-            emblaApi?.off("slidesInView", slidesInView);
-        };
-    }, [emblaApi]);
+    const [playSound] = useSound("/sounds/tap.wav");
+    const scrollPrev = useCallback(() => {
+        emblaApi?.scrollPrev();
+        playSound();
+    }, [emblaApi, playSound]);
+    const scrollNext = useCallback(() => {
+        emblaApi?.scrollNext();
+        playSound();
+    }, [emblaApi, playSound]);
 
     return (
         <>
@@ -51,16 +44,7 @@ export default function Slides({ urlData }: { urlData: Promise<URLData | null>[]
                     <Image src={RightArrowWhite} alt="Previous" className="rotate-180" />
                     Back
                 </button>
-                <motion.span
-                    key={title}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 1 }}
-                    className="font-bold text-2xl"
-                >
-                    {title}
-                </motion.span>
+                <span className="font-bold text-2xl">Robotics</span>
                 <button
                     className="embla__next flex text-gray-300 text-xs gap-2 items-center justify-center mr-4 hover:bg-black p-2 rounded-md transition-colors"
                     onClick={scrollNext}
@@ -76,17 +60,17 @@ export default function Slides({ urlData }: { urlData: Promise<URLData | null>[]
                     animate={{ opacity: 1 }}
                     transition={{ duration: 3, delay: 0.75 }}
                 >
-                    <div className="embla__slide flex-shrink-0 w-full h-full flex items-center justify-center text-3xl font-bold">
+                    <Slide title="Media">
                         <Suspense fallback={<LoadingWheel containerHeight="600px" />}>
                             <Media urlData={urlData} />
                         </Suspense>
-                    </div>
-                    <div className="embla__slide flex-shrink-0 w-full h-full flex items-center justify-center text-3xl font-bold">
+                    </Slide>
+                    <Slide title="BunyipsLib">
                         <BunyipsLib />
-                    </div>
-                    <div className="embla__slide flex-shrink-0 w-full h-full flex items-center justify-center text-3xl font-bold">
+                    </Slide>
+                    <Slide title="Impact">
                         <Impact />
-                    </div>
+                    </Slide>
                 </motion.div>
             </div>
         </>
