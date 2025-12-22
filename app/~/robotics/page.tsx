@@ -26,6 +26,7 @@ export default function Robotics() {
     const mediaTabUrlData = media.map((m) => rateLimit(() => getLinkPreview(m.url).catch(() => null))) as Promise<URLData | null>[];
 
     // TODO: some other links (not robotics)
+    // https://murrayvalleystandard.com.au/news/2025/12/21/high-score-for-bubner/
     // https://www.murraybridge.news/students-recognised-with-2025-barker-shield-awards/
     // https://www.murraybridge.news/murray-bridge-high-school-students/
     // https://www.murraybridgelawnbowls.com.au/gallery
