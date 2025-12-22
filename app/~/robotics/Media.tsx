@@ -84,7 +84,7 @@ function Card({ dataPromise }: { dataPromise: Promise<URLData | null> }) {
 
 export default function Media({ urlData }: { urlData: Promise<URLData | null>[] }) {
     return (
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap w-full md:w-1/2 p-4 pt-0">
             {urlData.map((p, i) => (
                 <Suspense key={i} fallback={<DisplayCard data={null} />}>
                     <Card dataPromise={p} />

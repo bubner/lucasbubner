@@ -61,9 +61,14 @@ export default function Slides({ urlData }: { urlData: Promise<URLData | null>[]
                     transition={{ duration: 3, delay: 0.75 }}
                 >
                     <Slide title="Media">
-                        <Suspense fallback={<LoadingWheel containerHeight="600px" />}>
+                        <div className="flex flex-col md:flex-row">
+                            <div className="w-full md:w-1/2 p-4 pt-0">
+                                <p className="text-4xl text-left w-full !max-w-full border border-t-0 border-l-0 border-r-0 !pl-0">
+                                    <strong>Empowering</strong> regional high-school students through FIRST® Robotics
+                                </p>
+                            </div>
                             <Media urlData={urlData} />
-                        </Suspense>
+                        </div>
                     </Slide>
                     <Slide title="BunyipsLib">
                         <BunyipsLib />
