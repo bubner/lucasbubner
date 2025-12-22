@@ -4,6 +4,7 @@ import Image from "next/image";
 import { NotFound } from "@/app/images";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { getYear } from "./page";
+import SoundLink from "@/app/components/SoundLink";
 
 // ILinkPreviewResponse
 export interface URLData {
@@ -63,10 +64,10 @@ function DisplayCard({ data }: { data: URLData | null }) {
 
     const cn = "flex flex-col rounded-xl overflow-hidden bg-black p-4 m-2";
     return data !== null ? (
-        <a href={data.url} target="_blank" rel="noopener noreferrer" className={cn + " hover:bg-zinc-900 transition-colors"}>
+        <SoundLink href={data.url} target="_blank" rel="noopener noreferrer" className={cn + " hover:bg-zinc-900 transition-colors"}>
             {image}
             {body}
-        </a>
+        </SoundLink>
     ) : (
         <div className={cn}>
             <SkeletonTheme baseColor="#111111" highlightColor="#7f7f7f">
