@@ -5,6 +5,8 @@ import { NotFound } from "@/app/images";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { getYear } from "./page";
 import SoundLink from "@/app/components/SoundLink";
+import { motion } from "framer-motion";
+import entryIncrement from "@/app/components/info-pages/entry-timing";
 
 // ILinkPreviewResponse
 export interface URLData {
@@ -84,12 +86,15 @@ function Card({ dataPromise }: { dataPromise: Promise<URLData | null> }) {
 }
 
 export default function Media({ urlData }: { urlData: Promise<URLData | null>[] }) {
+    const delay = entryIncrement(0.35);
     return (
         <div className="flex flex-wrap w-full md:w-1/2 p-4 pt-0">
             {urlData.map((p, i) => (
-                <Suspense key={i} fallback={<DisplayCard data={null} />}>
-                    <Card dataPromise={p} />
-                </Suspense>
+                <motion.div key={i} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5 + delay.next().value!! }}>
+                    <Suspense fallback={<DisplayCard data={null} />}>
+                        <Card dataPromise={p} />
+                    </Suspense>
+                </motion.div>
             ))}
         </div>
     );

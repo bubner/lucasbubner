@@ -63,9 +63,14 @@ export default function Slides({ urlData }: { urlData: Promise<URLData | null>[]
                     <Slide title="Media">
                         <div className="flex flex-col md:flex-row">
                             <div className="w-full md:w-1/2 p-4 pt-0">
-                                <p className="text-4xl text-left w-full !max-w-full border border-t-0 border-l-0 border-r-0 !pl-0">
+                                <motion.p
+                                    className="text-4xl text-left w-full !max-w-full border border-t-0 border-l-0 border-r-0 !pl-0"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ delay: 1.5 }}
+                                >
                                     <strong>Empowering</strong> regional high-school students through FIRST® Robotics
-                                </p>
+                                </motion.p>
                             </div>
                             <Media urlData={urlData} />
                         </div>
