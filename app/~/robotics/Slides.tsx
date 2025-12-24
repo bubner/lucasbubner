@@ -1,6 +1,6 @@
 "use client";
 
-import { RightArrowWhite } from "@/app/images";
+import { Bubner, RightArrowWhite } from "@/app/images";
 import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -10,6 +10,7 @@ import Impact from "./Impact";
 import Media, { URLData } from "./Media";
 import LoadingWheel from "@/app/components/info-pages/LoadingWheel";
 import useSound from "use-sound";
+import entryIncrement from "@/app/components/info-pages/entry-timing";
 
 function Slide({ title, children }: { title: string; children: React.ReactNode }) {
     return (
@@ -33,6 +34,8 @@ export default function Slides({ urlData }: { urlData: Promise<URLData | null>[]
         emblaApi?.scrollNext();
         playSound();
     }, [emblaApi, playSound]);
+    const entryDelay = entryIncrement(0.3);
+    const initialDelay = 1.5;
 
     return (
         <>
@@ -62,15 +65,51 @@ export default function Slides({ urlData }: { urlData: Promise<URLData | null>[]
                 >
                     <Slide title="Media">
                         <div className="flex flex-col md:flex-row">
-                            <div className="w-full md:w-1/2 p-4 pt-0">
+                            <div className="w-full md:w-1/2 p-4 pt-0 text-base font-normal text-left">
                                 <motion.p
-                                    className="text-4xl text-left w-full !max-w-full border border-t-0 border-l-0 border-r-0 !pl-0"
+                                    className="text-4xl w-full !max-w-full border border-t-0 border-l-0 border-r-0 !pl-0 mb-4"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     transition={{ delay: 1.5 }}
                                 >
                                     <strong>Empowering</strong> regional high-school students through FIRST® Robotics
                                 </motion.p>
+                                <motion.div
+                                    initial={{ opacity: 0, x: -100 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: initialDelay + entryDelay.next().value!!, type: "tween" }}
+                                    className="flex"
+                                >
+                                    <Image src={Bubner} width={100} height={100} alt="" />
+                                    <div className="flex flex-col">
+                                        <div className="text-2xl">FIRST® Dean's List Finalist</div>
+                                        TODO
+                                    </div>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ opacity: 0, x: 100 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: initialDelay + entryDelay.next().value!!, type: "tween" }}
+                                    className="flex flex-row-reverse"
+                                >
+                                    <Image src={Bubner} width={100} height={100} alt="" />
+                                    <div className="flex flex-col">
+                                        <div className="text-2xl text-right">iAwards Innovations</div>
+                                        TODO
+                                    </div>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ opacity: 0, x: -100 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: initialDelay + entryDelay.next().value!!, type: "tween" }}
+                                    className="flex"
+                                >
+                                    <Image src={Bubner} width={100} height={100} alt="" />
+                                    <div className="flex flex-col">
+                                        <div className="text-2xl">Media Outreach</div>
+                                        TODO
+                                    </div>
+                                </motion.div>
                             </div>
                             <Media urlData={urlData} />
                         </div>
