@@ -56,12 +56,6 @@
     backdrop-filter: blur(15px);
 }
 
-@media only screen and (max-width: 1160px) {
-    .__box {
-        flex-basis: 75%;
-    }
-}
-
 .__link {
     color: #7ea1ff;
     word-break: break-all;
