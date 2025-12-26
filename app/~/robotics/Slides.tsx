@@ -55,7 +55,7 @@ export default function Slides({ urlData }: { urlData: Promise<URLData | null>[]
                 onAnimationComplete={() => playAppearSound()}
                 className={`flex gap-4 my-12 xl:my-6 flex-col ${alignRight ? "xl:flex-row-reverse" : "xl:flex-row"}`}
             >
-                <Image src={image} className="rounded-xl object-cover w-full xl:w-1/2" width={400} height={300} alt={title} />
+                <Image src={image} className="rounded-xl object-cover w-full xl:w-1/2 max-w-[400px]" width={400} height={300} alt={title} />
                 <div className="flex flex-col">
                     <div className={`text-2xl ${alignRight ? "text-right" : "text-left"}`}>{title}</div>
                     {children}
