@@ -41,6 +41,9 @@ import Star from "./star.png";
 import ProtonBubner from "./email.png";
 import RightArrowWhite from "./rightarrowwhite.svg";
 import NotFound from "./not_found.png";
+import FIRSTDeansList from "./firstdeanslist.jpg";
+import Bellower from "./bellower.jpg";
+import PowerFM from "./powerfm.jpg";
 
 export {
     Stars,
@@ -85,5 +88,8 @@ export {
     Star,
     ProtonBubner,
     RightArrowWhite,
-    NotFound
+    NotFound,
+    FIRSTDeansList,
+    Bellower,
+    PowerFM
 };

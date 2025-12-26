@@ -37,7 +37,7 @@ export default function Robotics() {
 
     return (
         <Box className="w-full h-full flex items-center justify-center flex-col xl:flex-row">
-            <div className="embla w-full h-full">
+            <div className="embla w-full h-full max-h-dvh">
                 <Slides urlData={mediaTabUrlData} />
             </div>
         </Box>
