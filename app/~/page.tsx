@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import GitHubRepoTree from "../components/info-pages/home/GitHubRepoTree";
 import LoadingWheel from "../components/info-pages/LoadingWheel";
-import entryIncrement from "../components/info-pages/entry-timing";
+import stepAccumulate from "../components/info-pages/timing";
 import Box from "../components/info-pages/Box";
 import LazyLoadedImage from "../components/info-pages/LazyLoadedImage";
 import SoundLink from "../components/SoundLink";
@@ -9,7 +9,7 @@ import LazyLoadedIFrame from "../components/info-pages/LazyLoadedIFrame";
 import { GitHubBubner, LinkedInBubner, ProtonBubner } from "../images";
 
 export default function Home() {
-    const iter = entryIncrement(0.2);
+    const iter = stepAccumulate(0.2);
     const Red = ({ children }: { children: React.ReactNode }) => <span className="__text-emp-red font-bold">{children}</span>;
     const age = process.env.DOB ? Math.floor((Date.now() - parseInt(process.env.DOB) * 1000) / (1000 * 60 * 60 * 24 * 365.25)) : "?";
 

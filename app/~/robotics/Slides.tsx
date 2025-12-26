@@ -1,16 +1,15 @@
 "use client";
 
+import stepAccumulate from "@/app/components/info-pages/timing";
 import { Bubner, RightArrowWhite } from "@/app/images";
 import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Suspense, useCallback } from "react";
+import { useCallback } from "react";
+import useSound from "use-sound";
 import BunyipsLib from "./BunyipsLib";
 import Impact from "./Impact";
 import Media, { URLData } from "./Media";
-import LoadingWheel from "@/app/components/info-pages/LoadingWheel";
-import useSound from "use-sound";
-import entryIncrement from "@/app/components/info-pages/entry-timing";
 
 function Slide({ title, children }: { title: string; children: React.ReactNode }) {
     return (
@@ -34,7 +33,8 @@ export default function Slides({ urlData }: { urlData: Promise<URLData | null>[]
         emblaApi?.scrollNext();
         playSound();
     }, [emblaApi, playSound]);
-    const entryDelay = entryIncrement(0.3);
+    const [playAppearSound] = useSound("/sounds/tap.wav");
+    const entryDelay = stepAccumulate(0.75);
     const initialDelay = 1.5;
 
     return (
@@ -78,6 +78,7 @@ export default function Slides({ urlData }: { urlData: Promise<URLData | null>[]
                                     initial={{ opacity: 0, x: -100 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: initialDelay + entryDelay.next().value!!, type: "tween" }}
+                                    onAnimationComplete={() => playAppearSound()}
                                     className="flex"
                                 >
                                     <Image src={Bubner} width={100} height={100} alt="" />
@@ -90,6 +91,7 @@ export default function Slides({ urlData }: { urlData: Promise<URLData | null>[]
                                     initial={{ opacity: 0, x: 100 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: initialDelay + entryDelay.next().value!!, type: "tween" }}
+                                    onAnimationComplete={() => playAppearSound()}
                                     className="flex flex-row-reverse"
                                 >
                                     <Image src={Bubner} width={100} height={100} alt="" />
@@ -102,6 +104,7 @@ export default function Slides({ urlData }: { urlData: Promise<URLData | null>[]
                                     initial={{ opacity: 0, x: -100 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: initialDelay + entryDelay.next().value!!, type: "tween" }}
+                                    onAnimationComplete={() => playAppearSound()}
                                     className="flex"
                                 >
                                     <Image src={Bubner} width={100} height={100} alt="" />

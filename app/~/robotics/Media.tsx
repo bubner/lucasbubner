@@ -6,7 +6,7 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { getYear } from "./page";
 import SoundLink from "@/app/components/SoundLink";
 import { motion } from "framer-motion";
-import entryIncrement from "@/app/components/info-pages/entry-timing";
+import stepAccumulate from "@/app/components/info-pages/timing";
 
 // ILinkPreviewResponse
 export interface URLData {
@@ -86,7 +86,7 @@ function Card({ dataPromise }: { dataPromise: Promise<URLData | null> }) {
 }
 
 export default function Media({ urlData }: { urlData: Promise<URLData | null>[] }) {
-    const delay = entryIncrement(0.35);
+    const delay = stepAccumulate(0.35);
     return (
         <div className="flex flex-wrap w-full md:w-1/2 p-4 pt-0">
             {urlData.map((p, i) => (
