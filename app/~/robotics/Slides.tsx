@@ -55,7 +55,7 @@ export default function Slides({ urlData }: { urlData: Promise<URLData | null>[]
                 onAnimationComplete={() => playAppearSound()}
                 className={`flex gap-4 my-12 xl:my-6 flex-col ${alignRight ? "xl:flex-row-reverse" : "xl:flex-row"}`}
             >
-                <Image src={image} className="rounded-xl object-cover w-full xl:w-1/2 max-w-[400px]" width={400} height={300} alt={title} />
+                <Image src={image} className="rounded-xl object-cover object-left w-full xl:w-1/2 max-w-[400px]" width={400} height={300} alt={title} />
                 <div className="flex flex-col">
                     <div className={`text-2xl ${alignRight ? "text-right" : "text-left"}`}>{title}</div>
                     {children}
@@ -92,7 +92,7 @@ export default function Slides({ urlData }: { urlData: Promise<URLData | null>[]
                 >
                     <Slide title="Media">
                         <div className="flex flex-col md:flex-row">
-                            <div className="w-full md:w-1/2 p-4 pt-0 text-base font-normal text-left">
+                            <div className="w-full md:w-fit max-w-[1000px] p-4 pt-0 text-base font-normal text-left">
                                 <motion.p
                                     className="text-4xl w-full !max-w-full border border-t-0 border-l-0 border-r-0 !pl-0 mb-4"
                                     initial={{ opacity: 0 }}
