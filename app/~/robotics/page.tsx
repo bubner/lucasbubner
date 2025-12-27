@@ -1,4 +1,4 @@
-import Slides from "./Slides";
+import Slides from "../../../components/robotics/Slides";
 import { getLinkPreview } from "link-preview-js";
 import { URLData } from "../../../components/robotics/Media";
 import pLimit from "p-limit";
