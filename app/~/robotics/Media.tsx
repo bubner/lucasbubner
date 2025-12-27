@@ -87,15 +87,11 @@ function Card({ dataPromise }: { dataPromise: Promise<URLData | null> }) {
 
 export default function Media({ urlData }: { urlData: Promise<URLData | null>[] }) {
     const delay = stepAccumulate(0.35);
-    return (
-        <div className="flex flex-wrap w-full md:w-1/2 p-4 pt-0">
-            {urlData.map((p, i) => (
-                <motion.div key={i} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5 + delay.next().value!! }}>
-                    <Suspense fallback={<DisplayCard data={null} />}>
-                        <Card dataPromise={p} />
-                    </Suspense>
-                </motion.div>
-            ))}
-        </div>
-    );
+    return urlData.map((p, i) => (
+        <motion.div key={i} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5 + delay.next().value!! }}>
+            <Suspense fallback={<DisplayCard data={null} />}>
+                <Card dataPromise={p} />
+            </Suspense>
+        </motion.div>
+    ));
 }
