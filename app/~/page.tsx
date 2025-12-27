@@ -1,12 +1,12 @@
 import { Suspense } from "react";
-import GitHubRepoTree from "../components/info-pages/home/GitHubRepoTree";
-import LoadingWheel from "../components/info-pages/LoadingWheel";
-import stepAccumulate from "../components/info-pages/timing";
-import Box from "../components/info-pages/Box";
-import LazyLoadedImage from "../components/info-pages/LazyLoadedImage";
-import SoundLink from "../components/SoundLink";
-import LazyLoadedIFrame from "../components/info-pages/LazyLoadedIFrame";
-import { GitHubBubner, LinkedInBubner, ProtonBubner } from "../images";
+import GitHubRepoTree from "../../components/info-pages/home/GitHubRepoTree";
+import LoadingWheel from "../../components/info-pages/LoadingWheel";
+import Box from "../../components/info-pages/Box";
+import LazyLoadedImage from "../../components/info-pages/LazyLoadedImage";
+import SoundLink from "../../components/SoundLink";
+import LazyLoadedIFrame from "../../components/info-pages/LazyLoadedIFrame";
+import { GitHubBubner, LinkedInBubner, ProtonBubner } from "../../images";
+import { stepAccumulate } from "@/lib/util";
 
 export default function Home() {
     const iter = stepAccumulate(0.2);

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import AnimationWrapper from "./components/exit/AnimationWrapper";
-import { TreeStatusProvider } from "./components/TreeStatus";
-import { IndicatorPositionProvider } from "./components/PageIndicator";
+import AnimationWrapper from "../components/exit/AnimationWrapper";
+import { TreeStatusProvider } from "../components/TreeStatus";
+import { IndicatorPositionProvider } from "../components/PageIndicator";
 
 const inter = Inter({ subsets: ["latin"] });
 

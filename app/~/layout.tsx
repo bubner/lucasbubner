@@ -1,10 +1,10 @@
-import ContextualFadeIn from "@/app/components/info-pages/ContextualFadeIn";
-import PageIndicator from "@/app/components/PageIndicator";
-import SoundLink from "@/app/components/SoundLink";
-import { TreeStatusProvider } from "@/app/components/TreeStatus";
-import { Bubner, Bunyips, MainBackground, Star } from "@/app/images";
-import HomeScaleIn from "../components/info-pages/home/HomeScaleIn";
-import LazyLoadedImage from "../components/info-pages/LazyLoadedImage";
+import ContextualFadeIn from "@/components/info-pages/ContextualFadeIn";
+import PageIndicator from "@/components/PageIndicator";
+import SoundLink from "@/components/SoundLink";
+import { TreeStatusProvider } from "@/components/TreeStatus";
+import { Bubner, Bunyips, MainBackground, Star } from "@/images";
+import HomeScaleIn from "../../components/info-pages/home/HomeScaleIn";
+import LazyLoadedImage from "../../components/info-pages/LazyLoadedImage";
 // Using Image instead of LazyLoadedImage as it is "reloaded" between transitions
 import Image from "next/image";
 

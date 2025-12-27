@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/util/delaunay.js",
-    "app/components/landing/stars/StarsAnimation.tsx",
+    "components/landing/stars/StarsAnimation.tsx",
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [

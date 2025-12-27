@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { TreeStatus } from "../TreeStatus";
 import { useContext } from "react";
-import { Stars } from "@/app/images";
+import { Stars } from "@/images";
 import StarsAnimation from "./stars/StarsAnimation";
 
 /**

@@ -1,6 +1,6 @@
 "use client";
 
-import { DownArrow } from "@/app/images";
+import { DownArrow } from "@/images";
 import { motion } from "framer-motion";
 import { useContext, useEffect, useRef } from "react";
 import { TreeStatus } from "../TreeStatus";

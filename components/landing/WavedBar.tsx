@@ -1,6 +1,6 @@
 "use client";
 
-import { SepBar } from "@/app/images";
+import { SepBar } from "@/images";
 import { motion } from "framer-motion";
 import LazyLoadedImage from "../info-pages/LazyLoadedImage";
 

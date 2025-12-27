@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import { motion, useAnimation } from "framer-motion";
 import { TreeStatus } from "../TreeStatus";
-import { DownArrow, RightArrow } from "@/app/images";
+import { DownArrow, RightArrow } from "@/images";
 import Link from "next/link";
 import useSound from "use-sound";
 import LazyLoadedImage from "../info-pages/LazyLoadedImage";

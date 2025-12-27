@@ -1,6 +1,6 @@
 "use client";
 
-import { Python, JavaCup, TypeScript, Unity, JavaScript, HTMLBadge, CPlusPlus, CSharp, Kotlin, Tag } from "@/app/images";
+import { Python, JavaCup, TypeScript, Unity, JavaScript, HTMLBadge, CPlusPlus, CSharp, Kotlin, Tag } from "@/images";
 import { StaticImageData } from "next/image";
 import { RepoInfo } from "./GitHubRepoTree";
 import { motion } from "framer-motion";
