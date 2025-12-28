@@ -7,7 +7,7 @@ import SoundLink from "@/components/SoundLink";
 import { motion } from "framer-motion";
 import { stepAccumulate } from "@/lib/util";
 import useSound from "use-sound";
-import { getYear } from "../../app/~/robotics/page";
+import { getYear } from "../../../app/~/robotics/page";
 
 // ILinkPreviewResponse
 export interface URLData {
@@ -45,7 +45,7 @@ function DisplayCard({ data }: { data: URLData | null }) {
         );
         body = (
             <div className="flex flex-col p-3 w-[250px] sm:w-[300px]">
-                <h3 className="text-lg font-semibold leading-tight line-clamp-2">{data.title}</h3>
+                <h3 className="text-lg font-semibold leading-tight line-clamp-2 min-h-12">{data.title}</h3>
                 <h3 className="text-xs mt-2">
                     {data.siteName} — {getYear(data.url)}
                 </h3>
@@ -65,14 +65,14 @@ function DisplayCard({ data }: { data: URLData | null }) {
         );
     }
 
-    const cn = "flex flex-col xl:flex-row rounded-xl overflow-hidden bg-black p-4 m-2 items-center justify-around w-fit";
+    const cn = "flex flex-col xl:flex-row rounded-3xl overflow-hidden bg-black px-4 py-4 xl:py-2 m-2 items-center justify-around w-fit";
     return data !== null ? (
-        <SoundLink href={data.url} target="_blank" rel="noopener noreferrer" className={cn + " hover:bg-black/70 transition-colors"}>
+        <SoundLink href={data.url} target="_blank" rel="noopener noreferrer" className={cn + " hover:bg-black/30 transition-all border-4 border-red-950 border-opacity-0 hover:border-opacity-100"}>
             {image}
             {body}
         </SoundLink>
     ) : (
-        <div className={cn + " px-4 xl:px-8"}>
+        <div className={cn + " xl:px-8"}>
             <SkeletonTheme baseColor="#111111" highlightColor="#7f7f7f">
                 {image}
                 {body}
