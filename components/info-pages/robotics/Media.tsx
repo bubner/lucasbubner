@@ -67,7 +67,7 @@ function DisplayCard({ data }: { data: URLData | null }) {
 
     const cn = "flex flex-col xl:flex-row rounded-3xl overflow-hidden bg-black px-4 py-4 xl:py-2 m-2 items-center justify-around w-fit";
     return data !== null ? (
-        <SoundLink href={data.url} target="_blank" rel="noopener noreferrer" className={cn + " hover:bg-black/30 transition-all border-4 border-red-950 border-opacity-0 hover:border-opacity-100"}>
+        <SoundLink href={data.url} target="_blank" rel="noopener noreferrer" className={cn + " hover:bg-black/30 transition-all border-4 border-red-950 border-opacity-0 hover:border-opacity-30"}>
             {image}
             {body}
         </SoundLink>
