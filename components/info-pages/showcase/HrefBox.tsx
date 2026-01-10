@@ -24,7 +24,7 @@ interface BoxProps {
  *
  * @author Lucas Bubner, 2024
  */
-export default function Box({ src, size, extraBlur, href, small, entryDelay, children, className }: BoxProps & { className?: string }) {
+export default function HrefBox({ src, size, extraBlur, href, small, entryDelay, children, className }: BoxProps & { className?: string }) {
     const [playAppearSound] = useSound("/sounds/tap.wav");
     const root = useRef<HTMLElement>(null);
     const img = useRef<HTMLImageElement>(null);
