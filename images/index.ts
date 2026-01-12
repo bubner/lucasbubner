@@ -44,6 +44,16 @@ import NotFound from "./not_found.png";
 import FIRSTDeansList from "./firstdeanslist.jpg";
 import Bellower from "./bellower.jpg";
 import PowerFM from "./powerfm.jpg";
+import JsDos from "./jsdos.png";
+import MindOfCeo from "./ceo.png";
+import UTTT from "./uttt.png";
+import Mine from "./mine.png";
+import ZeusMonitor from "./zeusmonitor.webp";
+import Pulse from "./pulse.png";
+import MDBunyip from "./mdbunyip.png";
+import VintageStory from "./vs.png";
+import Minecraft from "./mc.png";
+import MinecraftSb from "./mch.png";
 
 export {
     Stars,
@@ -91,5 +101,15 @@ export {
     NotFound,
     FIRSTDeansList,
     Bellower,
-    PowerFM
+    PowerFM,
+    JsDos,
+    MindOfCeo,
+    UTTT,
+    Mine,
+    ZeusMonitor,
+    Pulse,
+    MDBunyip,
+    VintageStory,
+    Minecraft,
+    MinecraftSb,
 };
