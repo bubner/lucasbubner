@@ -176,8 +176,7 @@ export default class Delaunay {
         for (i = open.length; i--; ) closed.push(open[i]);
         open.length = 0;
 
-        for (i = closed.length; i--; )
-            if (closed[i].i < n && closed[i].j < n && closed[i].k < n) open.push(closed[i].i, closed[i].j, closed[i].k);
+        for (i = closed.length; i--; ) if (closed[i].i < n && closed[i].j < n && closed[i].k < n) open.push(closed[i].i, closed[i].j, closed[i].k);
 
         return open;
     }

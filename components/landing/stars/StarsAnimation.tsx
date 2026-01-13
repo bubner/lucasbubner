@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Stars, { Config } from "./components/stars";
 
 /**

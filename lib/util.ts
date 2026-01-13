@@ -2,7 +2,7 @@ export function* stepAccumulate(increment: number, startAtZero?: boolean) {
     let accumulated = 0;
     if (startAtZero) yield 0;
     while (true) {
-        yield accumulated += increment;
+        yield (accumulated += increment);
     }
 }
 

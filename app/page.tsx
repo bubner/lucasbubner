@@ -3,9 +3,10 @@ import Pulse from "../components/landing/Pulse";
 import Writer from "../components/landing/Writer";
 import { TreeStatusProvider } from "../components/TreeStatus";
 
-import NextButton from "../components/landing/NextButton";
+import { shuffle } from "@/lib/util";
 import ExitSlider from "../components/landing/ExitSlider";
 import IconShowcase, { Icon } from "../components/landing/IconShowcase";
+import NextButton from "../components/landing/NextButton";
 import {
     BunyipBellower,
     Bunyips,
@@ -32,7 +33,6 @@ import {
     Unity,
     Vercel,
 } from "../images";
-import { shuffle } from "@/lib/util";
 
 /**
  * bubner.me main landing page.

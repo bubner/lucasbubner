@@ -1,10 +1,10 @@
 "use client";
 
-import { StaticImageData } from "next/image";
-import { TreeStatus } from "../TreeStatus";
-import { useContext } from "react";
 import { motion } from "framer-motion";
+import { StaticImageData } from "next/image";
+import { useContext } from "react";
 import LazyLoadedImage from "../info-pages/LazyLoadedImage";
+import { TreeStatus } from "../TreeStatus";
 
 export type Icon = {
     src: StaticImageData;
@@ -29,12 +29,23 @@ export default function IconShowcase({ icons, direction, size }: { icons: Icon[]
             {[0, 1].map((i) => (
                 <div
                     key={i}
-                    className={`flex items-center justify-center group-hover:anim-pause ${direction == "left" ? "__anim_slide_left" : "__anim_slide_right"}`}
+                    className={
+                        "flex items-center justify-center group-hover:anim-pause " +
+                        (direction == "left" ? "__anim_slide_left" : "__anim_slide_right")
+                    }
                     style={{ height: size }}
                 >
                     {icons.map((icon, i) => (
                         <div key={i} className="mx-4 flex items-center justify-center" style={{ height: size, width: size }}>
-                            <LazyLoadedImage draggable={false} src={icon.src} alt={icon.alt} title={icon.alt} width={size} height={size} className="grayscale opacity-60" />
+                            <LazyLoadedImage
+                                draggable={false}
+                                src={icon.src}
+                                alt={icon.alt}
+                                title={icon.alt}
+                                width={size}
+                                height={size}
+                                className="grayscale opacity-60"
+                            />
                         </div>
                     ))}
                 </div>

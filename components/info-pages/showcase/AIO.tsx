@@ -1,7 +1,6 @@
 import { AIOLogo } from "@/images";
-import HrefBox from "./HrefBox";
-import Image from "next/image";
 import LazyLoadedImage from "../LazyLoadedImage";
+import HrefBox from "./HrefBox";
 
 export default function AIO({ entryDelay }: { entryDelay: number }) {
     return (

@@ -38,9 +38,7 @@ export default class Particle {
                 this.y,
                 this.z
             ),
-            r =
-                (this.z * this.base.config.particleSizeMultiplier + this.base.config.particleSizeBase) *
-                (sizeRatio(this.base.canvas) / 1000),
+            r = (this.z * this.base.config.particleSizeMultiplier + this.base.config.particleSizeBase) * (sizeRatio(this.base.canvas) / 1000),
             o = this.opacity;
 
         if (this.base.config.flicker) {
@@ -67,9 +65,7 @@ export default class Particle {
                 pos.y,
                 r * 100,
                 r,
-                (this.base.config.glareAngle -
-                    (this.base.nPos.x - 0.5) * this.base.config.noiseStrength * this.base.config.motion) *
-                    (Math.PI / 180),
+                (this.base.config.glareAngle - (this.base.nPos.x - 0.5) * this.base.config.noiseStrength * this.base.config.motion) * (Math.PI / 180),
                 0,
                 2 * Math.PI,
                 false

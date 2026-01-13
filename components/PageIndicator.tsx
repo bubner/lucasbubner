@@ -27,15 +27,11 @@ export function IndicatorPositionProvider({ children }: { children: React.ReactN
     }
 
     function setIndicatorPosition(page: number, pathname: string) {
-        setSeen(prev => new Set(prev).add(pathname));
+        setSeen((prev) => new Set(prev).add(pathname));
         setStateIndicatorPosition(page);
     }
 
-    return (
-        <IndicatorPosition.Provider value={{ indicatorPosition, setIndicatorPosition, hasSeenPathname }}>
-            {children}
-        </IndicatorPosition.Provider>
-    );
+    return <IndicatorPosition.Provider value={{ indicatorPosition, setIndicatorPosition, hasSeenPathname }}>{children}</IndicatorPosition.Provider>;
 }
 
 /**
@@ -49,11 +45,7 @@ export default function PageIndicator() {
 
     useEffect(() => {
         function calculatePosition() {
-            const pathOrder = [
-                "/~",
-                "/~/showcase",
-                "/~/robotics"
-            ];
+            const pathOrder = ["/~", "/~/showcase", "/~/robotics"];
             const index = pathOrder.indexOf(pathname);
             if (index === -1) return;
             // y=79x+19 and y=50x+17

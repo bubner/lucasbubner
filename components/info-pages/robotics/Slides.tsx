@@ -1,16 +1,15 @@
 "use client";
 
+import Box from "@/components/info-pages/Box";
 import { RightArrowWhite } from "@/images";
 import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useCallback } from "react";
 import useSound from "use-sound";
+import LazyLoadedImage from "../LazyLoadedImage";
 import BunyipsLib from "./BunyipsLib";
 import Impact from "./Impact";
 import Media, { URLData } from "./Media";
-import Box from "@/components/info-pages/Box";
-import LazyLoadedImage from "../LazyLoadedImage";
 
 function Slide({ title, children }: { title: string; children: React.ReactNode }) {
     return (

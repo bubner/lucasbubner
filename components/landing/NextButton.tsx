@@ -3,8 +3,8 @@
 import { DownArrow } from "@/images";
 import { motion } from "framer-motion";
 import { useContext, useEffect, useRef } from "react";
-import { TreeStatus } from "../TreeStatus";
 import SoundLink from "../SoundLink";
+import { TreeStatus } from "../TreeStatus";
 import LazyLoadedImage from "../info-pages/LazyLoadedImage";
 
 /**

@@ -1,5 +1,5 @@
-import Box from "../Box";
 import { Freemason } from "@/images";
+import Box from "../Box";
 import LazyLoadedImage from "../LazyLoadedImage";
 
 export default function Freemasons({ entryDelay }: { entryDelay: number }) {

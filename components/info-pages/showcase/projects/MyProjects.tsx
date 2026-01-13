@@ -1,3 +1,4 @@
+import SoundLink from "@/components/SoundLink";
 import {
     Bubner,
     BunyipBellower,
@@ -20,13 +21,12 @@ import {
     VintageStory,
     ZeusMonitor,
 } from "@/images";
-import Box from "../../Box";
-import Image, { StaticImageData } from "next/image";
-import SoundLink from "@/components/SoundLink";
-import { Children } from "react";
 import { shuffle, stepAccumulate } from "@/lib/util";
-import RiseInAnimation from "./RiseInAnimation";
+import { StaticImageData } from "next/image";
+import { Children } from "react";
+import Box from "../../Box";
 import LazyLoadedImage from "../../LazyLoadedImage";
+import RiseInAnimation from "./RiseInAnimation";
 
 function Project({ icon, title, href }: { icon: StaticImageData; title: string; href: string }) {
     return (
@@ -82,7 +82,11 @@ export default function MyProjects({ entryDelay }: { entryDelay: number }) {
                     <Project icon={Mine} title="Minesweeper AI" href="https://git.bubner.me/MinesweeperAI" />
                     <Project icon={UTTT} title="Ultimate Tic Tac Toe" href="https://git.bubner.me/UltimateTicTacToe" />
                 </ShuffledProjectGroup>
-                <ShuffledProjectGroup category="Visualisation" description="Data transformation and abstraction" entryDelay={initialDelay + iter.next().value!!}>
+                <ShuffledProjectGroup
+                    category="Visualisation"
+                    description="Data transformation and abstraction"
+                    entryDelay={initialDelay + iter.next().value!!}
+                >
                     <Project icon={ZeusMonitor} title="Zeus Monitor" href="https://git.bubner.me/ZeusMonitor" />
                     <Project icon={JavaCup} title="R3 Sim" href="https://git.bubner.me/r3sim" />
                     <Project icon={JavaCup} title="Hill Cipher" href="https://git.bubner.me/hillcipher-lib" />
@@ -103,19 +107,31 @@ export default function MyProjects({ entryDelay }: { entryDelay: number }) {
                     <Project icon={CPlusPlus} title="Duino" href="https://git.bubner.me/Arduino-TouchScreen-Joystick" />
                     <Project icon={JavaCup} title="Hill Cipher" href="https://git.bubner.me/hillcipher-lib" />
                 </ShuffledProjectGroup>
-                <ShuffledProjectGroup category="APIs" description="Application programming interfaces" entryDelay={initialDelay + iter.next().value!!}>
+                <ShuffledProjectGroup
+                    category="APIs"
+                    description="Application programming interfaces"
+                    entryDelay={initialDelay + iter.next().value!!}
+                >
                     <Project icon={Python} title="FIRST® Teams" href="https://git.bubner.me/FIRSTTeamAPI" />
                     <Project icon={Python} title="Profanity" href="https://git.bubner.me/ProfanityAPI" />
                     <Project icon={Python} title="BunyipsLib Wiki Search" href="https://git.bubner.me/BunyipsLib.wiki.search" />
                 </ShuffledProjectGroup>
-                <ShuffledProjectGroup category="Mods" description="Minecraft and Vintage Story game mods" entryDelay={initialDelay + iter.next().value!!}>
+                <ShuffledProjectGroup
+                    category="Mods"
+                    description="Minecraft and Vintage Story game mods"
+                    entryDelay={initialDelay + iter.next().value!!}
+                >
                     <Project icon={VintageStory} title="Distance Displayer" href="https://git.bubner.me/DistanceDisplayer" />
                     <Project icon={MinecraftSb} title="Ping Offset Miner" href="https://git.bubner.me/PingOffsetMiner" />
                     <Project icon={Minecraft} title="Move Tooltip" href="https://git.bubner.me/movetooltip" />
                     <Project icon={MinecraftSb} title="Stats Ring" href="https://git.bubner.me/StatsRing" />
                     <Project icon={MinecraftSb} title="SkyBlock AFK" href="https://git.bubner.me/sbafk-forge" />
                 </ShuffledProjectGroup>
-                <ShuffledProjectGroup category="Hardware" description="Integrated devices and embedded" entryDelay={initialDelay + iter.next().value!!}>
+                <ShuffledProjectGroup
+                    category="Hardware"
+                    description="Integrated devices and embedded"
+                    entryDelay={initialDelay + iter.next().value!!}
+                >
                     <Project icon={RoboticsLogos} title="FTC" href="https://git.bubner.me/BunyipsFTC" />
                     <Project icon={Bunyips} title="BunyipsLib" href="https://git.bubner.me/BunyipsLib" />
                     <Project icon={CPlusPlus} title="Duino" href="https://git.bubner.me/Arduino-TouchScreen-Joystick" />

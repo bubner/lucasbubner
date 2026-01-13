@@ -1,11 +1,11 @@
 "use client";
 
-import { StaticImageData } from "next/image";
-import Image from "next/image";
-import { RefObject, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import useSound from "use-sound";
 import SoundLink from "@/components/SoundLink";
+import { motion } from "framer-motion";
+import { StaticImageData } from "next/image";
+import { RefObject, useEffect, useRef } from "react";
+import useSound from "use-sound";
+import LazyLoadedImage from "../LazyLoadedImage";
 
 interface BoxProps {
     src?: StaticImageData;

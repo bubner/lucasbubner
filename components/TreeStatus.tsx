@@ -51,9 +51,5 @@ export function TreeStatusProvider({ children, resetRoot }: { children: React.Re
         _setDone(0);
     }
 
-    return (
-        <TreeStatus.Provider value={{ numCompleted, markDone, requirementMet, activityMet, reset }}>
-            {children}
-        </TreeStatus.Provider>
-    );
+    return <TreeStatus.Provider value={{ numCompleted, markDone, requirementMet, activityMet, reset }}>{children}</TreeStatus.Provider>;
 }

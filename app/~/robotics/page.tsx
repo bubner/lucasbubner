@@ -1,8 +1,8 @@
-import Slides from "../../../components/info-pages/robotics/Slides";
-import { getLinkPreview } from "link-preview-js";
-import { URLData } from "../../../components/info-pages/robotics/Media";
-import pLimit from "p-limit";
 import { shuffle } from "@/lib/util";
+import { getLinkPreview } from "link-preview-js";
+import pLimit from "p-limit";
+import { URLData } from "../../../components/info-pages/robotics/Media";
+import Slides from "../../../components/info-pages/robotics/Slides";
 
 export const fetchCache = "force-cache";
 

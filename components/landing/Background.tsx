@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { TreeStatus } from "../TreeStatus";
-import { useContext } from "react";
 import { Stars } from "@/images";
+import { motion } from "framer-motion";
+import { useContext } from "react";
+import { TreeStatus } from "../TreeStatus";
 import StarsAnimation from "./stars/StarsAnimation";
 
 /**

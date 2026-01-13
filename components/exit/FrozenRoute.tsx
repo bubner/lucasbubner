@@ -1,5 +1,5 @@
-import { useContext, useRef } from "react";
 import { LayoutRouterContext } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import { useContext, useRef } from "react";
 
 /**
  * Higher-Order Component to slow down the app router during framer-motion exit transitions.

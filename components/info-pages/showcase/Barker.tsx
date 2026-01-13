@@ -1,5 +1,4 @@
 import { BarkerAward } from "@/images";
-import Box from "../Box";
 import LazyLoadedImage from "../LazyLoadedImage";
 import HrefBox from "./HrefBox";
 

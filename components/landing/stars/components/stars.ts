@@ -210,26 +210,8 @@ class Stars {
                 const p1 = this.particles[this.vertices[v]],
                     p2 = this.particles[this.vertices[v + 1]];
 
-                const pos1 = position(
-                        this.canvas,
-                        this.mouse,
-                        this.nPos,
-                        this.config.noiseStrength,
-                        this.config.motion,
-                        p1.x,
-                        p1.y,
-                        p1.z
-                    ),
-                    pos2 = position(
-                        this.canvas,
-                        this.mouse,
-                        this.nPos,
-                        this.config.noiseStrength,
-                        this.config.motion,
-                        p2.x,
-                        p2.y,
-                        p2.z
-                    );
+                const pos1 = position(this.canvas, this.mouse, this.nPos, this.config.noiseStrength, this.config.motion, p1.x, p1.y, p1.z),
+                    pos2 = position(this.canvas, this.mouse, this.nPos, this.config.noiseStrength, this.config.motion, p2.x, p2.y, p2.z);
 
                 this.context.moveTo(pos1.x, pos1.y);
                 this.context.lineTo(pos2.x, pos2.y);

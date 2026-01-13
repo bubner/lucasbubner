@@ -1,14 +1,14 @@
 "use client";
 
-import { Python, JavaCup, TypeScript, Unity, JavaScript, HTMLBadge, CPlusPlus, CSharp, Kotlin, Tag } from "@/images";
-import { StaticImageData } from "next/image";
-import { RepoInfo } from "./GitHubRepoTree";
+import { CPlusPlus, CSharp, HTMLBadge, JavaCup, JavaScript, Kotlin, Python, Tag, TypeScript, Unity } from "@/images";
 import { motion } from "framer-motion";
+import { StaticImageData } from "next/image";
 import { memo, useEffect, useState } from "react";
-import SoundLink from "../../SoundLink";
 import { v4 } from "uuid";
-import LoadingWheel from "../LoadingWheel";
+import SoundLink from "../../SoundLink";
 import LazyLoadedImage from "../LazyLoadedImage";
+import LoadingWheel from "../LoadingWheel";
+import { RepoInfo } from "./GitHubRepoTree";
 
 interface ActiveItem {
     info: RepoInfo;
@@ -73,8 +73,7 @@ export default function BubblingDisplay({ repos }: { repos: RepoInfo[] }) {
     useEffect(() => {
         // Spawn every 2 seconds
         const id = setInterval(() => {
-            if (document.hidden)
-                return;
+            if (document.hidden) return;
             // Find items that are not already out there and add a random one
             const birb = repos.filter((waiting) => items.findIndex((item) => item.info === waiting) === -1);
             if (birb.length === 0) return;

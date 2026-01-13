@@ -1,7 +1,6 @@
-import Image from "next/image";
-import HrefBox from "./HrefBox";
 import { ADFFutureInnov } from "@/images";
 import LazyLoadedImage from "../LazyLoadedImage";
+import HrefBox from "./HrefBox";
 
 export default function FutureInnov({ entryDelay }: { entryDelay: number }) {
     return (

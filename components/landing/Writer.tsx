@@ -1,13 +1,13 @@
 "use client";
 
+import { DownArrow, RightArrow } from "@/images";
+import { motion, useAnimation } from "framer-motion";
+import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
-import { motion, useAnimation } from "framer-motion";
-import { TreeStatus } from "../TreeStatus";
-import { DownArrow, RightArrow } from "@/images";
-import Link from "next/link";
 import useSound from "use-sound";
 import LazyLoadedImage from "../info-pages/LazyLoadedImage";
+import { TreeStatus } from "../TreeStatus";
 
 const shineVariants = {
     animate: {

@@ -33,9 +33,7 @@ export default class Flare {
                 this.y,
                 this.z
             ),
-            r =
-                (this.z * this.base.config.flareSizeMultiplier + this.base.config.flareSizeBase) *
-                (sizeRatio(this.base.canvas) / 1000);
+            r = (this.z * this.base.config.flareSizeMultiplier + this.base.config.flareSizeBase) * (sizeRatio(this.base.canvas) / 1000);
 
         // Feathered circles
         this.base.context.beginPath();

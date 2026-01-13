@@ -1,11 +1,11 @@
-import "react-loading-skeleton/dist/skeleton.css";
-import { ReactElement, Suspense, use } from "react";
-import Image, { StaticImageData } from "next/image";
-import { Bellower, FIRSTDeansList, NotFound, PowerFM } from "@/images";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import SoundLink from "@/components/SoundLink";
-import { motion } from "framer-motion";
+import { Bellower, FIRSTDeansList, NotFound, PowerFM } from "@/images";
 import { stepAccumulate } from "@/lib/util";
+import { motion } from "framer-motion";
+import { StaticImageData } from "next/image";
+import { ReactElement, Suspense, use } from "react";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 import useSound from "use-sound";
 import { getYear } from "../../../app/~/robotics/page";
 import LazyLoadedImage from "../LazyLoadedImage";

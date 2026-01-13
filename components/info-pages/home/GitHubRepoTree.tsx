@@ -14,10 +14,7 @@ function fetchAPIData() {
     return new Promise<RepoInfo[]>(async (resolve, reject) => {
         try {
             // GitHub repo sources to use as part of the data
-            const urls = [
-                "https://api.github.com/users/bubner/repos",
-                "https://api.github.com/users/Murray-Bridge-Bunyips/repos",
-            ];
+            const urls = ["https://api.github.com/users/bubner/repos", "https://api.github.com/users/Murray-Bridge-Bunyips/repos"];
 
             const responses = await Promise.all(urls.map((url) => fetch(url, { next: { revalidate: 3600 } })));
             const jsonData = await Promise.all(
