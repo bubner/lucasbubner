@@ -5,7 +5,7 @@ import Dux from "@/components/info-pages/showcase/Dux";
 import Freemasons from "@/components/info-pages/showcase/Freemasons";
 import FutureInnov from "@/components/info-pages/showcase/FutureInnov";
 import MBBC from "@/components/info-pages/showcase/MBBC";
-import MyProjects from "@/components/info-pages/showcase/MyProjects";
+import MyProjects from "@/components/info-pages/showcase/projects/MyProjects";
 import { stepAccumulate } from "@/lib/util";
 
 export default function Showcase() {
