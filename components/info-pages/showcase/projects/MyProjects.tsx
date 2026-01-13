@@ -26,12 +26,13 @@ import SoundLink from "@/components/SoundLink";
 import { Children } from "react";
 import { shuffle, stepAccumulate } from "@/lib/util";
 import RiseInAnimation from "./RiseInAnimation";
+import LazyLoadedImage from "../../LazyLoadedImage";
 
 function Project({ icon, title, href }: { icon: StaticImageData; title: string; href: string }) {
     return (
         <SoundLink target="_blank" href={href} className="flex flex-col m-3 gap-1 items-center justify-center group relative">
             <div className="group-hover:blur-sm transition duration-300 flex flex-col items-center">
-                <Image src={icon} alt={title} width={70} height={70} className="w-[70px] h-[70px] p-1 object-contain" />
+                <LazyLoadedImage src={icon} alt={title} width={70} height={70} className="w-[70px] h-[70px] p-1 object-contain" />
                 <div className="flex gap-1">
                     <span className="text-xs select-none font-extrabold text-blue-300/50 underline">{title}</span>
                 </div>

@@ -2,12 +2,13 @@ import Image, { StaticImageData } from "next/image";
 import Box from "../Box";
 import { Bellower, BellowerOfficial, BunyipBellower, Firebase, iAwards, React, TypeScript } from "@/images";
 import HrefBox from "./HrefBox";
+import LazyLoadedImage from "../LazyLoadedImage";
 
 export default function BellowerAward({ entryDelay }: { entryDelay: number }) {
     const KwImg = ({ src, children }: { src: StaticImageData; children: React.ReactNode }) => (
         <span className="*:inline-block">
             {children}
-            <Image src={src} width={18} height={18} alt="" className="ml-1" />
+            <LazyLoadedImage src={src} width={18} height={18} alt="" className="ml-1 translate-y-0.5" />
         </span>
     );
 
@@ -16,7 +17,7 @@ export default function BellowerAward({ entryDelay }: { entryDelay: number }) {
             <h2 className="!text-2xl font-bold m-4 mb-0">iAwards SA/NT Winner & National Merit</h2>
             <span className="underline text-blue-400 text-sm mb-2">https://git.bubner.me/BunyipBellower</span>
             <div className="flex flex-col-reverse 2xl:flex-row gap-4 m-3 items-center">
-                <Image src={BellowerOfficial} width={400} className="rounded-xl" alt="Bunyip Bellower" />
+                <LazyLoadedImage src={BellowerOfficial} width={400} className="rounded-xl" containerClassName="w-auto 2xl:w-full" alt="Bunyip Bellower" />
                 <ul className="list-disc text-left ml-4">
                     <li>
                         <b>Designed and developed</b> the{" "}

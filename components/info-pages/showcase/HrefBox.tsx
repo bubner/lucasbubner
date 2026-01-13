@@ -76,7 +76,7 @@ export default function HrefBox({ src, size, extraBlur, href, small, entryDelay,
             >
                 {src && (
                     <div className="absolute -z-10">
-                        <Image
+                        <LazyLoadedImage
                             ref={img}
                             alt=""
                             draggable={false}

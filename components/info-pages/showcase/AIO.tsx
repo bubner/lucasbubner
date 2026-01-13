@@ -1,6 +1,7 @@
 import { AIOLogo } from "@/images";
 import HrefBox from "./HrefBox";
 import Image from "next/image";
+import LazyLoadedImage from "../LazyLoadedImage";
 
 export default function AIO({ entryDelay }: { entryDelay: number }) {
     return (
@@ -13,7 +14,7 @@ export default function AIO({ entryDelay }: { entryDelay: number }) {
                         Recipient of an AIO Credit Award in the Senior Division for problem-solving skills in competitive programming.
                     </div>
                 </div>
-                <Image src={AIOLogo} width={150} className="w-[150px] rounded-xl mx-12 my-4" alt="AIO" />
+                <LazyLoadedImage src={AIOLogo} width={150} containerClassName="w-[150px] mx-12 my-4" className="rounded-xl" alt="AIO" />
             </div>
         </HrefBox>
     );

@@ -10,6 +10,7 @@ import BunyipsLib from "./BunyipsLib";
 import Impact from "./Impact";
 import Media, { URLData } from "./Media";
 import Box from "@/components/info-pages/Box";
+import LazyLoadedImage from "../LazyLoadedImage";
 
 function Slide({ title, children }: { title: string; children: React.ReactNode }) {
     return (
@@ -42,7 +43,7 @@ export default function Slides({ mediaTabUrlData }: { mediaTabUrlData: Promise<U
                         className="embla__prev flex text-gray-300 text-xs gap-2 items-center justify-center ml-4 p-2 hover:bg-black/20 rounded-2xl transition-colors"
                         onClick={scrollPrev}
                     >
-                        <Image src={RightArrowWhite} alt="Previous" className="rotate-180" />
+                        <LazyLoadedImage src={RightArrowWhite} alt="Previous" className="rotate-180" />
                         Back
                     </button>
                     <span className="font-bold text-2xl">Robotics</span>
@@ -51,7 +52,7 @@ export default function Slides({ mediaTabUrlData }: { mediaTabUrlData: Promise<U
                         onClick={scrollNext}
                     >
                         Next
-                        <Image src={RightArrowWhite} alt="Next" />
+                        <LazyLoadedImage src={RightArrowWhite} alt="Next" />
                     </button>
                 </div>
                 <div className="embla__viewport min-h-[80dvh]" ref={embla}>

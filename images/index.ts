@@ -59,6 +59,8 @@ import AIOLogo from "./aio.png";
 import BellowerOfficial from "./bellowerofficial.jpg";
 import HighScoreBubner from "./highscore.jpg";
 import ADFFutureInnov from "./adffuture.jpg";
+import BarkerAward from "./barker.jpg";
+import Freemason from "./freemasons.png";
 
 export {
     Stars,
@@ -121,5 +123,7 @@ export {
     AIOLogo,
     BellowerOfficial,
     HighScoreBubner,
-    ADFFutureInnov
+    ADFFutureInnov,
+    BarkerAward,
+    Freemason
 };

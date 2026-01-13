@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HrefBox from "./HrefBox";
 import { HighScoreBubner } from "@/images";
+import LazyLoadedImage from "../LazyLoadedImage";
 
 export default function Dux({ entryDelay }: { entryDelay: number }) {
     return (
@@ -17,7 +18,7 @@ export default function Dux({ entryDelay }: { entryDelay: number }) {
                         implementing <b>Java</b> solutions for applied problems.
                     </div>
                 </div>
-                <Image src={HighScoreBubner} width={400} className="rounded-xl mb-4" alt="High score for Bubner" />
+                <LazyLoadedImage src={HighScoreBubner} width={400} className="rounded-xl" containerClassName="mb-4 w-auto 2xl:w-full p-3" alt="High score for Bubner" />
             </div>
         </HrefBox>
     );

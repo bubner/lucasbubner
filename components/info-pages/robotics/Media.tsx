@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { stepAccumulate } from "@/lib/util";
 import useSound from "use-sound";
 import { getYear } from "../../../app/~/robotics/page";
+import LazyLoadedImage from "../LazyLoadedImage";
 
 // ILinkPreviewResponse
 export interface URLData {
@@ -35,7 +36,7 @@ function DisplayCard({ data }: { data: URLData | null }) {
 
     if (data !== null) {
         image = (
-            <Image
+            <LazyLoadedImage
                 className="rounded-xl object-cover w-[250px] sm:w-[300px] h-[150px] sm:h-[200px]"
                 width={300}
                 height={200}
@@ -67,7 +68,12 @@ function DisplayCard({ data }: { data: URLData | null }) {
 
     const cn = "flex flex-col xl:flex-row rounded-3xl overflow-hidden bg-black px-4 py-4 xl:py-2 m-2 items-center justify-around w-fit";
     return data !== null ? (
-        <SoundLink href={data.url} target="_blank" rel="noopener noreferrer" className={cn + " hover:bg-black/30 transition-all border-4 border-red-950 border-opacity-0 hover:border-opacity-30"}>
+        <SoundLink
+            href={data.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn + " hover:bg-black/30 transition-all border-4 border-red-950 border-opacity-0 hover:border-opacity-30"}
+        >
             {image}
             {body}
         </SoundLink>
@@ -108,15 +114,11 @@ export default function Media({ urlData }: { urlData: Promise<URLData | null>[] 
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.25 + leftEntryDelay.next().value!!, type: "tween" }}
                 onAnimationComplete={() => playAppearSound()}
-                className={`flex gap-4 my-12 xl:my-6 flex-col ${alignRight ? "xl:flex-row-reverse" : "xl:flex-row"}`}
+                className={`flex gap-4 my-12 xl:my-6 flex-col items-center ${alignRight ? "xl:flex-row-reverse" : "xl:flex-row"}`}
             >
-                <Image
-                    src={image}
-                    className="rounded-xl object-cover object-left w-full xl:w-1/2 max-w-[400px]"
-                    width={400}
-                    height={300}
-                    alt={title}
-                />
+                <div className="w-full xl:w-1/2 max-w-[400px]">
+                    <LazyLoadedImage src={image} className="rounded-xl object-cover" width={400} height={300} alt={title} />
+                </div>
                 <div className="flex flex-col">
                     <div className={`text-2xl ${alignRight ? "text-right" : "text-left"}`}>{title}</div>
                     {children}
@@ -153,17 +155,17 @@ export default function Media({ urlData }: { urlData: Promise<URLData | null>[] 
                     </ul>
                 </Briefing>
                 <Briefing alignRight image={Bellower} title="iAwards Innovations">
-                    <ul className="list-disc ml-4">
+                    <ul className="list-disc ml-3">
                         <li>
-                            <b>Multi-year</b> award winning entries from the <b>AIIA iAwards</b> for STEM innovation inspired through robotics
+                            <b>Multi-year</b> award-winning entries in the <b>AIIA iAwards</b> for STEM innovation inspired by robotics
                         </li>
                         <li>
-                            Developed the <b>Bunyip Bellower</b> as a chat application to <b>assist communication</b> within <b>school-based</b> environments, nationally merited as a
-                            final contender against <b>national university entries</b> in the 2023 iAwards
+                            Created the <b>Bunyip Bellower</b>, a chat app to <b>enhance communication</b> in <b>school-based</b> settings, nationally
+                            merited against <b>university entries</b> in the 2023 iAwards
                         </li>
                         <li>
-                            Designed the <b>Bunyip Logbook</b> in assistance to document the <b>engineering design process</b> within robotics
-                            workshops, recognised as an <b>SA/NT Finalist</b> in the 2025 iAwards
+                            Designed the <b>Bunyip Logbook</b> to document the <b>engineering design process</b> in robotics workshops, recognised as
+                            an <b>SA/NT Finalist</b> in the 2025 iAwards
                         </li>
                     </ul>
                 </Briefing>

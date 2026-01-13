@@ -10,6 +10,7 @@ import useSound from "use-sound";
 export default function Box({
     entryDelay,
     children,
+    className,
     ...props
 }: { entryDelay?: number | void; children: React.ReactNode } & React.ComponentProps<typeof motion.div>) {
     const [playAppearSound] = useSound("/sounds/tap.wav");
@@ -20,7 +21,7 @@ export default function Box({
             transition={{ delay: entryDelay || 0, type: "spring", damping: 20, stiffness: 200 }}
             onAnimationComplete={() => playAppearSound()}
             {...props}
-            className={"__box " + props.className}
+            className={"__box" + (className ? " " + className : "")}
         >
             {children}
         </motion.div>
