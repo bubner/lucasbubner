@@ -56,7 +56,7 @@ function ShuffledProjectGroup({
 }) {
     return (
         <RiseInAnimation entryDelay={entryDelay} className="bg-black/40 w-full rounded-xl flex justify-between items-center">
-            <div className="pl-4 text-left *:w-max">
+            <div className="pl-4 text-left *:w-auto sm:*:w-max">
                 <h3 className="font-bold text-xl">{category}</h3>
                 <div className="text-sm">{description}</div>
             </div>

@@ -73,6 +73,8 @@ export default function BubblingDisplay({ repos }: { repos: RepoInfo[] }) {
     useEffect(() => {
         // Spawn every 2 seconds
         const id = setInterval(() => {
+            if (document.hidden)
+                return;
             // Find items that are not already out there and add a random one
             const birb = repos.filter((waiting) => items.findIndex((item) => item.info === waiting) === -1);
             if (birb.length === 0) return;
@@ -82,7 +84,6 @@ export default function BubblingDisplay({ repos }: { repos: RepoInfo[] }) {
 
         return () => clearInterval(id);
     }, [repos, items]);
-    ``;
 
     function addItem(item: RepoInfo) {
         setItems((curr) => [...curr, { info: item, seed: Math.random() >= 0.5, uuid: v4() }]);

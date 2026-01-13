@@ -9,7 +9,7 @@ import SoundLink from "@/components/SoundLink";
 
 interface BoxProps {
     src?: StaticImageData;
-    size: number;
+    size?: number;
     extraBlur?: boolean;
     href: string;
     small?: boolean;
@@ -82,7 +82,7 @@ export default function HrefBox({ src, size, extraBlur, href, small, entryDelay,
                             draggable={false}
                             src={src!}
                             className="h-auto relative top-1/2 left-1/2 -translate-x-1/2 transition-[filter] duration-500"
-                            style={{ width: `${size}%` }}
+                            style={{ width: `${size ?? 100}%` }}
                         />
                     </div>
                 )}

@@ -14,9 +14,9 @@ export default function Showcase() {
         <div className="flex w-full flex-col lg:flex-row">
             <div className="w-full lg:w-1/2 flex flex-col">
                 <MyProjects entryDelay={iter.next().value!!} /> 
-                <MBBC entryDelay={iter.next().value!!} /> 
-                <AIO entryDelay={iter.next().value!!} /> 
                 <BellowerAward entryDelay={iter.next().value!!} /> 
+                <AIO entryDelay={iter.next().value!!} /> 
+                <MBBC entryDelay={iter.next().value!!} /> 
             </div>
             <div className="w-full lg:w-1/2">
                 <Dux entryDelay={iter.next().value!!} /> 
