@@ -158,12 +158,12 @@ export default function Media({ urlData }: { urlData: Promise<URLData | null>[] 
                             <b>Multi-year</b> award winning entries from the <b>AIIA iAwards</b> for STEM innovation inspired through robotics
                         </li>
                         <li>
-                            Developed the <b>Bunyip Bellower</b> to win the <b>SA/NT Student & Education</b> category, and nationally merited as a
-                            final contender against <b>national university entries</b> in 2023
+                            Developed the <b>Bunyip Bellower</b> as a chat application to <b>assist communication</b> within <b>school-based</b> environments, nationally merited as a
+                            final contender against <b>national university entries</b> in the 2023 iAwards
                         </li>
                         <li>
                             Designed the <b>Bunyip Logbook</b> in assistance to document the <b>engineering design process</b> within robotics
-                            workshops, recognised as an SA/NT finalist in 2025
+                            workshops, recognised as an <b>SA/NT Finalist</b> in the 2025 iAwards
                         </li>
                     </ul>
                 </Briefing>
