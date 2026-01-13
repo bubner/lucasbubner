@@ -57,6 +57,8 @@ import MinecraftSb from "./mch.png";
 import MBBCDrone from "./mbbc.png";
 import AIOLogo from "./aio.png";
 import BellowerOfficial from "./bellowerofficial.jpg";
+import HighScoreBubner from "./highscore.jpg";
+import ADFFutureInnov from "./adffuture.jpg";
 
 export {
     Stars,
@@ -117,5 +119,7 @@ export {
     MinecraftSb,
     MBBCDrone,
     AIOLogo,
-    BellowerOfficial
+    BellowerOfficial,
+    HighScoreBubner,
+    ADFFutureInnov
 };

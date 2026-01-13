@@ -21,8 +21,8 @@ export default function Showcase() {
             <div className="w-full lg:w-1/2">
                 <Dux entryDelay={iter.next().value!!} /> 
                 <FutureInnov entryDelay={iter.next().value!!} /> 
-                <Freemasons entryDelay={iter.next().value!!} /> 
                 <Barker entryDelay={iter.next().value!!} /> 
+                <Freemasons entryDelay={iter.next().value!!} /> 
             </div>
         </div>
     );
