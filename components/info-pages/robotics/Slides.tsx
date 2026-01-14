@@ -13,8 +13,8 @@ import Media, { URLData } from "./Media";
 
 function Slide({ title, children }: { title: string; children: React.ReactNode }) {
     return (
-        <div className="embla__slide flex-shrink-0 w-full h-full flex items-center justify-center text-3xl font-bold">
-            <div className="flex flex-col h-full max-h-[100dvh]">
+        <div className="embla__slide flex-shrink-0 w-full h-full flex text-3xl font-bold">
+            <div className="flex flex-col h-full w-full max-h-[100dvh]">
                 <span className="text-bold text-xl pb-2">{title}</span>
                 <div className="overflow-y-scroll pb-12">{children}</div>
             </div>
