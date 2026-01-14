@@ -3,7 +3,9 @@ import { BunyipsLibBanner, BunyipsLibMap, Timeline } from "@/images";
 import LazyLoadedImage from "../LazyLoadedImage";
 
 export default function BunyipsLib() {
-    const Big = ({ children, scale = 4 }: { children: React.ReactNode, scale?: number }) => <span className={`text-${scale}xl font-bold`}>{children}</span>
+    const Big = ({ children, scale = 4 }: { children: React.ReactNode; scale?: number }) => (
+        <span className={`text-${scale}xl font-bold`}>{children}</span>
+    );
 
     return (
         <div className="w-full flex flex-col">
@@ -13,9 +15,15 @@ export default function BunyipsLib() {
                     <SoundLink href="https://git.bubner.me/BunyipsLib" className="underline text-blue-400 text-base" target="_blank">
                         https://git.bubner.me/BunyipsLib
                     </SoundLink>
-                    <span><Big scale={5}>25,000</Big> lines of code</span>
-                    <span><Big scale={5}>1,100</Big> commits</span>
-                    <span><Big scale={5}>41</Big> version releases</span>
+                    <span>
+                        <Big scale={5}>25,000</Big> lines of code
+                    </span>
+                    <span>
+                        <Big scale={5}>1,100</Big> commits
+                    </span>
+                    <span>
+                        <Big scale={5}>41</Big> version releases
+                    </span>
                     <LazyLoadedImage src={Timeline} width={400} alt="Timeline" containerClassName="p-4" />
                 </div>
                 <div className="flex flex-col w-full">
