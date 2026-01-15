@@ -19,12 +19,6 @@ export default function Impact() {
     ));
 
     const scrollRef = useRef<HTMLDivElement>(null);
-    const [scrollWidth, setScrollWidth] = useState(0);
-
-    useEffect(() => {
-        const scrollContainer = scrollRef.current;
-        if (scrollContainer) setScrollWidth(scrollContainer.scrollWidth);
-    }, []);
 
     return (
         <div className="flex flex-col items-center">
@@ -32,7 +26,11 @@ export default function Impact() {
                 ref={scrollRef}
                 className="relative flex overflow-hidden whitespace-nowrap bg-black/50 h-12 rounded-xl text-gray-300 w-[calc(100%-32px)]"
             >
-                <motion.div className="flex" animate={{ x: [0, -scrollWidth / 2] }} transition={{ repeat: Infinity, duration: 45, ease: "linear" }}>
+                <motion.div
+                    className="flex"
+                    animate={{ x: [0, -(scrollRef.current?.scrollWidth ?? 0) / 2] }}
+                    transition={{ repeat: Infinity, duration: 45, ease: "linear" }}
+                >
                     {mappedAttributes}
                     {mappedAttributes}
                 </motion.div>
