@@ -17,8 +17,8 @@ export default function FutureInnov({ entryDelay }: { entryDelay: number }) {
                     <h3 className="!text-xl font-bold">ADF Future Innovators Award</h3>
                     <span className="underline text-blue-400 text-sm">https://www.mbhs.sa.edu.au/?wtCmd=viewnewsletter&guid=52877</span>
                     <div className="mt-3">
-                        Recipient of the 2025 ADF Future Innovators Award, recognised for robotics <b>mentoring</b>, STEM <b>engagement</b>, and{" "}
-                        <b>leadership</b> in STEM studies.
+                        Recipient of the 2025 ADF Future Innovators Award, recognised for robotics <b>mentoring</b>, STEM <b>engagement</b>, and
+                        <b> leadership</b> in STEM studies.
                     </div>
                 </div>
             </div>

@@ -28,8 +28,16 @@ export default function BunyipsLib() {
                 </div>
                 <div className="flex flex-col w-full">
                     <LazyLoadedImage src={BunyipsLibBanner} alt="BunyipsLib" containerClassName="p-4 lg:p-8" />
-                    <div className="text-base font-normal">
-                        <b>BunyipsLib</b> is a <Big>TODO</Big>
+                    <div className="text-lg md:text-xl !leading-10 font-normal">
+                        <b>BunyipsLib</b> is a <Big>solo-developed</Big> <b>Java & Kotlin</b> library for FTC robotics.
+                        <br /> <br />
+                        Used within the <b>Murray Bridge High School Student Robotics Club</b>, BunyipsLib has been rigorously used in over
+                        <Big> 15</Big> robots by experienced and new students alike. With an <b>extensive</b> wiki and self-curated
+                        <b> rookie guide</b>, BunyipsLib's <Big>sustainable</Big> development has been officially recognised within FIRST®, receiving
+                        both the <b>Control Award</b> for innovation in software and the <b>Sustain Award</b> for maintaining an{" "}
+                        <Big>extensible </Big>
+                        library to introduce future <b>STEM innovators</b> to control theory and programming, providing opportunities to regional
+                        Australia's potential <Big>future engineers</Big>.
                     </div>
                     <LazyLoadedImage src={BunyipsLibMap} alt="BunyipsLib map" containerClassName="p-4 lg:p-8" />
                 </div>
