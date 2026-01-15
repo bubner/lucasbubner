@@ -27,9 +27,9 @@ export default function BunyipsLib() {
                     </span>
                     <LazyLoadedImage src={Timeline} width={400} alt="Timeline" containerClassName="p-4" />
                 </div>
-                <div className="flex flex-col w-full">
+                <div className="flex flex-col w-full px-4 md:px-8">
                     <LazyLoadedImage src={BunyipsLibBanner} alt="BunyipsLib" containerClassName="p-4 lg:p-8" />
-                    <div className="text-lg md:text-xl !leading-10 font-normal">
+                    <div className="text-lg md:text-xl !leading-10 font-normal bg-black/50 p-4 rounded-2xl">
                         <b>BunyipsLib</b> is a <Big>solo-developed</Big> <b>Java & Kotlin</b> library for FTC robotics.
                         <br /> <br />
                         Used within the <b>Murray Bridge High School Student Robotics Club</b>, BunyipsLib has been rigorously used in over{" "}
