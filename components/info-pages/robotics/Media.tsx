@@ -37,7 +37,7 @@ function DisplayCard({ data }: { data: URLData | null }) {
     if (data !== null) {
         image = (
             <LazyLoadedImage
-                className="rounded-xl object-cover w-[250px] sm:w-[300px] h-[150px] sm:h-[200px]"
+                className="rounded-xl object-cover w-[200px] sm:w-[300px] h-[150px] sm:h-[200px]"
                 width={300}
                 height={200}
                 alt={data.description ?? data.title}
@@ -45,7 +45,7 @@ function DisplayCard({ data }: { data: URLData | null }) {
             />
         );
         body = (
-            <div className="flex flex-col p-3 w-[250px] sm:w-[300px]">
+            <div className="flex flex-col p-3 w-[200px] sm:w-[300px]">
                 <h3 className="text-lg font-semibold leading-tight line-clamp-2 min-h-12">{data.title}</h3>
                 <h3 className="text-xs mt-2">
                     {data.siteName} — {getYear(data.url)}
@@ -57,7 +57,7 @@ function DisplayCard({ data }: { data: URLData | null }) {
     } else {
         image = <Skeleton width={250} height={150} className="rounded-xl" />;
         body = (
-            <div className="flex flex-col gap-2 p-3 w-[250px] sm:w-[300px]">
+            <div className="flex flex-col gap-2 p-3 w-[200px] sm:w-[300px]">
                 <Skeleton width={220} height={18} />
                 <Skeleton width={240} height={14} />
                 <Skeleton width={240} height={14} />
