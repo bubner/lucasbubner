@@ -1,12 +1,9 @@
 import SoundLink from "@/components/SoundLink";
 import { BunyipsLibBanner, BunyipsLibMap, Timeline } from "@/images";
+import Big from "../Big";
 import LazyLoadedImage from "../LazyLoadedImage";
 
 export default function BunyipsLib() {
-    const Big = ({ children, scale = 4 }: { children: React.ReactNode; scale?: number }) => (
-        <span className={`text-${scale}xl font-bold`}>{children}</span>
-    );
-
     return (
         <div className="w-full flex flex-col">
             <h1 className="!text-4xl lg:!text-6xl text-left">South Australia's leading FIRST® Tech Challenge library</h1>

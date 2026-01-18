@@ -64,6 +64,9 @@ import UTTT from "./uttt.png";
 import Vercel from "./vercelc.png";
 import VintageStory from "./vs.png";
 import ZeusMonitor from "./zeusmonitor.webp";
+import BunyipsLibGif from "./bunyipslib.gif";
+import DriveChart from "./drivechart.png";
+import HoldableActuator from "./holdableactuator.png";
 
 export {
     ADFFutureInnov,
@@ -132,4 +135,7 @@ export {
     Vercel,
     VintageStory,
     ZeusMonitor,
+    BunyipsLibGif,
+    HoldableActuator,
+    DriveChart
 };
