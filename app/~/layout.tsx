@@ -1,10 +1,10 @@
-import ContextualFadeIn from "@/app/components/info-pages/ContextualFadeIn";
-import PageIndicator from "@/app/components/PageIndicator";
-import SoundLink from "@/app/components/SoundLink";
-import { TreeStatusProvider } from "@/app/components/TreeStatus";
-import { Bubner, Bunyips, MainBackground, Star } from "@/app/images";
-import HomeScaleIn from "../components/info-pages/home/HomeScaleIn";
-import LazyLoadedImage from "../components/info-pages/LazyLoadedImage";
+import ContextualFadeIn from "@/components/info-pages/ContextualFadeIn";
+import PageIndicator from "@/components/PageIndicator";
+import SoundLink from "@/components/SoundLink";
+import { TreeStatusProvider } from "@/components/TreeStatus";
+import { Bubner, Bunyips, MainBackground, Star } from "@/images";
+import HomeScaleIn from "../../components/info-pages/home/HomeScaleIn";
+import LazyLoadedImage from "../../components/info-pages/LazyLoadedImage";
 // Using Image instead of LazyLoadedImage as it is "reloaded" between transitions
 import Image from "next/image";
 
@@ -26,9 +26,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <HomeScaleIn>
             <ContextualFadeIn>
                 <LazyLoadedImage className="-z-10 object-cover inset-0 w-full h-full fixed" src={MainBackground} alt="" quality={100} />
-                {/* <nav
+                <nav
                     role="navigation"
-                    className="z-10 fixed top-3 left-1/2 -translate-x-1/2 rounded-[32px] m-auto bg-[#101111] flex flex-col items-center justify-center px-2 sm:px-6 [box-shadow:8px_4px_32px_0_rgba(100,100,100,0.4)]"
+                    className="z-10 fixed top-3 left-1/2 -translate-x-1/2 rounded-[2rem] m-auto bg-[#101111] flex flex-col items-center justify-center px-2 sm:px-6 [box-shadow:8px_4px_32px_0_rgba(100,100,100,0.4)]"
                 >
                     <div className="flex pt-2 gap-0 sm:gap-6">
                         {hrefs.map((href, i) => (
@@ -43,7 +43,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         ))}
                     </div>
                     <PageIndicator />
-                </nav> */}
+                </nav>
                 <div className="py-10" />
                 <main
                     role="main"

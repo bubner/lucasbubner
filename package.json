@@ -1,6 +1,6 @@
 {
   "name": "lucasbubner",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,11 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "embla-carousel-react": "^8.6.0",
     "framer-motion": "^11.2.13",
-    "next": "^14.2.35",
+    "link-preview-js": "^4.0.0",
+    "next": "^16.0.10",
+    "p-limit": "^7.2.0",
     "pace-js": "^1.2.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-loading-skeleton": "^3.5.0",
     "typewriter-effect": "^2.21.0",
     "use-sound": "^4.0.3",
     "uuid": "^10.0.0"

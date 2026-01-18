@@ -1,11 +1,12 @@
-import Background from "./components/landing/Background";
-import Pulse from "./components/landing/Pulse";
-import Writer from "./components/landing/Writer";
-import { TreeStatusProvider } from "./components/TreeStatus";
+import Background from "../components/landing/Background";
+import Pulse from "../components/landing/Pulse";
+import Writer from "../components/landing/Writer";
+import { TreeStatusProvider } from "../components/TreeStatus";
 
-import NextButton from "./components/landing/NextButton";
-import ExitSlider from "./components/landing/ExitSlider";
-import IconShowcase, { Icon } from "./components/landing/IconShowcase";
+import { shuffle } from "@/lib/util";
+import ExitSlider from "../components/landing/ExitSlider";
+import IconShowcase, { Icon } from "../components/landing/IconShowcase";
+import NextButton from "../components/landing/NextButton";
 import {
     BunyipBellower,
     Bunyips,
@@ -31,20 +32,13 @@ import {
     TypeScript,
     Unity,
     Vercel,
-} from "./images";
+} from "../images";
 
 /**
  * bubner.me main landing page.
  * @author Lucas Bubner, 2024
  */
 export default function Index() {
-    function shuffle(array: Icon[]): Icon[] {
-        return array
-            .map((v) => ({ val: v, rand: Math.random() }))
-            .sort((a, b) => a.rand - b.rand)
-            .map((vp) => vp.val);
-    }
-
     const topImages: Icon[] = shuffle([
         { src: FTC, alt: "Society: FIRST Tech Challenge Team Captain" },
         { src: RoboticsLogos, alt: "Society: Murray Bridge High School Student Robotics Club" },
