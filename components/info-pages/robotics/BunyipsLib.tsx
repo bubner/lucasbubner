@@ -13,13 +13,13 @@ export default function BunyipsLib() {
                     <SoundLink href="https://git.bubner.me/BunyipsLib" className="underline text-blue-400 text-base" target="_blank">
                         https://git.bubner.me/BunyipsLib
                     </SoundLink>
-                    <span>
+                    <span className="w-[90%]">
                         <Big scale={5}>25,000</Big> lines of code
                     </span>
-                    <span>
+                    <span className="w-[90%]">
                         <Big scale={5}>1,100</Big> commits
                     </span>
-                    <span>
+                    <span className="w-[90%]">
                         <Big scale={5}>41</Big> version releases
                     </span>
                     <LazyLoadedImage src={Timeline} width={400} alt="Timeline" containerClassName="p-4" />

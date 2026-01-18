@@ -67,6 +67,8 @@ import ZeusMonitor from "./zeusmonitor.webp";
 import BunyipsLibGif from "./bunyipslib.gif";
 import DriveChart from "./drivechart.png";
 import HoldableActuator from "./holdableactuator.png";
+import RRShowcase from "./rrshowcase.png";
+import Ranking from "./qualification.png";
 
 export {
     ADFFutureInnov,
@@ -137,5 +139,7 @@ export {
     ZeusMonitor,
     BunyipsLibGif,
     HoldableActuator,
-    DriveChart
+    DriveChart,
+    RRShowcase,
+    Ranking,
 };

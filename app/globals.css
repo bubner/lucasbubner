@@ -33,7 +33,9 @@
     background-position: center;
     background-size: cover;
     overflow: hidden;
-    transition: box-shadow 500ms, backdrop-filter 500ms;
+    transition:
+        box-shadow 500ms,
+        backdrop-filter 500ms;
     color: #ffe2e2 !important;
     text-shadow: 0 0 10px #000;
 }
@@ -52,7 +54,9 @@
 }
 
 .__box:hover {
-    box-shadow: inset 0 0 33px #505050, 0 0 24px #505050;
+    box-shadow:
+        inset 0 0 33px #505050,
+        0 0 24px #505050;
     backdrop-filter: blur(15px);
 }
 
@@ -189,7 +193,9 @@
     right: 0px;
     width: 100px;
     height: 100%;
-    box-shadow: 0 0 10px #ee3148, 0 0 5px #ee3148;
+    box-shadow:
+        0 0 10px #ee3148,
+        0 0 5px #ee3148;
     opacity: 1;
     -webkit-transform: rotate(3deg) translate(0px, -4px);
     -moz-transform: rotate(3deg) translate(0px, -4px);
