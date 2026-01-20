@@ -1,5 +1,6 @@
 import SoundLink from "@/components/SoundLink";
 import {
+    AutoHangup,
     Bubner,
     BunyipBellower,
     Bunyips,
@@ -137,6 +138,7 @@ export default function MyProjects({ entryDelay }: { entryDelay: number }) {
                     <Project icon={CPlusPlus} title="Duino" href="https://git.bubner.me/Arduino-TouchScreen-Joystick" />
                     <Project icon={Python} title="TI-84 Python" href="https://git.bubner.me/ti84-plus-ce-python" />
                     <Project icon={CPlusPlus} title="Arduino Cookie Clicker" href="https://git.bubner.me/Arduino-CookieClicker" />
+                    <Project icon={AutoHangup} title="Auto Hangup" href="https://git.bubner.me/AutoHangup" />
                 </ShuffledProjectGroup>
             </div>
         </Box>
