@@ -138,7 +138,10 @@ export default function Media({ urlData }: { urlData: Promise<URLData | null>[] 
                 >
                     <strong>Empowering</strong> regional high-school students through FIRST® Robotics
                 </motion.p>
-                <Briefing image={FIRSTDeansList} title="FIRST® Dean's List Finalist">
+                <Briefing image={FIRSTDeansList} title="FIRST® Leadership Award">
+                    <div className="text-gray-400">
+                        (f.k.a Dean's List Finalist)
+                    </div>
                     <ul className="list-disc ml-4">
                         <li>
                             <b>Nationally recognised</b> as one of three students within Australia for upholding the FIRST®
