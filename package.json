@@ -20,7 +20,7 @@
     "react-loading-skeleton": "^3.5.0",
     "typewriter-effect": "^2.21.0",
     "use-sound": "^4.0.3",
-    "uuid": "^10.0.0"
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
     "@types/howler": "^2.2.11",
