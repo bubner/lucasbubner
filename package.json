@@ -11,7 +11,7 @@
   "dependencies": {
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^11.2.13",
-    "link-preview-js": "^4.0.0",
+    "link-preview-js": "^4.0.1",
     "next": "^16.2.3",
     "p-limit": "^7.2.0",
     "pace-js": "^1.2.4",
