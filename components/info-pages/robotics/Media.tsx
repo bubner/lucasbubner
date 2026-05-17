@@ -85,18 +85,15 @@ export default function Media({ ogData }: { ogData: OpenGraphData[] }) {
                     <ul className="list-disc ml-4">
                         <li>
                             <b>Nationally recognised</b> as one of three students within Australia for
-                            upholding the FIRST®
-                            <b> core values</b>
+                            upholding the FIRST® <b>core values</b>
                         </li>
                         <li>
-                            Demonstrated impact as a <b>four-year club captain</b> through <b>leadership</b>,{" "}
-                            <b>technical ability</b>,<b> mentoring teammates</b>, and{" "}
-                            <b>fostering collaboration</b>
+                            Demonstrated impact as a <b>four-year club captain</b> through <b>leadership</b>, <b>technical ability</b>, <b>mentoring teammates</b>,
+                            and <b>fostering collaboration</b>
                         </li>
                         <li>
                             Advanced <b>STEM participation</b> in <b>regional communities</b>, expanding
-                            access to
-                            <b> student robotics in SA</b>
+                            access to <b>student robotics in SA</b>
                         </li>
                     </ul>
                 </Briefing>
@@ -107,14 +104,12 @@ export default function Media({ ogData }: { ogData: OpenGraphData[] }) {
                             innovation inspired by robotics
                         </li>
                         <li>
-                            Created the <b>Bunyip Bellower</b>, a chat app to <b>enhance communication</b> in{" "}
-                            <b>school-based</b> settings, nationally merited against <b>university entries</b>{" "}
-                            in the 2023 iAwards
+                            Created the <b>Bunyip Bellower</b>, a chat app to <b>enhance communication</b> in <b>school-based</b> settings,
+                            nationally merited against <b>university entries</b> in the 2023 iAwards
                         </li>
                         <li>
-                            Designed the <b>Bunyip Logbook</b> to document the{" "}
-                            <b>engineering design process</b> in robotics workshops, recognised as an{" "}
-                            <b>SA/NT Finalist</b> in the 2025 iAwards
+                            Designed the <b>Bunyip Logbook</b> to document the <b>engineering design process</b> in
+                            robotics workshops, recognised as an <b>SA/NT Finalist</b> in the 2025 iAwards
                         </li>
                     </ul>
                 </Briefing>
@@ -125,8 +120,8 @@ export default function Media({ ogData }: { ogData: OpenGraphData[] }) {
                             <b> robotics and STEM pathways</b>
                         </li>
                         <li>
-                            Directly contributed to <b>$24,000+ in funding</b> for visibility of{" "}
-                            <b>student robotics programs</b> in regional Australia
+                            Directly contributed to <b>$24,000+ in funding</b> for visibility
+                            of <b>student robotics programs</b> in regional Australia
                         </li>
                         <li>
                             Represented <b>student-led robotics innovation</b> as <b>club captain</b> across
