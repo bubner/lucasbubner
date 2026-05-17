@@ -9,7 +9,7 @@ import useSound from "use-sound";
 import LazyLoadedImage from "../LazyLoadedImage";
 import BunyipsLib from "./BunyipsLib";
 import Impact from "./Impact";
-import Media, { URLData } from "./Media";
+import Media, { OpenGraphData } from "./Media";
 
 function Slide({ title, children }: { title: string; children: React.ReactNode }) {
     return (
@@ -22,7 +22,7 @@ function Slide({ title, children }: { title: string; children: React.ReactNode }
     );
 }
 
-export default function Slides({ mediaTabUrlData }: { mediaTabUrlData: Promise<URLData | null>[] }) {
+export default function Slides({ ogData }: { ogData: OpenGraphData[] }) {
     const [embla, emblaApi] = useEmblaCarousel({ loop: true });
     const [playAppearSound] = useSound("/sounds/tap.wav");
     const scrollPrev = useCallback(() => {
@@ -62,7 +62,7 @@ export default function Slides({ mediaTabUrlData }: { mediaTabUrlData: Promise<U
                         transition={{ duration: 3, delay: 0.75 }}
                     >
                         <Slide title="Media">
-                            <Media urlData={mediaTabUrlData} />
+                            <Media ogData={ogData} />
                         </Slide>
                         <Slide title="BunyipsLib">
                             <BunyipsLib />

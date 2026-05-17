@@ -49,6 +49,7 @@ export default function Home() {
                             title="CV"
                             className="pointer-events-none rounded-[2rem] w-full h-full p-3 transition filter group-hover:blur-sm"
                             tabIndex={-1}
+                            scrolling="no" // Deprecated but works
                         />
                         <div
                             className="pointer-events-none absolute left-0 right-0 bottom-0 h-1/2 rounded-b-[2rem] z-10 m-3"

@@ -22,6 +22,11 @@ const nextConfig = {
                 hostname: "murrayvalleystandard.com.au",
                 port: "",
             },
+            {
+                protocol: "https",
+                hostname: "storage.ghost.io",
+                port: "",
+            },
         ],
         qualities: [75, 100],
     },

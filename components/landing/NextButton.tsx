@@ -18,6 +18,7 @@ export default function NextButton() {
     function next() {
         // Allow users to scroll to activate the next page
         nextPage.current?.click();
+        window.removeEventListener("wheel", next);
     }
 
     useEffect(() => {
