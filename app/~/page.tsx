@@ -36,7 +36,7 @@ export default function Home() {
                             LinkedIn
                             <LazyLoadedImage src={LinkedInBubner} className="rounded" height={28} alt="Lucas Bubner's LinkedIn" />
                         </SoundLink>
-                        <SoundLink href={"mailto:bubner@p" + "roton.me"} target="_blank" className="flex flex-col gap-1">
+                        <SoundLink href="mailto:lucas@bubner.me" target="_blank" className="flex flex-col gap-1">
                             Email
                             <LazyLoadedImage src={ProtonBubner} className="rounded" height={28} alt="Lucas Bubner's Email" />
                         </SoundLink>
